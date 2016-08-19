@@ -131,8 +131,6 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ChildItemsWidth>Equal</ChildItemsWidth>
@@ -146,9 +144,9 @@
 							<v8:content>Шапка (левая колонка)</v8:content>
 						</v8:item>
 					</Title>
-					<VerticalStretch>false</VerticalStretch>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="111"/>
 					<ChildItems>
@@ -170,6 +168,26 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="112"/>
 							<ChildItems>
+								<InputField name="Номер" id="78">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="113"/>
+								</InputField>
+								<InputField name="Дата" id="80">
+									<DataPath>Объект.Date</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="114"/>
+								</InputField>
 								<PictureField name="СостояниеДокумента" id="203">
 									<DataPath>СостояниеДокумента</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -189,32 +207,6 @@
 									</ContextMenu>
 									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="205"/>
 								</PictureField>
-								<LabelDecoration name="ДекорацияРазделительПустая" id="206">
-									<Width>3</Width>
-									<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="207"/>
-									<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="208"/>
-								</LabelDecoration>
-								<InputField name="Номер" id="78">
-									<DataPath>Объект.Number</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>10</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="НомерКонтекстноеМеню" id="79"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="113"/>
-								</InputField>
-								<InputField name="Дата" id="80">
-									<DataPath>Объект.Date</DataPath>
-									<DefaultItem>true</DefaultItem>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="81"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="114"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<InputField name="Местонахождение" id="106">
@@ -238,9 +230,9 @@
 							<v8:content>Шапка (правая колонка)</v8:content>
 						</v8:item>
 					</Title>
-					<VerticalStretch>false</VerticalStretch>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="118"/>
 					<ChildItems>
@@ -285,7 +277,6 @@
 					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="121"/>
 			<ChildItems>
 				<Page name="ГруппаСпецодежда" id="18">
@@ -443,7 +434,6 @@
 									<DataPath>Объект.Спецодежда.СчетУчета</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>12</Width>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="СпецодеждаСчетУчетаКонтекстноеМеню" id="33"/>
 									<ExtendedTooltip name="СпецодеждаСчетУчетаExtendedTooltip" id="132"/>
 								</InputField>
@@ -451,7 +441,6 @@
 									<DataPath>Объект.Спецодежда.СчетПередачи</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>16</Width>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="СпецодеждаСчетПередачиКонтекстноеМеню" id="35"/>
 									<ExtendedTooltip name="СпецодеждаСчетПередачиExtendedTooltip" id="133"/>
 								</InputField>
@@ -612,7 +601,6 @@
 									<DataPath>Объект.Спецоснастка.СчетУчета</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>12</Width>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="СпецоснасткаСчетУчетаКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="СпецоснасткаСчетУчетаExtendedTooltip" id="144"/>
 								</InputField>
@@ -620,7 +608,6 @@
 									<DataPath>Объект.Спецоснастка.СчетПередачи</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>16</Width>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="СпецоснасткаСчетПередачиКонтекстноеМеню" id="53"/>
 									<ExtendedTooltip name="СпецоснасткаСчетПередачиExtendedTooltip" id="145"/>
 								</InputField>
@@ -787,7 +774,6 @@
 								<InputField name="ИнвентарьИХозяйственныеПринадлежностиСчетУчета" id="70">
 									<DataPath>Объект.ИнвентарьИХозяйственныеПринадлежности.СчетУчета</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="ИнвентарьИХозяйственныеПринадлежностиСчетУчетаКонтекстноеМеню" id="71"/>
 									<ExtendedTooltip name="ИнвентарьИХозяйственныеПринадлежностиСчетУчетаExtendedTooltip" id="157"/>
 								</InputField>
@@ -816,8 +802,6 @@
 					<v8:content>Подвал</v8:content>
 				</v8:item>
 			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -1112,8 +1096,6 @@
 						<v8:content>Шапка</v8:content>
 					</v8:item>
 				</ToolTip>
-				<HorizontalStretch>true</HorizontalStretch>
-				<VerticalStretch>false</VerticalStretch>
 				<Group>Horizontal</Group>
 				<Representation>None</Representation>
 				<ChildItemsWidth>Equal</ChildItemsWidth>
@@ -1127,9 +1109,9 @@
 								<v8:content>Шапка (левая колонка)</v8:content>
 							</v8:item>
 						</Title>
-						<VerticalStretch>false</VerticalStretch>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="111"/>
 						<ChildItems>
@@ -1147,10 +1129,31 @@
 									</v8:item>
 								</ToolTip>
 								<Group>Horizontal</Group>
+								<VerticalAlign>Center</VerticalAlign>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="112"/>
 								<ChildItems>
+									<InputField name="Номер" id="78">
+										<DataPath>Объект.Number</DataPath>
+										<EditMode>EnterOnInput</EditMode>
+										<HorizontalStretch>false</HorizontalStretch>
+										<ContextMenu name="НомерКонтекстноеМеню" id="79"/>
+										<ExtendedTooltip name="НомерExtendedTooltip" id="113"/>
+									</InputField>
+									<InputField name="Дата" id="80">
+										<DataPath>Объект.Date</DataPath>
+										<DefaultItem>true</DefaultItem>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>от</v8:content>
+											</v8:item>
+										</Title>
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="ДатаКонтекстноеМеню" id="81"/>
+										<ExtendedTooltip name="ДатаExtendedTooltip" id="114"/>
+									</InputField>
 									<PictureField name="СостояниеДокумента" id="203">
 										<DataPath>СостояниеДокумента</DataPath>
 										<TitleLocation>None</TitleLocation>
@@ -1170,32 +1173,6 @@
 										</ContextMenu>
 										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="205"/>
 									</PictureField>
-									<LabelDecoration name="ДекорацияРазделительПустая" id="206">
-										<Width>3</Width>
-										<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="207"/>
-										<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="208"/>
-									</LabelDecoration>
-									<InputField name="Номер" id="78">
-										<DataPath>Объект.Number</DataPath>
-										<EditMode>EnterOnInput</EditMode>
-										<Width>10</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="НомерКонтекстноеМеню" id="79"/>
-										<ExtendedTooltip name="НомерExtendedTooltip" id="113"/>
-									</InputField>
-									<InputField name="Дата" id="80">
-										<DataPath>Объект.Date</DataPath>
-										<DefaultItem>true</DefaultItem>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>от</v8:content>
-											</v8:item>
-										</Title>
-										<EditMode>EnterOnInput</EditMode>
-										<ContextMenu name="ДатаКонтекстноеМеню" id="81"/>
-										<ExtendedTooltip name="ДатаExtendedTooltip" id="114"/>
-									</InputField>
 								</ChildItems>
 							</UsualGroup>
 							<InputField name="Местонахождение" id="106">
@@ -1219,9 +1196,9 @@
 								<v8:content>Шапка (правая колонка)</v8:content>
 							</v8:item>
 						</Title>
-						<VerticalStretch>false</VerticalStretch>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="118"/>
 						<ChildItems>
@@ -1266,7 +1243,6 @@
 						<v8:content>Группа страницы</v8:content>
 					</v8:item>
 				</ToolTip>
-				<HorizontalStretch>true</HorizontalStretch>
 				<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="121"/>
 				<ChildItems>
 					<Page name="ГруппаСпецодежда" id="18">
@@ -1424,7 +1400,6 @@
 										<DataPath>Объект.Спецодежда.СчетУчета</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>12</Width>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="СпецодеждаСчетУчетаКонтекстноеМеню" id="33"/>
 										<ExtendedTooltip name="СпецодеждаСчетУчетаExtendedTooltip" id="132"/>
 									</InputField>
@@ -1432,7 +1407,6 @@
 										<DataPath>Объект.Спецодежда.СчетПередачи</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>16</Width>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="СпецодеждаСчетПередачиКонтекстноеМеню" id="35"/>
 										<ExtendedTooltip name="СпецодеждаСчетПередачиExtendedTooltip" id="133"/>
 									</InputField>
@@ -1593,7 +1567,6 @@
 										<DataPath>Объект.Спецоснастка.СчетУчета</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>12</Width>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="СпецоснасткаСчетУчетаКонтекстноеМеню" id="51"/>
 										<ExtendedTooltip name="СпецоснасткаСчетУчетаExtendedTooltip" id="144"/>
 									</InputField>
@@ -1601,7 +1574,6 @@
 										<DataPath>Объект.Спецоснастка.СчетПередачи</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>16</Width>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="СпецоснасткаСчетПередачиКонтекстноеМеню" id="53"/>
 										<ExtendedTooltip name="СпецоснасткаСчетПередачиExtendedTooltip" id="145"/>
 									</InputField>
@@ -1768,7 +1740,6 @@
 									<InputField name="ИнвентарьИХозяйственныеПринадлежностиСчетУчета" id="70">
 										<DataPath>Объект.ИнвентарьИХозяйственныеПринадлежности.СчетУчета</DataPath>
 										<EditMode>EnterOnInput</EditMode>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="ИнвентарьИХозяйственныеПринадлежностиСчетУчетаКонтекстноеМеню" id="71"/>
 										<ExtendedTooltip name="ИнвентарьИХозяйственныеПринадлежностиСчетУчетаExtendedTooltip" id="157"/>
 									</InputField>
@@ -1797,8 +1768,6 @@
 						<v8:content>Подвал</v8:content>
 					</v8:item>
 				</ToolTip>
-				<HorizontalStretch>true</HorizontalStretch>
-				<VerticalStretch>false</VerticalStretch>
 				<Group>Horizontal</Group>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>

@@ -151,6 +151,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="135"/>
 					<ChildItems>
@@ -173,6 +174,31 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="136"/>
 							<ChildItems>
+								<InputField name="Номер" id="4">
+									<DataPath>Объект.Number</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="137"/>
+								</InputField>
+								<InputField name="Дата" id="6">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="138"/>
+								</InputField>
 								<PictureField name="СостояниеДокумента" id="261">
 									<DataPath>СостояниеДокумента</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -192,30 +218,6 @@
 									</ContextMenu>
 									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="263"/>
 								</PictureField>
-								<InputField name="Номер" id="4">
-									<DataPath>Объект.Number</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Номер</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="137"/>
-								</InputField>
-								<InputField name="Дата" id="6">
-									<DataPath>Объект.Date</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="138"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<InputField name="Контрагент" id="10">
@@ -300,6 +302,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="142"/>
 					<ChildItems>
@@ -316,7 +319,6 @@
 									<v8:content>Валюта сверки</v8:content>
 								</v8:item>
 							</Title>
-							<Width>8</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<OpenButton>false</OpenButton>
 							<ContextMenu name="ВалютаДокументаКонтекстноеМеню" id="13"/>
@@ -533,11 +535,6 @@
 									<ContextMenu name="ОстатокНаНачалоКонтекстноеМеню" id="104"/>
 									<ExtendedTooltip name="ОстатокНаНачалоExtendedTooltip" id="163"/>
 								</InputField>
-								<LabelDecoration name="ДекорацияОтступ" id="231">
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="232"/>
-									<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="233"/>
-								</LabelDecoration>
 								<UsualGroup name="ГруппаОстаткиПоДаннымОрганизации" id="229">
 									<Title>
 										<v8:item>
@@ -545,42 +542,58 @@
 											<v8:content>Группа остатки по данным организации</v8:content>
 										</v8:item>
 									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<BackColor>style:ИтогиФонГруппы</BackColor>
 									<ExtendedTooltip name="ГруппаОстаткиПоДаннымОрганизацииРасширеннаяПодсказка" id="230"/>
 									<ChildItems>
-										<InputField name="ОстатокНаКонец" id="105">
-											<DataPath>ОстатокНаКонец</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<SkipOnInput>true</SkipOnInput>
+										<UsualGroup name="ГруппаОстаткиПоОрганизацииСФоном" id="303">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Остаток на конец</v8:content>
+													<v8:content>Остатки по организации с фоном</v8:content>
 												</v8:item>
 											</Title>
-											<Width>11</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="ОстатокНаКонецКонтекстноеМеню" id="106"/>
-											<ExtendedTooltip name="ОстатокНаКонецExtendedTooltip" id="165"/>
-										</InputField>
-										<InputField name="Расхождение" id="107">
-											<DataPath>Расхождение</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<SkipOnInput>true</SkipOnInput>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Расхождение с контрагентом</v8:content>
-												</v8:item>
-											</Title>
-											<Width>11</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="РасхождениеКонтекстноеМеню" id="108"/>
-											<ExtendedTooltip name="РасхождениеExtendedTooltip" id="167"/>
-										</InputField>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ИтогиФонГруппы</BackColor>
+											<ExtendedTooltip name="ГруппаОстаткиПоОрганизацииСФономРасширеннаяПодсказка" id="305"/>
+											<ChildItems>
+												<InputField name="ОстатокНаКонец" id="105">
+													<DataPath>ОстатокНаКонец</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остаток на конец</v8:content>
+														</v8:item>
+													</Title>
+													<Width>11</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ОстатокНаКонецКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ОстатокНаКонецExtendedTooltip" id="165"/>
+												</InputField>
+												<InputField name="Расхождение" id="107">
+													<DataPath>Расхождение</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Расхождение с контрагентом</v8:content>
+														</v8:item>
+													</Title>
+													<Width>11</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="РасхождениеКонтекстноеМеню" id="108"/>
+													<ExtendedTooltip name="РасхождениеExtendedTooltip" id="167"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -773,41 +786,52 @@
 									<ContextMenu name="ОстатокНаНачалоКонтрагентКонтекстноеМеню" id="113"/>
 									<ExtendedTooltip name="ОстатокНаНачалоКонтрагентExtendedTooltip" id="182"/>
 								</InputField>
-								<LabelDecoration name="ДекорацияОтступПоДаннымКонтрагента" id="234">
+								<UsualGroup name="ГруппаОстаткиНаКонецКонтрагент" id="301">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остатки на конец контрагент</v8:content>
+										</v8:item>
+									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ДекорацияОтступПоДаннымКонтрагентаКонтекстноеМеню" id="235"/>
-									<ExtendedTooltip name="ДекорацияОтступПоДаннымКонтрагентаРасширеннаяПодсказка" id="236"/>
-								</LabelDecoration>
-								<InputField name="ОстатокНаКонецКонтрагент" id="114">
-									<DataPath>ОстатокНаКонецКонтрагент</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<SkipOnInput>true</SkipOnInput>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток на конец</v8:content>
-										</v8:item>
-									</Title>
-									<Width>11</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ОстатокНаКонецКонтрагентКонтекстноеМеню" id="115"/>
-									<ExtendedTooltip name="ОстатокНаКонецКонтрагентExtendedTooltip" id="184"/>
-								</InputField>
-								<InputField name="РасхождениеКонтрагент" id="116">
-									<DataPath>РасхождениеКонтрагент</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<SkipOnInput>true</SkipOnInput>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Расхождение с организацией</v8:content>
-										</v8:item>
-									</Title>
-									<Width>11</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="РасхождениеКонтрагентКонтекстноеМеню" id="117"/>
-									<ExtendedTooltip name="РасхождениеКонтрагентExtendedTooltip" id="186"/>
-								</InputField>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОстаткиНаКонецКонтрагентРасширеннаяПодсказка" id="302"/>
+									<ChildItems>
+										<InputField name="ОстатокНаКонецКонтрагент" id="114">
+											<DataPath>ОстатокНаКонецКонтрагент</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток на конец</v8:content>
+												</v8:item>
+											</Title>
+											<Width>11</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ОстатокНаКонецКонтрагентКонтекстноеМеню" id="115"/>
+											<ExtendedTooltip name="ОстатокНаКонецКонтрагентExtendedTooltip" id="184"/>
+										</InputField>
+										<InputField name="РасхождениеКонтрагент" id="116">
+											<DataPath>РасхождениеКонтрагент</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расхождение с организацией</v8:content>
+												</v8:item>
+											</Title>
+											<Width>11</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="РасхождениеКонтрагентКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="РасхождениеКонтрагентExtendedTooltip" id="186"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -924,12 +948,6 @@
 									<ChildItems>
 										<CheckBoxField name="СписокСчетовУчаствуетВРасчетах" id="78">
 											<DataPath>Объект.СписокСчетов.УчаствуетВРасчетах</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content> </v8:content>
-												</v8:item>
-											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="СписокСчетовУчаствуетВРасчетахКонтекстноеМеню" id="79"/>
@@ -939,7 +957,6 @@
 											<DataPath>Объект.СписокСчетов.Счет</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<HorizontalStretch>false</HorizontalStretch>
-											<DropListWidth>40</DropListWidth>
 											<ContextMenu name="СписокСчетовСчетКонтекстноеМеню" id="77"/>
 											<ExtendedTooltip name="СписокСчетовСчетExtendedTooltip" id="194"/>
 										</InputField>
@@ -993,7 +1010,6 @@
 									<v8:content>Печатная форма</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<ExtendedTooltip name="ГруппаПечатнаяФормаExtendedTooltip" id="200"/>
 							<ChildItems>
@@ -1033,7 +1049,6 @@
 				<InputField name="Комментарий" id="98">
 					<DataPath>Объект.Комментарий</DataPath>
 					<TitleLocation>Left</TitleLocation>
-					<VerticalStretch>false</VerticalStretch>
 					<MultiLine>false</MultiLine>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="99"/>
 					<ExtendedTooltip name="КомментарийExtendedTooltip" id="205"/>
@@ -1262,6 +1277,21 @@
 				<v8:Type>v8:UUID</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="АдресХранилищаСОшибками" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища с ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоДаннымБухУчета" id="1">
@@ -1483,6 +1513,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="135"/>
 						<ChildItems>
@@ -1505,9 +1536,35 @@
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="136"/>
 								<ChildItems>
+									<InputField name="Номер" id="4">
+										<DataPath>Объект.Number</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Номер</v8:content>
+											</v8:item>
+										</Title>
+										<EditMode>EnterOnInput</EditMode>
+										<HorizontalStretch>false</HorizontalStretch>
+										<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+										<ExtendedTooltip name="НомерExtendedTooltip" id="137"/>
+									</InputField>
+									<InputField name="Дата" id="6">
+										<DataPath>Объект.Date</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>от</v8:content>
+											</v8:item>
+										</Title>
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+										<ExtendedTooltip name="ДатаExtendedTooltip" id="138"/>
+									</InputField>
 									<PictureField name="СостояниеДокумента" id="261">
 										<DataPath>СостояниеДокумента</DataPath>
 										<TitleLocation>None</TitleLocation>
+										<GroupVerticalAlign>Center</GroupVerticalAlign>
 										<Width>2</Width>
 										<Height>1</Height>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -1524,30 +1581,6 @@
 										</ContextMenu>
 										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="263"/>
 									</PictureField>
-									<InputField name="Номер" id="4">
-										<DataPath>Объект.Number</DataPath>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Номер</v8:content>
-											</v8:item>
-										</Title>
-										<EditMode>EnterOnInput</EditMode>
-										<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
-										<ExtendedTooltip name="НомерExtendedTooltip" id="137"/>
-									</InputField>
-									<InputField name="Дата" id="6">
-										<DataPath>Объект.Date</DataPath>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>от</v8:content>
-											</v8:item>
-										</Title>
-										<EditMode>EnterOnInput</EditMode>
-										<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
-										<ExtendedTooltip name="ДатаExtendedTooltip" id="138"/>
-									</InputField>
 								</ChildItems>
 							</UsualGroup>
 							<InputField name="Контрагент" id="10">
@@ -1632,6 +1665,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="142"/>
 						<ChildItems>
@@ -1648,7 +1682,6 @@
 										<v8:content>Валюта сверки</v8:content>
 									</v8:item>
 								</Title>
-								<Width>8</Width>
 								<HorizontalStretch>false</HorizontalStretch>
 								<OpenButton>false</OpenButton>
 								<ContextMenu name="ВалютаДокументаКонтекстноеМеню" id="13"/>
@@ -1865,11 +1898,6 @@
 										<ContextMenu name="ОстатокНаНачалоКонтекстноеМеню" id="104"/>
 										<ExtendedTooltip name="ОстатокНаНачалоExtendedTooltip" id="163"/>
 									</InputField>
-									<LabelDecoration name="ДекорацияОтступ" id="231">
-										<HorizontalStretch>true</HorizontalStretch>
-										<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="232"/>
-										<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="233"/>
-									</LabelDecoration>
 									<UsualGroup name="ГруппаОстаткиПоДаннымОрганизации" id="229">
 										<Title>
 											<v8:item>
@@ -1877,42 +1905,58 @@
 												<v8:content>Группа остатки по данным организации</v8:content>
 											</v8:item>
 										</Title>
+										<HorizontalStretch>true</HorizontalStretch>
 										<Group>Horizontal</Group>
+										<HorizontalAlign>Right</HorizontalAlign>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<BackColor>style:ИтогиФонГруппы</BackColor>
 										<ExtendedTooltip name="ГруппаОстаткиПоДаннымОрганизацииРасширеннаяПодсказка" id="230"/>
 										<ChildItems>
-											<InputField name="ОстатокНаКонец" id="105">
-												<DataPath>ОстатокНаКонец</DataPath>
-												<ReadOnly>true</ReadOnly>
-												<SkipOnInput>true</SkipOnInput>
+											<UsualGroup name="ГруппаОстаткиПоОрганизацииСФоном" id="299">
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Остаток на конец</v8:content>
+														<v8:content>Остатки по организации с фоном</v8:content>
 													</v8:item>
 												</Title>
-												<Width>11</Width>
-												<HorizontalStretch>false</HorizontalStretch>
-												<ContextMenu name="ОстатокНаКонецКонтекстноеМеню" id="106"/>
-												<ExtendedTooltip name="ОстатокНаКонецExtendedTooltip" id="165"/>
-											</InputField>
-											<InputField name="Расхождение" id="107">
-												<DataPath>Расхождение</DataPath>
-												<ReadOnly>true</ReadOnly>
-												<SkipOnInput>true</SkipOnInput>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Расхождение с контрагентом</v8:content>
-													</v8:item>
-												</Title>
-												<Width>11</Width>
-												<HorizontalStretch>false</HorizontalStretch>
-												<ContextMenu name="РасхождениеКонтекстноеМеню" id="108"/>
-												<ExtendedTooltip name="РасхождениеExtendedTooltip" id="167"/>
-											</InputField>
+												<Group>Horizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<BackColor>style:ИтогиФонГруппы</BackColor>
+												<ExtendedTooltip name="ГруппаОстаткиПоОрганизацииСФономРасширеннаяПодсказка" id="300"/>
+												<ChildItems>
+													<InputField name="ОстатокНаКонец" id="105">
+														<DataPath>ОстатокНаКонец</DataPath>
+														<ReadOnly>true</ReadOnly>
+														<SkipOnInput>true</SkipOnInput>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Остаток на конец</v8:content>
+															</v8:item>
+														</Title>
+														<Width>11</Width>
+														<HorizontalStretch>false</HorizontalStretch>
+														<ContextMenu name="ОстатокНаКонецКонтекстноеМеню" id="106"/>
+														<ExtendedTooltip name="ОстатокНаКонецExtendedTooltip" id="165"/>
+													</InputField>
+													<InputField name="Расхождение" id="107">
+														<DataPath>Расхождение</DataPath>
+														<ReadOnly>true</ReadOnly>
+														<SkipOnInput>true</SkipOnInput>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Расхождение с контрагентом</v8:content>
+															</v8:item>
+														</Title>
+														<Width>11</Width>
+														<HorizontalStretch>false</HorizontalStretch>
+														<ContextMenu name="РасхождениеКонтекстноеМеню" id="108"/>
+														<ExtendedTooltip name="РасхождениеExtendedTooltip" id="167"/>
+													</InputField>
+												</ChildItems>
+											</UsualGroup>
 										</ChildItems>
 									</UsualGroup>
 								</ChildItems>
@@ -2105,41 +2149,52 @@
 										<ContextMenu name="ОстатокНаНачалоКонтрагентКонтекстноеМеню" id="113"/>
 										<ExtendedTooltip name="ОстатокНаНачалоКонтрагентExtendedTooltip" id="182"/>
 									</InputField>
-									<LabelDecoration name="ДекорацияОтступПоДаннымКонтрагента" id="234">
+									<UsualGroup name="ГруппаОстаткиНаКонецКонтрагент" id="301">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Остатки на конец контрагент</v8:content>
+											</v8:item>
+										</Title>
 										<HorizontalStretch>true</HorizontalStretch>
-										<ContextMenu name="ДекорацияОтступПоДаннымКонтрагентаКонтекстноеМеню" id="235"/>
-										<ExtendedTooltip name="ДекорацияОтступПоДаннымКонтрагентаРасширеннаяПодсказка" id="236"/>
-									</LabelDecoration>
-									<InputField name="ОстатокНаКонецКонтрагент" id="114">
-										<DataPath>ОстатокНаКонецКонтрагент</DataPath>
-										<ReadOnly>true</ReadOnly>
-										<SkipOnInput>true</SkipOnInput>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Остаток на конец</v8:content>
-											</v8:item>
-										</Title>
-										<Width>11</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="ОстатокНаКонецКонтрагентКонтекстноеМеню" id="115"/>
-										<ExtendedTooltip name="ОстатокНаКонецКонтрагентExtendedTooltip" id="184"/>
-									</InputField>
-									<InputField name="РасхождениеКонтрагент" id="116">
-										<DataPath>РасхождениеКонтрагент</DataPath>
-										<ReadOnly>true</ReadOnly>
-										<SkipOnInput>true</SkipOnInput>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Расхождение с организацией</v8:content>
-											</v8:item>
-										</Title>
-										<Width>11</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="РасхождениеКонтрагентКонтекстноеМеню" id="117"/>
-										<ExtendedTooltip name="РасхождениеКонтрагентExtendedTooltip" id="186"/>
-									</InputField>
+										<Group>Horizontal</Group>
+										<HorizontalAlign>Right</HorizontalAlign>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаОстаткиНаКонецКонтрагентРасширеннаяПодсказка" id="302"/>
+										<ChildItems>
+											<InputField name="ОстатокНаКонецКонтрагент" id="114">
+												<DataPath>ОстатокНаКонецКонтрагент</DataPath>
+												<ReadOnly>true</ReadOnly>
+												<SkipOnInput>true</SkipOnInput>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Остаток на конец</v8:content>
+													</v8:item>
+												</Title>
+												<Width>11</Width>
+												<HorizontalStretch>false</HorizontalStretch>
+												<ContextMenu name="ОстатокНаКонецКонтрагентКонтекстноеМеню" id="115"/>
+												<ExtendedTooltip name="ОстатокНаКонецКонтрагентExtendedTooltip" id="184"/>
+											</InputField>
+											<InputField name="РасхождениеКонтрагент" id="116">
+												<DataPath>РасхождениеКонтрагент</DataPath>
+												<ReadOnly>true</ReadOnly>
+												<SkipOnInput>true</SkipOnInput>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Расхождение с организацией</v8:content>
+													</v8:item>
+												</Title>
+												<Width>11</Width>
+												<HorizontalStretch>false</HorizontalStretch>
+												<ContextMenu name="РасхождениеКонтрагентКонтекстноеМеню" id="117"/>
+												<ExtendedTooltip name="РасхождениеКонтрагентExtendedTooltip" id="186"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
 								</ChildItems>
 							</UsualGroup>
 						</ChildItems>
@@ -2256,12 +2311,6 @@
 										<ChildItems>
 											<CheckBoxField name="СписокСчетовУчаствуетВРасчетах" id="78">
 												<DataPath>Объект.СписокСчетов.УчаствуетВРасчетах</DataPath>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content> </v8:content>
-													</v8:item>
-												</Title>
 												<EditMode>EnterOnInput</EditMode>
 												<CheckBoxType>Auto</CheckBoxType>
 												<ContextMenu name="СписокСчетовУчаствуетВРасчетахКонтекстноеМеню" id="79"/>
@@ -2271,7 +2320,6 @@
 												<DataPath>Объект.СписокСчетов.Счет</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<HorizontalStretch>false</HorizontalStretch>
-												<DropListWidth>40</DropListWidth>
 												<ContextMenu name="СписокСчетовСчетКонтекстноеМеню" id="77"/>
 												<ExtendedTooltip name="СписокСчетовСчетExtendedTooltip" id="194"/>
 											</InputField>
@@ -2325,7 +2373,6 @@
 										<v8:content>Печатная форма</v8:content>
 									</v8:item>
 								</Title>
-								<HorizontalStretch>true</HorizontalStretch>
 								<Group>Vertical</Group>
 								<ExtendedTooltip name="ГруппаПечатнаяФормаExtendedTooltip" id="200"/>
 								<ChildItems>
@@ -2365,7 +2412,6 @@
 					<InputField name="Комментарий" id="98">
 						<DataPath>Объект.Комментарий</DataPath>
 						<TitleLocation>Left</TitleLocation>
-						<VerticalStretch>false</VerticalStretch>
 						<MultiLine>false</MultiLine>
 						<ContextMenu name="КомментарийКонтекстноеМеню" id="99"/>
 						<ExtendedTooltip name="КомментарийExtendedTooltip" id="205"/>
@@ -2592,6 +2638,21 @@
 				</Title>
 				<Type>
 					<v8:Type>v8:UUID</v8:Type>
+				</Type>
+			</Attribute>
+			<Attribute name="АдресХранилищаСОшибками" id="16">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Адрес хранилища с ошибками</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>0</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
 				</Type>
 			</Attribute>
 		</Attributes>

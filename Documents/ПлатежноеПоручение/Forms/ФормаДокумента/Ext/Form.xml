@@ -82,10 +82,6 @@
 										<v8:content>DirectBank (прямой обмен с банком)</v8:content>
 									</v8:item>
 								</ToolTip>
-								<Picture>
-									<xr:Ref>0:6ff39320-751c-4a05-908e-0578db45c332</xr:Ref>
-									<xr:LoadTransparent>true</xr:LoadTransparent>
-								</Picture>
 								<ExtendedTooltip name="КомандыЭДОРасширеннаяПодсказка" id="313"/>
 							</Popup>
 							<Button name="ОбщаяКомандаСтруктураПодчиненности" id="228">
@@ -171,12 +167,6 @@
 					<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -212,6 +202,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="179"/>
 					<ChildItems>
@@ -238,12 +229,16 @@
 											<xr:ValueChange>DontChange</xr:ValueChange>
 										</xr:Link>
 										<xr:Link>
-											<xr:Name>Отбор.Ссылка</xr:Name>
-											<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+											<xr:Name>Отбор.СчетОрганизации</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.СчетОрганизации</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+										<xr:Link>
+											<xr:Name>ПризнакПлатежногоПоручения</xr:Name>
+											<xr:DataPath xsi:type="xs:string">ПризнакПлатежногоПоручения</xr:DataPath>
 											<xr:ValueChange>DontChange</xr:ValueChange>
 										</xr:Link>
 									</ChoiceParameterLinks>
-									<DropListWidth>35</DropListWidth>
 									<ContextMenu name="ВидОперацииКонтекстноеМеню" id="270"/>
 									<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="271"/>
 								</InputField>
@@ -261,6 +256,24 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНомераИДатыРасширеннаяПодсказка" id="133"/>
 							<ChildItems>
+								<InputField name="Номер" id="4">
+									<DataPath>Объект.Number</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="134"/>
+								</InputField>
+								<InputField name="Дата" id="6">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="135"/>
+								</InputField>
 								<PictureField name="СостояниеДокумента" id="247">
 									<DataPath>СостояниеДокумента</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -280,35 +293,10 @@
 									</ContextMenu>
 									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="249"/>
 								</PictureField>
-								<LabelDecoration name="ДекорацияРазделительПустая" id="250">
-									<Width>2</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="251"/>
-									<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="252"/>
-								</LabelDecoration>
-								<InputField name="Номер" id="4">
-									<DataPath>Объект.Number</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="134"/>
-								</InputField>
-								<InputField name="Дата" id="6">
-									<DataPath>Объект.Date</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-									</Title>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="135"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<InputField name="Налог" id="289">
 							<DataPath>Объект.Налог</DataPath>
-							<DropListWidth>50</DropListWidth>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -336,6 +324,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПолучательРасширеннаяПодсказка" id="221"/>
@@ -499,6 +488,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПлатежРасширеннаяПодсказка" id="219"/>
 							<ChildItems>
@@ -543,6 +533,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="191"/>
 					<ChildItems>
@@ -683,7 +674,6 @@
 									<TitleLocation>Left</TitleLocation>
 									<DropListButton>true</DropListButton>
 									<ChoiceListButton>true</ChoiceListButton>
-									<DropListWidth>55</DropListWidth>
 									<ContextMenu name="ОчередностьПлатежаКонтекстноеМеню" id="40"/>
 									<ExtendedTooltip name="ОчередностьПлатежаExtendedTooltip" id="163"/>
 								</InputField>
@@ -727,15 +717,16 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаРеквизитыПлатежейВБюджетExtendedTooltip" id="165"/>
 			<ChildItems>
-				<LabelDecoration name="ДекорацияРеквизитыПлатежейВБюджет" id="110">
-					<Width>12</Width>
-					<ContextMenu name="ДекорацияРеквизитыПлатежейВБюджетКонтекстноеМеню" id="111"/>
-					<ExtendedTooltip name="ДекорацияРеквизитыПлатежейВБюджетРасширеннаяПодсказка" id="166"/>
-				</LabelDecoration>
 				<LabelField name="НадписьРеквизитыПлатежейВБюджет" id="71">
 					<DataPath>НадписьРеквизитыПлатежейВБюджет</DataPath>
 					<SkipOnInput>true</SkipOnInput>
-					<TitleLocation>None</TitleLocation>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:FormBackColor</TitleTextColor>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -770,24 +761,82 @@
 					<DataPath>Объект.НазначениеПлатежа</DataPath>
 					<TitleLocation>Left</TitleLocation>
 					<TitleHeight>2</TitleHeight>
+					<Width>95</Width>
 					<Height>4</Height>
 					<VerticalStretch>false</VerticalStretch>
 					<MultiLine>true</MultiLine>
 					<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="168"/>
 				</InputField>
-				<UsualGroup name="ГруппаОплачено" id="79">
+				<UsualGroup name="ГруппаСостояниеДокументСписания" id="322">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние документ списания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние документ списания</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаОплаченоExtendedTooltip" id="169"/>
+					<ExtendedTooltip name="ГруппаСостояниеДокументСписанияРасширеннаяПодсказка" id="326"/>
 					<ChildItems>
-						<CheckBoxField name="Оплачено" id="80">
-							<DataPath>Объект.Оплачено</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ОплаченоКонтекстноеМеню" id="81"/>
-							<ExtendedTooltip name="ОплаченоExtendedTooltip" id="170"/>
-						</CheckBoxField>
+						<InputField name="Состояние" id="324">
+							<DataPath>Состояние</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalStretch>false</HorizontalStretch>
+							<OpenButton>true</OpenButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Подготовлено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отправлено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Оплачено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отклонено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.НаПодписи</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СостояниеКонтекстноеМеню" id="327"/>
+							<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="321"/>
+						</InputField>
 						<LabelField name="НадписьДокументСписания" id="82">
 							<DataPath>НадписьДокументСписания</DataPath>
 							<TitleLocation>None</TitleLocation>
@@ -797,13 +846,6 @@
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
-				<LabelField name="СостояниеЭД" id="129">
-					<DataPath>ТекстСостоянияЭД</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Hiperlink>true</Hiperlink>
-					<ContextMenu name="СостояниеЭДКонтекстноеМеню" id="130"/>
-					<ExtendedTooltip name="СостояниеЭДExtendedTooltip" id="172"/>
-				</LabelField>
 				<UsualGroup name="ГруппаКомментарий" id="200">
 					<Title>
 						<v8:item>
@@ -819,7 +861,6 @@
 						<InputField name="Комментарий" id="43">
 							<DataPath>Объект.Комментарий</DataPath>
 							<TitleLocation>Left</TitleLocation>
-							<VerticalStretch>false</VerticalStretch>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="44"/>
 							<ExtendedTooltip name="КомментарийExtendedTooltip" id="174"/>
 						</InputField>
@@ -986,24 +1027,6 @@
 				<v8:Type>cfg:EnumRef.ЮридическоеФизическоеЛицо</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекстСостоянияЭД" id="26">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>DirectBank</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<FunctionalOptions>
-				<Item>FunctionalOption.ИспользоватьОбменСБанками</Item>
-			</FunctionalOptions>
-		</Attribute>
 		<Attribute name="АдресОшибок" id="30">
 			<Title>
 				<v8:item>
@@ -1119,15 +1142,6 @@
 				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ЗапроситьСведенияОПолучателе" id="41">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Запросить сведения о получателе</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
-		</Attribute>
 		<Attribute name="ПериодСобытияКалендаря" id="42">
 			<Title>
 				<v8:item>
@@ -1152,32 +1166,6 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.Патенты</v8:Type>
 				<v8:Type>cfg:CatalogRef.ПравилаПредставленияОтчетовУплатыНалогов</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ИдентификаторЗаданияПроверкиПлатежныхРеквизитов" id="45">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Идентификатор задания проверки платежных реквизитов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:UUID</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="АдресРезультатаПроверкиПлатежныхРеквизитов" id="46">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Адрес результата проверки платежных реквизитов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>100</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="УчетЗарплатыИКадровВоВнешнейПрограмме" id="47">
@@ -1368,6 +1356,37 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="ДлительнаяОперацияПроверкиПлатежныхРеквизитов" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция проверки платежных реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПризнакПлатежногоПоручения" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак платежного поручения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Состояние" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияБанковскихДокументов</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПрочиеПлатежиВБюджет" id="1">
@@ -1542,10 +1561,6 @@
 											<v8:content>DirectBank (прямой обмен с банком)</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Picture>
-										<xr:Ref>0:6ff39320-751c-4a05-908e-0578db45c332</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
 									<ExtendedTooltip name="КомандыЭДОРасширеннаяПодсказка" id="313"/>
 								</Popup>
 								<Button name="ОбщаяКомандаСтруктураПодчиненности" id="228">
@@ -1619,12 +1634,6 @@
 						<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
-					</v8:item>
-				</ToolTip>
 				<Group>Horizontal</Group>
 				<Representation>NormalSeparation</Representation>
 				<ShowTitle>false</ShowTitle>
@@ -1634,6 +1643,7 @@
 					<LabelField name="РеквизитыОрганизацииСсылка" id="316">
 						<DataPath>РеквизитыОрганизацииСсылка</DataPath>
 						<TitleLocation>None</TitleLocation>
+						<AutoMaxWidth>false</AutoMaxWidth>
 						<ContextMenu name="РеквизитыОрганизацииСсылкаКонтекстноеМеню" id="317"/>
 						<ExtendedTooltip name="РеквизитыОрганизацииСсылкаРасширеннаяПодсказка" id="318"/>
 					</LabelField>
@@ -1660,6 +1670,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="179"/>
 						<ChildItems>
@@ -1686,12 +1697,16 @@
 												<xr:ValueChange>DontChange</xr:ValueChange>
 											</xr:Link>
 											<xr:Link>
-												<xr:Name>Отбор.Ссылка</xr:Name>
-												<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+												<xr:Name>Отбор.СчетОрганизации</xr:Name>
+												<xr:DataPath xsi:type="xs:string">Объект.СчетОрганизации</xr:DataPath>
+												<xr:ValueChange>DontChange</xr:ValueChange>
+											</xr:Link>
+											<xr:Link>
+												<xr:Name>ПризнакПлатежногоПоручения</xr:Name>
+												<xr:DataPath xsi:type="xs:string">ПризнакПлатежногоПоручения</xr:DataPath>
 												<xr:ValueChange>DontChange</xr:ValueChange>
 											</xr:Link>
 										</ChoiceParameterLinks>
-										<DropListWidth>35</DropListWidth>
 										<ContextMenu name="ВидОперацииКонтекстноеМеню" id="270"/>
 										<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="271"/>
 									</InputField>
@@ -1709,31 +1724,6 @@
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаНомераИДатыРасширеннаяПодсказка" id="133"/>
 								<ChildItems>
-									<PictureField name="СостояниеДокумента" id="247">
-										<DataPath>СостояниеДокумента</DataPath>
-										<TitleLocation>None</TitleLocation>
-										<Width>2</Width>
-										<Height>1</Height>
-										<HorizontalStretch>false</HorizontalStretch>
-										<VerticalStretch>false</VerticalStretch>
-										<ValuesPicture>
-											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</ValuesPicture>
-										<Border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</Border>
-										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="248">
-											<Autofill>false</Autofill>
-										</ContextMenu>
-										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="249"/>
-									</PictureField>
-									<LabelDecoration name="ДекорацияРазделительПустая" id="250">
-										<Width>2</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="251"/>
-										<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="252"/>
-									</LabelDecoration>
 									<InputField name="Номер" id="4">
 										<DataPath>Объект.Number</DataPath>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -1752,11 +1742,30 @@
 										<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
 										<ExtendedTooltip name="ДатаExtendedTooltip" id="135"/>
 									</InputField>
+									<PictureField name="СостояниеДокумента" id="247">
+										<DataPath>СостояниеДокумента</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<GroupVerticalAlign>Center</GroupVerticalAlign>
+										<Width>2</Width>
+										<Height>1</Height>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<ValuesPicture>
+											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</ValuesPicture>
+										<Border width="1">
+											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+										</Border>
+										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="248">
+											<Autofill>false</Autofill>
+										</ContextMenu>
+										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="249"/>
+									</PictureField>
 								</ChildItems>
 							</UsualGroup>
 							<InputField name="Налог" id="289">
 								<DataPath>Объект.Налог</DataPath>
-								<DropListWidth>50</DropListWidth>
 								<InputHint>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -1784,6 +1793,7 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ChildItemsWidth>Equal</ChildItemsWidth>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаПолучательРасширеннаяПодсказка" id="221"/>
@@ -1947,6 +1957,7 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаПлатежРасширеннаяПодсказка" id="219"/>
 								<ChildItems>
@@ -1991,6 +2002,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="191"/>
 						<ChildItems>
@@ -2131,7 +2143,6 @@
 										<TitleLocation>Left</TitleLocation>
 										<DropListButton>true</DropListButton>
 										<ChoiceListButton>true</ChoiceListButton>
-										<DropListWidth>55</DropListWidth>
 										<ContextMenu name="ОчередностьПлатежаКонтекстноеМеню" id="40"/>
 										<ExtendedTooltip name="ОчередностьПлатежаExtendedTooltip" id="163"/>
 									</InputField>
@@ -2175,21 +2186,23 @@
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаРеквизитыПлатежейВБюджетExtendedTooltip" id="165"/>
 				<ChildItems>
-					<LabelDecoration name="ДекорацияРеквизитыПлатежейВБюджет" id="110">
-						<Width>12</Width>
-						<ContextMenu name="ДекорацияРеквизитыПлатежейВБюджетКонтекстноеМеню" id="111"/>
-						<ExtendedTooltip name="ДекорацияРеквизитыПлатежейВБюджетРасширеннаяПодсказка" id="166"/>
-					</LabelDecoration>
 					<LabelField name="НадписьРеквизитыПлатежейВБюджет" id="71">
 						<DataPath>НадписьРеквизитыПлатежейВБюджет</DataPath>
 						<SkipOnInput>true</SkipOnInput>
-						<TitleLocation>None</TitleLocation>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Реквизиты</v8:content>
+							</v8:item>
+						</Title>
+						<TitleTextColor>style:FormBackColor</TitleTextColor>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Реквизиты для перечисления налогов и иных платежей в бюджет</v8:content>
 							</v8:item>
 						</ToolTip>
+						<AutoMaxWidth>false</AutoMaxWidth>
 						<Hiperlink>true</Hiperlink>
 						<ContextMenu name="НадписьРеквизитыПлатежейВБюджетКонтекстноеМеню" id="72"/>
 						<ExtendedTooltip name="НадписьРеквизитыПлатежейВБюджетExtendedTooltip" id="167"/>
@@ -2218,40 +2231,93 @@
 						<DataPath>Объект.НазначениеПлатежа</DataPath>
 						<TitleLocation>Left</TitleLocation>
 						<TitleHeight>2</TitleHeight>
+						<Width>95</Width>
 						<Height>4</Height>
 						<VerticalStretch>false</VerticalStretch>
 						<MultiLine>true</MultiLine>
 						<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="24"/>
 						<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="168"/>
 					</InputField>
-					<UsualGroup name="ГруппаОплачено" id="79">
+					<UsualGroup name="ГруппаСостояниеДокументСписания" id="79">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа состояние документ списания</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа состояние документ списания</v8:content>
+							</v8:item>
+						</ToolTip>
 						<Group>Horizontal</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаОплаченоExtendedTooltip" id="169"/>
+						<ExtendedTooltip name="ГруппаСостояниеДокументСписанияРасширеннаяПодсказка" id="169"/>
 						<ChildItems>
-							<CheckBoxField name="Оплачено" id="80">
-								<DataPath>Объект.Оплачено</DataPath>
-								<CheckBoxType>Auto</CheckBoxType>
-								<ContextMenu name="ОплаченоКонтекстноеМеню" id="81"/>
-								<ExtendedTooltip name="ОплаченоExtendedTooltip" id="170"/>
-							</CheckBoxField>
+							<InputField name="Состояние" id="319">
+								<DataPath>Состояние</DataPath>
+								<ReadOnly>true</ReadOnly>
+								<HorizontalStretch>false</HorizontalStretch>
+								<OpenButton>true</OpenButton>
+								<ListChoiceMode>true</ListChoiceMode>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Подготовлено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отправлено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Оплачено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отклонено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.НаПодписи</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="СостояниеКонтекстноеМеню" id="320"/>
+								<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="321"/>
+							</InputField>
 							<LabelField name="НадписьДокументСписания" id="82">
 								<DataPath>НадписьДокументСписания</DataPath>
 								<TitleLocation>None</TitleLocation>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>81</MaxWidth>
 								<Hiperlink>true</Hiperlink>
 								<ContextMenu name="НадписьДокументСписанияКонтекстноеМеню" id="83"/>
 								<ExtendedTooltip name="НадписьДокументСписанияExtendedTooltip" id="171"/>
 							</LabelField>
 						</ChildItems>
 					</UsualGroup>
-					<LabelField name="СостояниеЭД" id="129">
-						<DataPath>ТекстСостоянияЭД</DataPath>
-						<ReadOnly>true</ReadOnly>
-						<Hiperlink>true</Hiperlink>
-						<ContextMenu name="СостояниеЭДКонтекстноеМеню" id="130"/>
-						<ExtendedTooltip name="СостояниеЭДExtendedTooltip" id="172"/>
-					</LabelField>
 					<UsualGroup name="ГруппаКомментарий" id="200">
 						<Title>
 							<v8:item>
@@ -2267,7 +2333,6 @@
 							<InputField name="Комментарий" id="43">
 								<DataPath>Объект.Комментарий</DataPath>
 								<TitleLocation>Left</TitleLocation>
-								<VerticalStretch>false</VerticalStretch>
 								<ContextMenu name="КомментарийКонтекстноеМеню" id="44"/>
 								<ExtendedTooltip name="КомментарийExtendedTooltip" id="174"/>
 							</InputField>
@@ -2434,24 +2499,6 @@
 					<v8:Type>cfg:EnumRef.ЮридическоеФизическоеЛицо</v8:Type>
 				</Type>
 			</Attribute>
-			<Attribute name="ТекстСостоянияЭД" id="26">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>DirectBank</v8:content>
-					</v8:item>
-				</Title>
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>0</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
-				</Type>
-				<FunctionalOptions>
-					<Item>FunctionalOption.ИспользоватьОбменСБанками</Item>
-				</FunctionalOptions>
-			</Attribute>
 			<Attribute name="АдресОшибок" id="30">
 				<Title>
 					<v8:item>
@@ -2567,15 +2614,6 @@
 					</v8:DateQualifiers>
 				</Type>
 			</Attribute>
-			<Attribute name="ЗапроситьСведенияОПолучателе" id="41">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Запросить сведения о получателе</v8:content>
-					</v8:item>
-				</Title>
-				<Type/>
-			</Attribute>
 			<Attribute name="ПериодСобытияКалендаря" id="42">
 				<Title>
 					<v8:item>
@@ -2600,32 +2638,6 @@
 				<Type>
 					<v8:Type>cfg:CatalogRef.Патенты</v8:Type>
 					<v8:Type>cfg:CatalogRef.ПравилаПредставленияОтчетовУплатыНалогов</v8:Type>
-				</Type>
-			</Attribute>
-			<Attribute name="ИдентификаторЗаданияПроверкиПлатежныхРеквизитов" id="45">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Идентификатор задания проверки платежных реквизитов</v8:content>
-					</v8:item>
-				</Title>
-				<Type>
-					<v8:Type>v8:UUID</v8:Type>
-				</Type>
-			</Attribute>
-			<Attribute name="АдресРезультатаПроверкиПлатежныхРеквизитов" id="46">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Адрес результата проверки платежных реквизитов</v8:content>
-					</v8:item>
-				</Title>
-				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>100</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
 				</Type>
 			</Attribute>
 			<Attribute name="УчетЗарплатыИКадровВоВнешнейПрограмме" id="47">
@@ -2815,6 +2827,37 @@
 					</v8:item>
 				</Title>
 				<Type/>
+			</Attribute>
+			<Attribute name="ДлительнаяОперацияПроверкиПлатежныхРеквизитов" id="62">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительная операция проверки платежных реквизитов</v8:content>
+					</v8:item>
+				</Title>
+				<Type/>
+			</Attribute>
+			<Attribute name="Состояние" id="63">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Состояние</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>cfg:EnumRef.СостоянияБанковскихДокументов</v8:Type>
+				</Type>
+			</Attribute>
+			<Attribute name="ПризнакПлатежногоПоручения" id="64">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Признак платежного поручения</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
 			</Attribute>
 		</Attributes>
 		<Commands>

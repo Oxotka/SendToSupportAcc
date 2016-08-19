@@ -118,60 +118,38 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРРасширеннаяПодсказка" id="428"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРЛевая" id="517">
+				<PictureDecoration name="ДекорацияСтрелка" id="519">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация стрелка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.НачнитеОтсюда</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияСтрелкаКонтекстноеМеню" id="520"/>
+					<ExtendedTooltip name="ДекорацияСтрелкаРасширеннаяПодсказка" id="521"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРПолеВвода" id="615">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Заполнение по данным ЕГР (левая)</v8:content>
+							<v8:content>Заполнение по данным ЕГР</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРЛеваяРасширеннаяПодсказка" id="518"/>
-					<ChildItems>
-						<PictureDecoration name="ДекорацияСтрелка" id="519">
-							<Width>14</Width>
-							<Height>2</Height>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Декорация стрелка</v8:content>
-								</v8:item>
-							</Title>
-							<Picture>
-								<xr:Ref>CommonPicture.НачнитеОтсюда</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ContextMenu name="ДекорацияСтрелкаКонтекстноеМеню" id="520"/>
-							<ExtendedTooltip name="ДекорацияСтрелкаРасширеннаяПодсказка" id="521"/>
-						</PictureDecoration>
-						<LabelDecoration name="ДекорацияОтступСлева" id="522">
-							<Width>1</Width>
-							<ContextMenu name="ДекорацияОтступСлеваКонтекстноеМеню" id="523"/>
-							<ExtendedTooltip name="ДекорацияОтступСлеваРасширеннаяПодсказка" id="524"/>
-						</LabelDecoration>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРЦентр" id="429">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заполнение по данным ЕГР (центр)</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
 					<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
-					<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРЦентрРасширеннаяПодсказка" id="430"/>
+					<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРПолеВводаРасширеннаяПодсказка" id="620"/>
 					<ChildItems>
 						<InputField name="ПолеПоискаИНННаименование" id="436">
 							<DataPath>ПолеПоискаИНННаименование</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<TitleLocation>Top</TitleLocation>
-							<Width>50</Width>
-							<HorizontalStretch>false</HorizontalStretch>
+							<Width>40</Width>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -181,25 +159,6 @@
 							<ContextMenu name="ПолеПоискаИНННаименованиеКонтекстноеМеню" id="437"/>
 							<ExtendedTooltip name="ПолеПоискаИНННаименованиеРасширеннаяПодсказка" id="438"/>
 						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРПравая" id="431">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заполнение по данным ЕГР (правая)</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
-					<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРПраваяРасширеннаяПодсказка" id="432"/>
-					<ChildItems>
-						<LabelDecoration name="ДекорацияОтступ" id="439">
-							<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="440"/>
-							<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="441"/>
-						</LabelDecoration>
 						<Button name="ЗаполнитьРеквизитыПоДаннымЕГР" id="442">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ЗаполнитьРеквизитыПоДаннымЕГР</CommandName>
@@ -236,8 +195,6 @@
 							<v8:content>Вид контрагента</v8:content>
 						</v8:item>
 					</Title>
-					<Width>31</Width>
-					<HorizontalStretch>false</HorizontalStretch>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ChoiceList>
 						<xr:Item>
@@ -296,11 +253,6 @@
 					<ContextMenu name="ВидКонтекстноеМеню" id="143"/>
 					<ExtendedTooltip name="ВидExtendedTooltip" id="165"/>
 				</InputField>
-				<LabelDecoration name="ДекорацияПустаяКод" id="415">
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="ДекорацияПустаяКодКонтекстноеМеню" id="416"/>
-					<ExtendedTooltip name="ДекорацияПустаяКодРасширеннаяПодсказка" id="417"/>
-				</LabelDecoration>
 				<InputField name="Код" id="4">
 					<DataPath>Объект.Code</DataPath>
 					<UserVisible>
@@ -332,7 +284,6 @@
 			<ChildItems>
 				<InputField name="Наименование" id="2">
 					<DataPath>Объект.Description</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="3"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="162"/>
 				</InputField>
@@ -357,7 +308,6 @@
 			<ChildItems>
 				<InputField name="НаименованиеПолное" id="10">
 					<DataPath>Объект.НаименованиеПолное</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
 					<ChoiceButton>true</ChoiceButton>
 					<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="170"/>
@@ -377,53 +327,20 @@
 		</UsualGroup>
 		<InputField name="Родитель" id="27">
 			<DataPath>Объект.Parent</DataPath>
-			<HorizontalStretch>false</HorizontalStretch>
 			<CreateButton>false</CreateButton>
 			<ContextMenu name="РодительКонтекстноеМеню" id="28"/>
 			<ExtendedTooltip name="РодительExtendedTooltip" id="164"/>
 		</InputField>
 		<InputField name="СтранаРегистрации" id="373">
 			<DataPath>Объект.СтранаРегистрации</DataPath>
-			<Width>31</Width>
-			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="СтранаРегистрацииКонтекстноеМеню" id="374"/>
 			<ExtendedTooltip name="СтранаРегистрацииРасширеннаяПодсказка" id="375"/>
 		</InputField>
-		<UsualGroup name="ГруппаГоловнойКонтрагент" id="150">
-			<EnableContentChange>true</EnableContentChange>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Головной контрагент</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Головной контрагент</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаГоловнойКонтрагентРасширеннаяПодсказка" id="175"/>
-			<ChildItems>
-				<InputField name="ГоловнойКонтрагент" id="159">
-					<DataPath>Объект.ГоловнойКонтрагент</DataPath>
-					<ContextMenu name="ГоловнойКонтрагентКонтекстноеМеню" id="160"/>
-					<ExtendedTooltip name="ГоловнойКонтрагентExtendedTooltip" id="177"/>
-				</InputField>
-				<LabelField name="ИННГоловногоКонтрагента" id="379">
-					<DataPath>Объект.ИНН</DataPath>
-					<TitleLocation>Left</TitleLocation>
-					<Width>14</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<TextColor>style:ТекстПредопределенногоЗначения</TextColor>
-					<ContextMenu name="ИННГоловногоКонтрагентаКонтекстноеМеню" id="380"/>
-					<ExtendedTooltip name="ИННГоловногоКонтрагентаExtendedTooltip" id="381"/>
-				</LabelField>
-			</ChildItems>
-		</UsualGroup>
+		<InputField name="ГоловнойКонтрагент" id="159">
+			<DataPath>Объект.ГоловнойКонтрагент</DataPath>
+			<ContextMenu name="ГоловнойКонтрагентКонтекстноеМеню" id="160"/>
+			<ExtendedTooltip name="ГоловнойКонтрагентExtendedTooltip" id="177"/>
+		</InputField>
 		<UsualGroup name="ГруппаГосударственныйОрган" id="395">
 			<Title>
 				<v8:item>
@@ -444,7 +361,7 @@
 							<v8:content>Государственный орган</v8:content>
 						</v8:item>
 					</Title>
-					<Width>31</Width>
+					<Width>17</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ВидГосударственногоОрганаКонтекстноеМеню" id="398"/>
 					<ExtendedTooltip name="ВидГосударственногоОрганаРасширеннаяПодсказка" id="399"/>
@@ -471,8 +388,6 @@
 				</v8:item>
 			</ToolTip>
 			<ToolTipRepresentation>Button</ToolTipRepresentation>
-			<Width>31</Width>
-			<HorizontalStretch>false</HorizontalStretch>
 			<InputHint>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -501,59 +416,40 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="172"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаЗаполнитьИНН" id="389">
-					<Title>
+				<InputField name="ИНН" id="157">
+					<DataPath>Объект.ИНН</DataPath>
+					<Width>17</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Заполнить ИНН</v8:content>
+							<v8:content>Введите ИНН</v8:content>
 						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заполнить ИНН</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаЗаполнитьИННРасширеннаяПодсказка" id="390"/>
-					<ChildItems>
-						<InputField name="ИНН" id="157">
-							<DataPath>Объект.ИНН</DataPath>
-							<Width>16</Width>
-							<HorizontalStretch>false</HorizontalStretch>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Введите ИНН</v8:content>
-								</v8:item>
-							</InputHint>
-							<ContextMenu name="ИННКонтекстноеМеню" id="158"/>
-							<ExtendedTooltip name="ИННExtendedTooltip" id="174"/>
-						</InputField>
-						<Button name="КнопкаЗаполнитьРеквизитыПоИНН" id="382">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ЗаполнитьРеквизитыПоИНН</CommandName>
-							<ExtendedTooltip name="КнопкаЗаполнитьРеквизитыПоИННРасширеннаяПодсказка" id="383"/>
-						</Button>
-					</ChildItems>
-				</UsualGroup>
-				<LabelField name="НадписьПоясненияНекорректногоИНН" id="347">
-					<DataPath>НадписьПоясненияНекорректногоИНН</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Какая-то справочная информация</v8:content>
-						</v8:item>
-					</Title>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="НадписьПоясненияНекорректногоИННКонтекстноеМеню" id="348"/>
-					<ExtendedTooltip name="НадписьПоясненияНекорректногоИННРасширеннаяПодсказка" id="349"/>
-				</LabelField>
+					</InputHint>
+					<ContextMenu name="ИННКонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="ИННExtendedTooltip" id="174"/>
+				</InputField>
+				<Button name="КнопкаЗаполнитьРеквизитыПоИНН" id="382">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьРеквизитыПоИНН</CommandName>
+					<ExtendedTooltip name="КнопкаЗаполнитьРеквизитыПоИННРасширеннаяПодсказка" id="383"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<LabelField name="НадписьПоясненияНекорректногоИНН" id="347">
+			<DataPath>НадписьПоясненияНекорректногоИНН</DataPath>
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Какая-то справочная информация</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<Width>57</Width>
+			<ContextMenu name="НадписьПоясненияНекорректногоИННКонтекстноеМеню" id="348"/>
+			<ExtendedTooltip name="НадписьПоясненияНекорректногоИННРасширеннаяПодсказка" id="349"/>
+		</LabelField>
 		<UsualGroup name="ГруппаКПП" id="345">
 			<Title>
 				<v8:item>
@@ -574,7 +470,7 @@
 			<ChildItems>
 				<InputField name="КПП" id="14">
 					<DataPath>Объект.КПП</DataPath>
-					<Width>16</Width>
+					<Width>17</Width>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -595,21 +491,29 @@
 					<ContextMenu name="ИсторияКППКонтекстноеМеню" id="425"/>
 					<ExtendedTooltip name="ИсторияКППРасширеннаяПодсказка" id="426"/>
 				</LabelDecoration>
-				<LabelField name="НадписьПоясненияНекорректногоКПП" id="359">
-					<DataPath>НадписьПоясненияНекорректногоКПП</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="НадписьПоясненияНекорректногоКППКонтекстноеМеню" id="360"/>
-					<ExtendedTooltip name="НадписьПоясненияНекорректногоКППРасширеннаяПодсказка" id="361"/>
-				</LabelField>
 			</ChildItems>
 		</UsualGroup>
+		<LabelField name="НадписьПоясненияНекорректногоКПП" id="359">
+			<DataPath>НадписьПоясненияНекорректногоКПП</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<Width>57</Width>
+			<ContextMenu name="НадписьПоясненияНекорректногоКППКонтекстноеМеню" id="360"/>
+			<ExtendedTooltip name="НадписьПоясненияНекорректногоКППРасширеннаяПодсказка" id="361"/>
+		</LabelField>
+		<LabelField name="НадписьПояснениеПроверкиДублейФНС" id="617">
+			<DataPath>НадписьПояснениеПроверкиДублейФНС</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<Width>57</Width>
+			<ContextMenu name="НадписьПояснениеПроверкиДублейФНСКонтекстноеМеню" id="619"/>
+			<ExtendedTooltip name="НадписьПояснениеПроверкиДублейФНСРасширеннаяПодсказка" id="596"/>
+		</LabelField>
 		<InputField name="КодПоОКПО" id="25">
 			<DataPath>Объект.КодПоОКПО</DataPath>
 			<UserVisible>
 				<xr:Common>false</xr:Common>
 			</UserVisible>
-			<Width>16</Width>
 			<ContextMenu name="КодПоОКПОКонтекстноеМеню" id="26"/>
 			<ExtendedTooltip name="КодПоОКПОExtendedTooltip" id="180"/>
 		</InputField>
@@ -621,7 +525,6 @@
 					<v8:content>Рег. номер</v8:content>
 				</v8:item>
 			</Title>
-			<Width>31</Width>
 			<HorizontalStretch>false</HorizontalStretch>
 			<InputHint>
 				<v8:item>
@@ -639,12 +542,6 @@
 					<v8:content>Регистрация в качестве индивидуального предпринимателя</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа регистрация как ИП</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Vertical</Group>
 			<Collapsed>true</Collapsed>
 			<ControlRepresentation>Picture</ControlRepresentation>
@@ -655,8 +552,6 @@
 			<ChildItems>
 				<InputField name="СвидетельствоСерияНомер" id="405">
 					<DataPath>Объект.СвидетельствоСерияНомер</DataPath>
-					<Width>31</Width>
-					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="СвидетельствоСерияНомерКонтекстноеМеню" id="406"/>
 					<ExtendedTooltip name="СвидетельствоСерияНомерРасширеннаяПодсказка" id="407"/>
 				</InputField>
@@ -681,9 +576,6 @@
 		<InputField name="Комментарий" id="53">
 			<DataPath>Объект.Комментарий</DataPath>
 			<TitleLocation>Left</TitleLocation>
-			<Width>74</Width>
-			<HorizontalStretch>false</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="54"/>
 			<ExtendedTooltip name="КомментарийExtendedTooltip" id="243"/>
 		</InputField>
@@ -694,12 +586,7 @@
 					<v8:content>Основной банковский счет</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Основной банковский счет</v8:content>
-				</v8:item>
-			</ToolTip>
+			<Width>1000</Width>
 			<Group>Vertical</Group>
 			<Behavior>Collapsible</Behavior>
 			<ControlRepresentation>Picture</ControlRepresentation>
@@ -714,12 +601,6 @@
 							<v8:content>Банк</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Банк</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -739,11 +620,9 @@
 									<v8:content>Введите БИК или наименование банка</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Width>50</Width>
-							<HorizontalStretch>false</HorizontalStretch>
+							<Width>46</Width>
 							<CreateButton>false</CreateButton>
 							<ChooseType>false</ChooseType>
-							<DropListWidth>52</DropListWidth>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -768,7 +647,6 @@
 									<v8:content>Подсказка банка</v8:content>
 								</v8:item>
 							</ToolTip>
-							<HorizontalStretch>false</HorizontalStretch>
 							<TextColor>style:ПросроченныеДанныеЦвет</TextColor>
 							<ContextMenu name="ПодсказкаБанкКонтекстноеМеню" id="579"/>
 							<ExtendedTooltip name="ПодсказкаБанкРасширеннаяПодсказка" id="580"/>
@@ -782,12 +660,6 @@
 							<v8:content>Номер счета</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номер Счета</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -853,6 +725,7 @@
 					<v8:content>Адрес и телефон</v8:content>
 				</v8:item>
 			</Title>
+			<Width>1000</Width>
 			<Group>Vertical</Group>
 			<Behavior>Collapsible</Behavior>
 			<Collapsed>true</Collapsed>
@@ -875,15 +748,12 @@
 					<ExtendedTooltip name="ГруппаЗагрузкаАдресногоКлассификатораРасширеннаяПодсказка" id="267"/>
 					<ChildItems>
 						<LabelDecoration name="ДекорацияАдресныйКлассификаторНеЗагружен" id="268">
-							<HorizontalStretch>true</HorizontalStretch>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Загрузите адресный классификатор, чтобы вводить адреса в специальном формате,
-который требуется для сдачи отчетности в ИФНС и фонды.</v8:content>
+									<v8:content>Загрузите адресный классификатор, чтобы вводить адреса в специальном формате, который требуется для сдачи отчетности в ИФНС и фонды.</v8:content>
 								</v8:item>
 							</Title>
-							<VerticalAlign>Center</VerticalAlign>
 							<ContextMenu name="ДекорацияАдресныйКлассификаторНеЗагруженКонтекстноеМеню" id="269"/>
 							<ExtendedTooltip name="ДекорацияАдресныйКлассификаторНеЗагруженExtendedTooltip" id="270"/>
 						</LabelDecoration>
@@ -899,159 +769,61 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа адреса</v8:content>
+							<v8:content>Адреса</v8:content>
 						</v8:item>
 					</Title>
-					<Group>Horizontal</Group>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаАдресаРасширеннаяПодсказка" id="246"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаЗаголовокАдреса" id="247">
+						<LabelField name="КонтактнаяИнформацияПолеЮрАдресКонтрагента" id="98">
+							<DataPath>КонтактнаяИнформацияПолеЮрАдресКонтрагента</DataPath>
+							<SkipOnInput>false</SkipOnInput>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа заголовок адреса</v8:content>
+									<v8:content>Юридический адрес</v8:content>
 								</v8:item>
 							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаЗаголовокАдресаРасширеннаяПодсказка" id="248"/>
-							<ChildItems>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагента" id="249">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Юридический адрес:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="250"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="251"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагента" id="252">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Фактический адрес:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="253"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="254"/>
-								</LabelDecoration>
-								<LabelDecoration name="ДекорацияОтступФактАдрес" id="258">
-									<ContextMenu name="ДекорацияОтступФактАдресКонтекстноеМеню" id="259"/>
-									<ExtendedTooltip name="ДекорацияОтступФактАдресРасширеннаяПодсказка" id="260"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="255">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Почтовый адрес:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="256"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="257"/>
-								</LabelDecoration>
-								<LabelDecoration name="ДекорацияОтступПочтовыйАдрес" id="261">
-									<ContextMenu name="ДекорацияОтступПочтовыйАдресКонтекстноеМеню" id="262"/>
-									<ExtendedTooltip name="ДекорацияОтступПочтовыйАдресРасширеннаяПодсказка" id="263"/>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПолеАдреса" id="264">
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="213"/>
+						</LabelField>
+						<UsualGroup name="ГруппаФактАдресКонтрагента" id="106">
+							<EnableContentChange>true</EnableContentChange>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа поле адреса</v8:content>
+									<v8:content>Фактический адрес</v8:content>
 								</v8:item>
 							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПолеАдресаРасширеннаяПодсказка" id="265"/>
+							<ExtendedTooltip name="ГруппаФактАдресКонтрагентаExtendedTooltip" id="218"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаЮрАдресКонтрагента" id="97">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Юридический адрес</v8:content>
-										</v8:item>
-									</Title>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаЮрАдресКонтрагентаExtendedTooltip" id="212"/>
-									<ChildItems>
-										<LabelField name="КонтактнаяИнформацияПолеЮрАдресКонтрагента" id="98">
-											<DataPath>КонтактнаяИнформацияПолеЮрАдресКонтрагента</DataPath>
-											<SkipOnInput>false</SkipOnInput>
-											<TitleLocation>None</TitleLocation>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="99"/>
-											<ExtendedTooltip name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="213"/>
-										</LabelField>
-									</ChildItems>
-								</UsualGroup>
-								<Pages name="ГруппаФактАдресКонтрагента" id="106">
-									<EnableContentChange>true</EnableContentChange>
+								<LabelField name="КонтактнаяИнформацияПолеФактАдресКонтрагента" id="108">
+									<DataPath>КонтактнаяИнформацияПолеФактАдресКонтрагента</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Фактический адрес</v8:content>
 										</v8:item>
 									</Title>
-									<PagesRepresentation>None</PagesRepresentation>
-									<ExtendedTooltip name="ГруппаФактАдресКонтрагентаExtendedTooltip" id="218"/>
-									<ChildItems>
-										<Page name="СтраницаФактАдресКонтрагента" id="107">
-											<EnableContentChange>true</EnableContentChange>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Фактический адрес контрагента</v8:content>
-												</v8:item>
-											</Title>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="СтраницаФактАдресКонтрагентаExtendedTooltip" id="219"/>
-											<ChildItems>
-												<LabelField name="КонтактнаяИнформацияПолеФактАдресКонтрагента" id="108">
-													<DataPath>КонтактнаяИнформацияПолеФактАдресКонтрагента</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Фактический адрес</v8:content>
-														</v8:item>
-													</Title>
-													<TitleLocation>None</TitleLocation>
-													<Hiperlink>true</Hiperlink>
-													<ContextMenu name="КонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="109"/>
-													<ExtendedTooltip name="КонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="220"/>
-												</LabelField>
-											</ChildItems>
-										</Page>
-										<Page name="СтраницаФактАдресКонтрагентаСовпадает" id="110">
-											<EnableContentChange>true</EnableContentChange>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Фактический адрес контрагента совпадает с юридическим</v8:content>
-												</v8:item>
-											</Title>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="СтраницаФактАдресКонтрагентаСовпадаетExtendedTooltip" id="221"/>
-											<ChildItems>
-												<LabelField name="ФактАдресКонтрагентаСовпадает" id="111">
-													<DataPath>ФактАдресКонтрагентаСовпадает</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
-													<ContextMenu name="ФактАдресКонтрагентаСовпадаетКонтекстноеМеню" id="112"/>
-													<ExtendedTooltip name="ФактАдресКонтрагентаСовпадаетExtendedTooltip" id="222"/>
-												</LabelField>
-											</ChildItems>
-										</Page>
-									</ChildItems>
-								</Pages>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="КонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="220"/>
+								</LabelField>
+								<LabelField name="ФактАдресКонтрагентаСовпадает" id="111">
+									<DataPath>ФактАдресКонтрагентаСовпадает</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фактический адрес</v8:content>
+										</v8:item>
+									</Title>
+									<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
+									<ContextMenu name="ФактАдресКонтрагентаСовпадаетКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ФактАдресКонтрагентаСовпадаетExtendedTooltip" id="222"/>
+								</LabelField>
 								<CheckBoxField name="ЮрФактАдресаСовпадают" id="116">
 									<DataPath>ЮрФактАдресаСовпадают</DataPath>
 									<TitleLocation>Right</TitleLocation>
@@ -1059,60 +831,36 @@
 									<ContextMenu name="ЮрФактАдресаСовпадаютКонтекстноеМеню" id="117"/>
 									<ExtendedTooltip name="ЮрФактАдресаСовпадаютExtendedTooltip" id="225"/>
 								</CheckBoxField>
-								<Pages name="ГруппаПочтовыйАдресКонтрагента" id="121">
-									<EnableContentChange>true</EnableContentChange>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПочтовыйАдресКонтрагента" id="121">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Почтовый адрес</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаПочтовыйАдресКонтрагентаExtendedTooltip" id="228"/>
+							<ChildItems>
+								<InputField name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="123">
+									<DataPath>КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="230"/>
+								</InputField>
+								<LabelField name="ПочтовыйАдресКонтрагентаСовпадает" id="126">
+									<DataPath>ПочтовыйАдресКонтрагентаСовпадает</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Почтовый адрес</v8:content>
 										</v8:item>
 									</Title>
-									<PagesRepresentation>None</PagesRepresentation>
-									<ExtendedTooltip name="ГруппаПочтовыйАдресКонтрагентаExtendedTooltip" id="228"/>
-									<ChildItems>
-										<Page name="СтраницаПочтовыйАдресКонтрагента" id="122">
-											<EnableContentChange>true</EnableContentChange>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Почтовый адрес контрагента</v8:content>
-												</v8:item>
-											</Title>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="СтраницаПочтовыйАдресКонтрагентаExtendedTooltip" id="229"/>
-											<ChildItems>
-												<InputField name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="123">
-													<DataPath>КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<ChoiceButton>true</ChoiceButton>
-													<ContextMenu name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="124"/>
-													<ExtendedTooltip name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="230"/>
-												</InputField>
-											</ChildItems>
-										</Page>
-										<Page name="СтраницаПочтовыйАдресКонтрагентаСовпадает" id="125">
-											<EnableContentChange>true</EnableContentChange>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Почтовый адрес контрагента совпадает с юридическим адресом</v8:content>
-												</v8:item>
-											</Title>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="СтраницаПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="231"/>
-											<ChildItems>
-												<LabelField name="ПочтовыйАдресКонтрагентаСовпадает" id="126">
-													<DataPath>ПочтовыйАдресКонтрагентаСовпадает</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<VerticalAlign>Bottom</VerticalAlign>
-													<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
-													<ContextMenu name="ПочтовыйАдресКонтрагентаСовпадаетКонтекстноеМеню" id="127"/>
-													<ExtendedTooltip name="ПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="232"/>
-												</LabelField>
-											</ChildItems>
-										</Page>
-									</ChildItems>
-								</Pages>
+									<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
+									<ContextMenu name="ПочтовыйАдресКонтрагентаСовпадаетКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="232"/>
+								</LabelField>
 								<CheckBoxField name="ЮрПочтовыйАдресаСовпадают" id="131">
 									<DataPath>ЮрПочтовыйАдресаСовпадают</DataPath>
 									<TitleLocation>Right</TitleLocation>
@@ -1122,175 +870,128 @@
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаДействийАдреса" id="488">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа действий адреса</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаДействийАдресаРасширеннаяПодсказка" id="489"/>
-							<ChildItems>
-								<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагента" id="505">
-									<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="506"/>
-									<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="507"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагента" id="511">
-									<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="512"/>
-									<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="513"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаглушкаДействияФактАдресОтступ" id="496">
-									<ContextMenu name="ЗаглушкаДействияФактАдресОтступКонтекстноеМеню" id="497"/>
-									<ExtendedTooltip name="ЗаглушкаДействияФактАдресОтступРасширеннаяПодсказка" id="498"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="508">
-									<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="509"/>
-									<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="510"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаглушкаДействияПочтовыйАдрес" id="514">
-									<ContextMenu name="ЗаглушкаДействияПочтовыйАдресКонтекстноеМеню" id="515"/>
-									<ExtendedTooltip name="ЗаглушкаДействияПочтовыйАдресРасширеннаяПодсказка" id="516"/>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаКомпоновкиКонтактнойИнформации" id="449">
-					<Group>Horizontal</Group>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактная информация</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаКомпоновкиКонтактнойИнформацииРасширеннаяПодсказка" id="450"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаЗаголовковКонтактнойИнформации" id="451">
-							<Group>Vertical</Group>
+						<UsualGroup name="ГруппаКонтактнаяИнформацияПолеТелефонКонтрагента" id="597">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаЗаголовковКонтактнойИнформацииРасширеннаяПодсказка" id="452"/>
-							<ChildItems>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагента" id="468">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Телефон:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагентаКонтекстноеМеню" id="469"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="470"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагенты" id="465">
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Факс:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="466"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="467"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагенты" id="474">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Email:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="475"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="476"/>
-								</LabelDecoration>
-								<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="477">
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Другие контакты:</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="478"/>
-									<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="479"/>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПолейВводаКонтактнойИнформации" id="453">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПолейВводаКонтактнойИнформацииРасширеннаяПодсказка" id="454"/>
+							<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="598"/>
 							<ChildItems>
 								<InputField name="КонтактнаяИнформацияПолеТелефонКонтрагента" id="134">
 									<DataPath>КонтактнаяИнформацияПолеТелефонКонтрагента</DataPath>
-									<TitleLocation>None</TitleLocation>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<ChoiceButton>true</ChoiceButton>
 									<ContextMenu name="КонтактнаяИнформацияПолеТелефонКонтрагентаКонтекстноеМеню" id="135"/>
 									<ExtendedTooltip name="КонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="237"/>
 								</InputField>
-								<InputField name="КонтактнаяИнформацияПолеФаксКонтрагенты" id="136">
-									<DataPath>КонтактнаяИнформацияПолеФаксКонтрагенты</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<TitleLocation>None</TitleLocation>
-									<ContextMenu name="КонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="137"/>
-									<ExtendedTooltip name="КонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="238"/>
-								</InputField>
-								<InputField name="КонтактнаяИнформацияПолеEmailКонтрагенты" id="138">
-									<DataPath>КонтактнаяИнформацияПолеEmailКонтрагенты</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<ContextMenu name="КонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="139"/>
-									<ExtendedTooltip name="КонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="239"/>
-								</InputField>
-								<InputField name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="140">
-									<DataPath>КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<TitleLocation>None</TitleLocation>
-									<Height>2</Height>
-									<VerticalStretch>false</VerticalStretch>
-									<MultiLine>true</MultiLine>
-									<ContextMenu name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="141"/>
-									<ExtendedTooltip name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="240"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаДействийКонтактнойИнформации" id="458">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаДействийКонтактнойИнформацииРасширеннаяПодсказка" id="459"/>
-							<ChildItems>
 								<Button name="КомандаКонтактнаяИнформацияПолеТелефонКонтрагента" id="527">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.КомандаКонтактнаяИнформацияПолеТелефонКонтрагента</CommandName>
 									<ExtendedTooltip name="КомандаКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="528"/>
 								</Button>
-								<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагенты" id="471">
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтактнаяИнформацияПолеФаксКонтрагенты" id="599">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Факс</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="600"/>
+							<ChildItems>
+								<InputField name="КонтактнаяИнформацияПолеФаксКонтрагенты" id="136">
+									<DataPath>КонтактнаяИнформацияПолеФаксКонтрагенты</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
-									<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="472"/>
-									<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="473"/>
-								</LabelDecoration>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="238"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтактнаяИнформацияПолеEmailКонтрагенты" id="606">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контактная информация поле email контрагенты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контактная информация поле email контрагенты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="607"/>
+							<ChildItems>
+								<InputField name="КонтактнаяИнформацияПолеEmailКонтрагенты" id="138">
+									<DataPath>КонтактнаяИнформацияПолеEmailКонтрагенты</DataPath>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="239"/>
+								</InputField>
 								<Button name="КомандаКонтактнаяИнформацияПолеEmailКонтрагенты" id="486">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.КомандаКонтактнаяИнформацияПолеEmailКонтрагенты</CommandName>
 									<ExtendedTooltip name="КомандаКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="487"/>
 								</Button>
-								<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="483">
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="613">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Другая информация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="614"/>
+							<ChildItems>
+								<InputField name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="140">
+									<DataPath>КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
-									<Height>2</Height>
-									<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="484"/>
-									<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="485"/>
-								</LabelDecoration>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="240"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1304,7 +1005,6 @@
 					<v8:content>Дополнительные реквизиты</v8:content>
 				</v8:item>
 			</Title>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Vertical</Group>
 			<Behavior>Collapsible</Behavior>
 			<Collapsed>true</Collapsed>
@@ -1652,15 +1352,6 @@
 				</v8:StringQualifiers>
 			</Settings>
 		</Attribute>
-		<Attribute name="ДанныеРасчетногоСчета" id="38">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Данные расчетного счета</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
-		</Attribute>
 		<Attribute name="ОтобразитьЗаполнениеПоДаннымЕГР" id="39">
 			<Title>
 				<v8:item>
@@ -1985,6 +1676,17 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="НадписьПояснениеПроверкиДублейФНС" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись пояснение проверки дублей ФНС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗагрузитьАдресныйКлассификатор" id="7">
@@ -2059,6 +1761,7 @@
 					<v8:content>Заполнить из файла</v8:content>
 				</v8:item>
 			</ToolTip>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="ЗаполнитьИзЭлектроннойПочты" id="3">
 			<Title>
@@ -2073,6 +1776,7 @@
 					<v8:content>Заполнить из электронной почты</v8:content>
 				</v8:item>
 			</ToolTip>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="ЗаполнитьРеквизитыПоДаннымЕГР" id="4">
 			<Title>
@@ -2293,60 +1997,38 @@
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРРасширеннаяПодсказка" id="428"/>
 				<ChildItems>
-					<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРЛевая" id="517">
+					<PictureDecoration name="ДекорацияСтрелка" id="519">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Декорация стрелка</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>CommonPicture.НачнитеОтсюда</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ContextMenu name="ДекорацияСтрелкаКонтекстноеМеню" id="520"/>
+						<ExtendedTooltip name="ДекорацияСтрелкаРасширеннаяПодсказка" id="521"/>
+					</PictureDecoration>
+					<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРПолеВвода" id="429">
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Заполнение по данным ЕГР (левая)</v8:content>
+								<v8:content>Заполнение по данным ЕГР</v8:content>
 							</v8:item>
 						</Title>
 						<Group>Horizontal</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРЛеваяРасширеннаяПодсказка" id="518"/>
-						<ChildItems>
-							<PictureDecoration name="ДекорацияСтрелка" id="519">
-								<Width>14</Width>
-								<Height>2</Height>
-								<Title formatted="false">
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Декорация стрелка</v8:content>
-									</v8:item>
-								</Title>
-								<Picture>
-									<xr:Ref>CommonPicture.НачнитеОтсюда</xr:Ref>
-									<xr:LoadTransparent>true</xr:LoadTransparent>
-								</Picture>
-								<ContextMenu name="ДекорацияСтрелкаКонтекстноеМеню" id="520"/>
-								<ExtendedTooltip name="ДекорацияСтрелкаРасширеннаяПодсказка" id="521"/>
-							</PictureDecoration>
-							<LabelDecoration name="ДекорацияОтступСлева" id="522">
-								<Width>1</Width>
-								<ContextMenu name="ДекорацияОтступСлеваКонтекстноеМеню" id="523"/>
-								<ExtendedTooltip name="ДекорацияОтступСлеваРасширеннаяПодсказка" id="524"/>
-							</LabelDecoration>
-						</ChildItems>
-					</UsualGroup>
-					<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРЦентр" id="429">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Заполнение по данным ЕГР (центр)</v8:content>
-							</v8:item>
-						</Title>
-						<Group>Vertical</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
 						<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
-						<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРЦентрРасширеннаяПодсказка" id="430"/>
+						<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРПолеВводаРасширеннаяПодсказка" id="430"/>
 						<ChildItems>
 							<InputField name="ПолеПоискаИНННаименование" id="436">
 								<DataPath>ПолеПоискаИНННаименование</DataPath>
 								<DefaultItem>true</DefaultItem>
 								<TitleLocation>Top</TitleLocation>
-								<Width>50</Width>
-								<HorizontalStretch>false</HorizontalStretch>
+								<Width>40</Width>
 								<InputHint>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -2356,25 +2038,6 @@
 								<ContextMenu name="ПолеПоискаИНННаименованиеКонтекстноеМеню" id="437"/>
 								<ExtendedTooltip name="ПолеПоискаИНННаименованиеРасширеннаяПодсказка" id="438"/>
 							</InputField>
-						</ChildItems>
-					</UsualGroup>
-					<UsualGroup name="ГруппаЗаполнениеПоДаннымЕГРПравая" id="431">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Заполнение по данным ЕГР (правая)</v8:content>
-							</v8:item>
-						</Title>
-						<Group>Vertical</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<BackColor>style:БыстрыеОтборыФонГруппы</BackColor>
-						<ExtendedTooltip name="ГруппаЗаполнениеПоДаннымЕГРПраваяРасширеннаяПодсказка" id="432"/>
-						<ChildItems>
-							<LabelDecoration name="ДекорацияОтступ" id="439">
-								<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="440"/>
-								<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="441"/>
-							</LabelDecoration>
 							<Button name="ЗаполнитьРеквизитыПоДаннымЕГР" id="442">
 								<Type>UsualButton</Type>
 								<CommandName>Form.Command.ЗаполнитьРеквизитыПоДаннымЕГР</CommandName>
@@ -2411,8 +2074,6 @@
 								<v8:content>Вид контрагента</v8:content>
 							</v8:item>
 						</Title>
-						<Width>31</Width>
-						<HorizontalStretch>false</HorizontalStretch>
 						<ListChoiceMode>true</ListChoiceMode>
 						<ChoiceList>
 							<xr:Item>
@@ -2471,11 +2132,6 @@
 						<ContextMenu name="ВидКонтекстноеМеню" id="143"/>
 						<ExtendedTooltip name="ВидExtendedTooltip" id="165"/>
 					</InputField>
-					<LabelDecoration name="ДекорацияПустаяКод" id="415">
-						<HorizontalStretch>true</HorizontalStretch>
-						<ContextMenu name="ДекорацияПустаяКодКонтекстноеМеню" id="416"/>
-						<ExtendedTooltip name="ДекорацияПустаяКодРасширеннаяПодсказка" id="417"/>
-					</LabelDecoration>
 					<InputField name="Код" id="4">
 						<DataPath>Объект.Code</DataPath>
 						<UserVisible>
@@ -2507,7 +2163,6 @@
 				<ChildItems>
 					<InputField name="Наименование" id="2">
 						<DataPath>Объект.Description</DataPath>
-						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="НаименованиеКонтекстноеМеню" id="3"/>
 						<ExtendedTooltip name="НаименованиеExtendedTooltip" id="162"/>
 					</InputField>
@@ -2532,7 +2187,6 @@
 				<ChildItems>
 					<InputField name="НаименованиеПолное" id="10">
 						<DataPath>Объект.НаименованиеПолное</DataPath>
-						<HorizontalStretch>false</HorizontalStretch>
 						<ChoiceButton>true</ChoiceButton>
 						<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="11"/>
 						<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="170"/>
@@ -2552,53 +2206,20 @@
 			</UsualGroup>
 			<InputField name="Родитель" id="27">
 				<DataPath>Объект.Parent</DataPath>
-				<HorizontalStretch>false</HorizontalStretch>
 				<CreateButton>false</CreateButton>
 				<ContextMenu name="РодительКонтекстноеМеню" id="28"/>
 				<ExtendedTooltip name="РодительExtendedTooltip" id="164"/>
 			</InputField>
 			<InputField name="СтранаРегистрации" id="373">
 				<DataPath>Объект.СтранаРегистрации</DataPath>
-				<Width>31</Width>
-				<HorizontalStretch>false</HorizontalStretch>
 				<ContextMenu name="СтранаРегистрацииКонтекстноеМеню" id="374"/>
 				<ExtendedTooltip name="СтранаРегистрацииРасширеннаяПодсказка" id="375"/>
 			</InputField>
-			<UsualGroup name="ГруппаГоловнойКонтрагент" id="150">
-				<EnableContentChange>true</EnableContentChange>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Головной контрагент</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Головной контрагент</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Group>Horizontal</Group>
-				<Representation>None</Representation>
-				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ГруппаГоловнойКонтрагентРасширеннаяПодсказка" id="175"/>
-				<ChildItems>
-					<InputField name="ГоловнойКонтрагент" id="159">
-						<DataPath>Объект.ГоловнойКонтрагент</DataPath>
-						<ContextMenu name="ГоловнойКонтрагентКонтекстноеМеню" id="160"/>
-						<ExtendedTooltip name="ГоловнойКонтрагентExtendedTooltip" id="177"/>
-					</InputField>
-					<LabelField name="ИННГоловногоКонтрагента" id="379">
-						<DataPath>Объект.ИНН</DataPath>
-						<TitleLocation>Left</TitleLocation>
-						<Width>14</Width>
-						<HorizontalStretch>false</HorizontalStretch>
-						<TextColor>style:ТекстПредопределенногоЗначения</TextColor>
-						<ContextMenu name="ИННГоловногоКонтрагентаКонтекстноеМеню" id="380"/>
-						<ExtendedTooltip name="ИННГоловногоКонтрагентаExtendedTooltip" id="381"/>
-					</LabelField>
-				</ChildItems>
-			</UsualGroup>
+			<InputField name="ГоловнойКонтрагент" id="159">
+				<DataPath>Объект.ГоловнойКонтрагент</DataPath>
+				<ContextMenu name="ГоловнойКонтрагентКонтекстноеМеню" id="160"/>
+				<ExtendedTooltip name="ГоловнойКонтрагентExtendedTooltip" id="177"/>
+			</InputField>
 			<UsualGroup name="ГруппаГосударственныйОрган" id="395">
 				<Title>
 					<v8:item>
@@ -2619,7 +2240,7 @@
 								<v8:content>Государственный орган</v8:content>
 							</v8:item>
 						</Title>
-						<Width>31</Width>
+						<Width>17</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="ВидГосударственногоОрганаКонтекстноеМеню" id="398"/>
 						<ExtendedTooltip name="ВидГосударственногоОрганаРасширеннаяПодсказка" id="399"/>
@@ -2646,8 +2267,6 @@
 					</v8:item>
 				</ToolTip>
 				<ToolTipRepresentation>Button</ToolTipRepresentation>
-				<Width>31</Width>
-				<HorizontalStretch>false</HorizontalStretch>
 				<InputHint>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
@@ -2676,59 +2295,40 @@
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="172"/>
 				<ChildItems>
-					<UsualGroup name="ГруппаЗаполнитьИНН" id="389">
-						<Title>
+					<InputField name="ИНН" id="157">
+						<DataPath>Объект.ИНН</DataPath>
+						<Width>17</Width>
+						<HorizontalStretch>false</HorizontalStretch>
+						<InputHint>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Заполнить ИНН</v8:content>
+								<v8:content>Введите ИНН</v8:content>
 							</v8:item>
-						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Заполнить ИНН</v8:content>
-							</v8:item>
-						</ToolTip>
-						<Group>Horizontal</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаЗаполнитьИННРасширеннаяПодсказка" id="390"/>
-						<ChildItems>
-							<InputField name="ИНН" id="157">
-								<DataPath>Объект.ИНН</DataPath>
-								<Width>16</Width>
-								<HorizontalStretch>false</HorizontalStretch>
-								<InputHint>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Введите ИНН</v8:content>
-									</v8:item>
-								</InputHint>
-								<ContextMenu name="ИННКонтекстноеМеню" id="158"/>
-								<ExtendedTooltip name="ИННExtendedTooltip" id="174"/>
-							</InputField>
-							<Button name="КнопкаЗаполнитьРеквизитыПоИНН" id="382">
-								<Type>UsualButton</Type>
-								<CommandName>Form.Command.ЗаполнитьРеквизитыПоИНН</CommandName>
-								<ExtendedTooltip name="КнопкаЗаполнитьРеквизитыПоИННРасширеннаяПодсказка" id="383"/>
-							</Button>
-						</ChildItems>
-					</UsualGroup>
-					<LabelField name="НадписьПоясненияНекорректногоИНН" id="347">
-						<DataPath>НадписьПоясненияНекорректногоИНН</DataPath>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Какая-то справочная информация</v8:content>
-							</v8:item>
-						</Title>
-						<TitleLocation>None</TitleLocation>
-						<HorizontalStretch>true</HorizontalStretch>
-						<ContextMenu name="НадписьПоясненияНекорректногоИННКонтекстноеМеню" id="348"/>
-						<ExtendedTooltip name="НадписьПоясненияНекорректногоИННРасширеннаяПодсказка" id="349"/>
-					</LabelField>
+						</InputHint>
+						<ContextMenu name="ИННКонтекстноеМеню" id="158"/>
+						<ExtendedTooltip name="ИННExtendedTooltip" id="174"/>
+					</InputField>
+					<Button name="КнопкаЗаполнитьРеквизитыПоИНН" id="382">
+						<Type>UsualButton</Type>
+						<CommandName>Form.Command.ЗаполнитьРеквизитыПоИНН</CommandName>
+						<ExtendedTooltip name="КнопкаЗаполнитьРеквизитыПоИННРасширеннаяПодсказка" id="383"/>
+					</Button>
 				</ChildItems>
 			</UsualGroup>
+			<LabelField name="НадписьПоясненияНекорректногоИНН" id="347">
+				<DataPath>НадписьПоясненияНекорректногоИНН</DataPath>
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Какая-то справочная информация</v8:content>
+					</v8:item>
+				</Title>
+				<TitleLocation>None</TitleLocation>
+				<Width>57</Width>
+				<ContextMenu name="НадписьПоясненияНекорректногоИННКонтекстноеМеню" id="348"/>
+				<ExtendedTooltip name="НадписьПоясненияНекорректногоИННРасширеннаяПодсказка" id="349"/>
+			</LabelField>
 			<UsualGroup name="ГруппаКПП" id="345">
 				<Title>
 					<v8:item>
@@ -2749,7 +2349,7 @@
 				<ChildItems>
 					<InputField name="КПП" id="14">
 						<DataPath>Объект.КПП</DataPath>
-						<Width>16</Width>
+						<Width>17</Width>
 						<InputHint>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -2770,21 +2370,29 @@
 						<ContextMenu name="ИсторияКППКонтекстноеМеню" id="425"/>
 						<ExtendedTooltip name="ИсторияКППРасширеннаяПодсказка" id="426"/>
 					</LabelDecoration>
-					<LabelField name="НадписьПоясненияНекорректногоКПП" id="359">
-						<DataPath>НадписьПоясненияНекорректногоКПП</DataPath>
-						<TitleLocation>None</TitleLocation>
-						<HorizontalStretch>true</HorizontalStretch>
-						<ContextMenu name="НадписьПоясненияНекорректногоКППКонтекстноеМеню" id="360"/>
-						<ExtendedTooltip name="НадписьПоясненияНекорректногоКППРасширеннаяПодсказка" id="361"/>
-					</LabelField>
 				</ChildItems>
 			</UsualGroup>
+			<LabelField name="НадписьПоясненияНекорректногоКПП" id="359">
+				<DataPath>НадписьПоясненияНекорректногоКПП</DataPath>
+				<Visible>false</Visible>
+				<TitleLocation>None</TitleLocation>
+				<Width>57</Width>
+				<ContextMenu name="НадписьПоясненияНекорректногоКППКонтекстноеМеню" id="360"/>
+				<ExtendedTooltip name="НадписьПоясненияНекорректногоКППРасширеннаяПодсказка" id="361"/>
+			</LabelField>
+			<LabelField name="НадписьПояснениеПроверкиДублейФНС" id="594">
+				<DataPath>НадписьПояснениеПроверкиДублейФНС</DataPath>
+				<Visible>false</Visible>
+				<TitleLocation>None</TitleLocation>
+				<Width>57</Width>
+				<ContextMenu name="НадписьПояснениеПроверкиДублейФНСКонтекстноеМеню" id="595"/>
+				<ExtendedTooltip name="НадписьПояснениеПроверкиДублейФНСРасширеннаяПодсказка" id="596"/>
+			</LabelField>
 			<InputField name="КодПоОКПО" id="25">
 				<DataPath>Объект.КодПоОКПО</DataPath>
 				<UserVisible>
 					<xr:Common>false</xr:Common>
 				</UserVisible>
-				<Width>16</Width>
 				<ContextMenu name="КодПоОКПОКонтекстноеМеню" id="26"/>
 				<ExtendedTooltip name="КодПоОКПОExtendedTooltip" id="180"/>
 			</InputField>
@@ -2796,7 +2404,6 @@
 						<v8:content>Рег. номер</v8:content>
 					</v8:item>
 				</Title>
-				<Width>31</Width>
 				<HorizontalStretch>false</HorizontalStretch>
 				<InputHint>
 					<v8:item>
@@ -2814,12 +2421,6 @@
 						<v8:content>Регистрация в качестве индивидуального предпринимателя</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа регистрация как ИП</v8:content>
-					</v8:item>
-				</ToolTip>
 				<Group>Vertical</Group>
 				<Collapsed>true</Collapsed>
 				<ControlRepresentation>Picture</ControlRepresentation>
@@ -2830,8 +2431,6 @@
 				<ChildItems>
 					<InputField name="СвидетельствоСерияНомер" id="405">
 						<DataPath>Объект.СвидетельствоСерияНомер</DataPath>
-						<Width>31</Width>
-						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="СвидетельствоСерияНомерКонтекстноеМеню" id="406"/>
 						<ExtendedTooltip name="СвидетельствоСерияНомерРасширеннаяПодсказка" id="407"/>
 					</InputField>
@@ -2856,9 +2455,6 @@
 			<InputField name="Комментарий" id="53">
 				<DataPath>Объект.Комментарий</DataPath>
 				<TitleLocation>Left</TitleLocation>
-				<Width>74</Width>
-				<HorizontalStretch>false</HorizontalStretch>
-				<VerticalStretch>false</VerticalStretch>
 				<ContextMenu name="КомментарийКонтекстноеМеню" id="54"/>
 				<ExtendedTooltip name="КомментарийExtendedTooltip" id="243"/>
 			</InputField>
@@ -2869,12 +2465,7 @@
 						<v8:content>Основной банковский счет</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Основной банковский счет</v8:content>
-					</v8:item>
-				</ToolTip>
+				<Width>1000</Width>
 				<Group>Vertical</Group>
 				<Behavior>Collapsible</Behavior>
 				<ControlRepresentation>Picture</ControlRepresentation>
@@ -2889,12 +2480,6 @@
 								<v8:content>Банк</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Банк</v8:content>
-							</v8:item>
-						</ToolTip>
 						<Group>Horizontal</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
@@ -2914,11 +2499,9 @@
 										<v8:content>Введите БИК или наименование банка</v8:content>
 									</v8:item>
 								</ToolTip>
-								<Width>50</Width>
-								<HorizontalStretch>false</HorizontalStretch>
+								<Width>46</Width>
 								<CreateButton>false</CreateButton>
 								<ChooseType>false</ChooseType>
-								<DropListWidth>52</DropListWidth>
 								<InputHint>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -2943,7 +2526,6 @@
 										<v8:content>Подсказка банка</v8:content>
 									</v8:item>
 								</ToolTip>
-								<HorizontalStretch>false</HorizontalStretch>
 								<TextColor>style:ПросроченныеДанныеЦвет</TextColor>
 								<ContextMenu name="ПодсказкаБанкКонтекстноеМеню" id="579"/>
 								<ExtendedTooltip name="ПодсказкаБанкРасширеннаяПодсказка" id="580"/>
@@ -2957,12 +2539,6 @@
 								<v8:content>Номер счета</v8:content>
 							</v8:item>
 						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Номер Счета</v8:content>
-							</v8:item>
-						</ToolTip>
 						<Group>Horizontal</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
@@ -3028,6 +2604,7 @@
 						<v8:content>Адрес и телефон</v8:content>
 					</v8:item>
 				</Title>
+				<Width>1000</Width>
 				<Group>Vertical</Group>
 				<Behavior>Collapsible</Behavior>
 				<Collapsed>true</Collapsed>
@@ -3050,15 +2627,12 @@
 						<ExtendedTooltip name="ГруппаЗагрузкаАдресногоКлассификатораРасширеннаяПодсказка" id="267"/>
 						<ChildItems>
 							<LabelDecoration name="ДекорацияАдресныйКлассификаторНеЗагружен" id="268">
-								<HorizontalStretch>true</HorizontalStretch>
 								<Title formatted="false">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Загрузите адресный классификатор, чтобы вводить адреса в специальном формате,
-который требуется для сдачи отчетности в ИФНС и фонды.</v8:content>
+										<v8:content>Загрузите адресный классификатор, чтобы вводить адреса в специальном формате, который требуется для сдачи отчетности в ИФНС и фонды.</v8:content>
 									</v8:item>
 								</Title>
-								<VerticalAlign>Center</VerticalAlign>
 								<ContextMenu name="ДекорацияАдресныйКлассификаторНеЗагруженКонтекстноеМеню" id="269"/>
 								<ExtendedTooltip name="ДекорацияАдресныйКлассификаторНеЗагруженExtendedTooltip" id="270"/>
 							</LabelDecoration>
@@ -3074,159 +2648,68 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Группа адреса</v8:content>
+								<v8:content>Адреса</v8:content>
 							</v8:item>
 						</Title>
-						<Group>Horizontal</Group>
+						<Group>Vertical</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаАдресаРасширеннаяПодсказка" id="246"/>
 						<ChildItems>
-							<UsualGroup name="ГруппаЗаголовокАдреса" id="247">
+							<LabelField name="КонтактнаяИнформацияПолеЮрАдресКонтрагента" id="98">
+								<DataPath>КонтактнаяИнформацияПолеЮрАдресКонтрагента</DataPath>
+								<SkipOnInput>false</SkipOnInput>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Группа заголовок адреса</v8:content>
+										<v8:content>Юридический адрес</v8:content>
 									</v8:item>
 								</Title>
-								<Group>Vertical</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаЗаголовокАдресаРасширеннаяПодсказка" id="248"/>
-								<ChildItems>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагента" id="249">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Юридический адрес:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="250"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="251"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагента" id="252">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Фактический адрес:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="253"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="254"/>
-									</LabelDecoration>
-									<LabelDecoration name="ДекорацияОтступФактАдрес" id="258">
-										<ContextMenu name="ДекорацияОтступФактАдресКонтекстноеМеню" id="259"/>
-										<ExtendedTooltip name="ДекорацияОтступФактАдресРасширеннаяПодсказка" id="260"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="255">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Почтовый адрес:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="256"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="257"/>
-									</LabelDecoration>
-									<LabelDecoration name="ДекорацияОтступПочтовыйАдрес" id="261">
-										<ContextMenu name="ДекорацияОтступПочтовыйАдресКонтекстноеМеню" id="262"/>
-										<ExtendedTooltip name="ДекорацияОтступПочтовыйАдресРасширеннаяПодсказка" id="263"/>
-									</LabelDecoration>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаПолеАдреса" id="264">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Hiperlink>true</Hiperlink>
+								<ContextMenu name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="213"/>
+							</LabelField>
+							<UsualGroup name="ГруппаФактАдресКонтрагента" id="106">
+								<EnableContentChange>true</EnableContentChange>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Группа поле адреса</v8:content>
+										<v8:content>Фактический адрес</v8:content>
 									</v8:item>
 								</Title>
 								<Group>Vertical</Group>
-								<Representation>None</Representation>
+								<VerticalSpacing>Half</VerticalSpacing>
+								<Representation>NormalSeparation</Representation>
 								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаПолеАдресаРасширеннаяПодсказка" id="265"/>
+								<ExtendedTooltip name="ГруппаФактАдресКонтрагентаExtendedTooltip" id="218"/>
 								<ChildItems>
-									<UsualGroup name="ГруппаЮрАдресКонтрагента" id="97">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Юридический адрес</v8:content>
-											</v8:item>
-										</Title>
-										<Group>Horizontal</Group>
-										<Representation>None</Representation>
-										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаЮрАдресКонтрагентаExtendedTooltip" id="212"/>
-										<ChildItems>
-											<LabelField name="КонтактнаяИнформацияПолеЮрАдресКонтрагента" id="98">
-												<DataPath>КонтактнаяИнформацияПолеЮрАдресКонтрагента</DataPath>
-												<SkipOnInput>false</SkipOnInput>
-												<TitleLocation>None</TitleLocation>
-												<Hiperlink>true</Hiperlink>
-												<ContextMenu name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="99"/>
-												<ExtendedTooltip name="КонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="213"/>
-											</LabelField>
-										</ChildItems>
-									</UsualGroup>
-									<Pages name="ГруппаФактАдресКонтрагента" id="106">
-										<EnableContentChange>true</EnableContentChange>
+									<LabelField name="КонтактнаяИнформацияПолеФактАдресКонтрагента" id="108">
+										<DataPath>КонтактнаяИнформацияПолеФактАдресКонтрагента</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
 												<v8:content>Фактический адрес</v8:content>
 											</v8:item>
 										</Title>
-										<PagesRepresentation>None</PagesRepresentation>
-										<ExtendedTooltip name="ГруппаФактАдресКонтрагентаExtendedTooltip" id="218"/>
-										<ChildItems>
-											<Page name="СтраницаФактАдресКонтрагента" id="107">
-												<EnableContentChange>true</EnableContentChange>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Фактический адрес контрагента</v8:content>
-													</v8:item>
-												</Title>
-												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="СтраницаФактАдресКонтрагентаExtendedTooltip" id="219"/>
-												<ChildItems>
-													<LabelField name="КонтактнаяИнформацияПолеФактАдресКонтрагента" id="108">
-														<DataPath>КонтактнаяИнформацияПолеФактАдресКонтрагента</DataPath>
-														<Title>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Фактический адрес</v8:content>
-															</v8:item>
-														</Title>
-														<TitleLocation>None</TitleLocation>
-														<Hiperlink>true</Hiperlink>
-														<ContextMenu name="КонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="109"/>
-														<ExtendedTooltip name="КонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="220"/>
-													</LabelField>
-												</ChildItems>
-											</Page>
-											<Page name="СтраницаФактАдресКонтрагентаСовпадает" id="110">
-												<EnableContentChange>true</EnableContentChange>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Фактический адрес контрагента совпадает с юридическим</v8:content>
-													</v8:item>
-												</Title>
-												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="СтраницаФактАдресКонтрагентаСовпадаетExtendedTooltip" id="221"/>
-												<ChildItems>
-													<LabelField name="ФактАдресКонтрагентаСовпадает" id="111">
-														<DataPath>ФактАдресКонтрагентаСовпадает</DataPath>
-														<TitleLocation>None</TitleLocation>
-														<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
-														<ContextMenu name="ФактАдресКонтрагентаСовпадаетКонтекстноеМеню" id="112"/>
-														<ExtendedTooltip name="ФактАдресКонтрагентаСовпадаетExtendedTooltip" id="222"/>
-													</LabelField>
-												</ChildItems>
-											</Page>
-										</ChildItems>
-									</Pages>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Hiperlink>true</Hiperlink>
+										<ContextMenu name="КонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="109"/>
+										<ExtendedTooltip name="КонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="220"/>
+									</LabelField>
+									<LabelField name="ФактАдресКонтрагентаСовпадает" id="111">
+										<DataPath>ФактАдресКонтрагентаСовпадает</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Фактический адрес</v8:content>
+											</v8:item>
+										</Title>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
+										<ContextMenu name="ФактАдресКонтрагентаСовпадаетКонтекстноеМеню" id="112"/>
+										<ExtendedTooltip name="ФактАдресКонтрагентаСовпадаетExtendedTooltip" id="222"/>
+									</LabelField>
 									<CheckBoxField name="ЮрФактАдресаСовпадают" id="116">
 										<DataPath>ЮрФактАдресаСовпадают</DataPath>
 										<TitleLocation>Right</TitleLocation>
@@ -3234,60 +2717,41 @@
 										<ContextMenu name="ЮрФактАдресаСовпадаютКонтекстноеМеню" id="117"/>
 										<ExtendedTooltip name="ЮрФактАдресаСовпадаютExtendedTooltip" id="225"/>
 									</CheckBoxField>
-									<Pages name="ГруппаПочтовыйАдресКонтрагента" id="121">
-										<EnableContentChange>true</EnableContentChange>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаПочтовыйАдресКонтрагента" id="121">
+								<EnableContentChange>true</EnableContentChange>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Почтовый адрес</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<VerticalSpacing>Half</VerticalSpacing>
+								<Representation>NormalSeparation</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПочтовыйАдресКонтрагентаExtendedTooltip" id="228"/>
+								<ChildItems>
+									<InputField name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="123">
+										<DataPath>КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента</DataPath>
+										<ChoiceButton>true</ChoiceButton>
+										<ContextMenu name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="124"/>
+										<ExtendedTooltip name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="230"/>
+									</InputField>
+									<LabelField name="ПочтовыйАдресКонтрагентаСовпадает" id="126">
+										<DataPath>ПочтовыйАдресКонтрагентаСовпадает</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
 												<v8:content>Почтовый адрес</v8:content>
 											</v8:item>
 										</Title>
-										<PagesRepresentation>None</PagesRepresentation>
-										<ExtendedTooltip name="ГруппаПочтовыйАдресКонтрагентаExtendedTooltip" id="228"/>
-										<ChildItems>
-											<Page name="СтраницаПочтовыйАдресКонтрагента" id="122">
-												<EnableContentChange>true</EnableContentChange>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Почтовый адрес контрагента</v8:content>
-													</v8:item>
-												</Title>
-												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="СтраницаПочтовыйАдресКонтрагентаExtendedTooltip" id="229"/>
-												<ChildItems>
-													<InputField name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="123">
-														<DataPath>КонтактнаяИнформацияПолеПочтовыйАдресКонтрагента</DataPath>
-														<TitleLocation>None</TitleLocation>
-														<ChoiceButton>true</ChoiceButton>
-														<ContextMenu name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="124"/>
-														<ExtendedTooltip name="КонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="230"/>
-													</InputField>
-												</ChildItems>
-											</Page>
-											<Page name="СтраницаПочтовыйАдресКонтрагентаСовпадает" id="125">
-												<EnableContentChange>true</EnableContentChange>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Почтовый адрес контрагента совпадает с юридическим адресом</v8:content>
-													</v8:item>
-												</Title>
-												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="СтраницаПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="231"/>
-												<ChildItems>
-													<LabelField name="ПочтовыйАдресКонтрагентаСовпадает" id="126">
-														<DataPath>ПочтовыйАдресКонтрагентаСовпадает</DataPath>
-														<TitleLocation>None</TitleLocation>
-														<VerticalAlign>Bottom</VerticalAlign>
-														<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
-														<ContextMenu name="ПочтовыйАдресКонтрагентаСовпадаетКонтекстноеМеню" id="127"/>
-														<ExtendedTooltip name="ПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="232"/>
-													</LabelField>
-												</ChildItems>
-											</Page>
-										</ChildItems>
-									</Pages>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:НадписьПоясняющаяГиперссылку</TextColor>
+										<ContextMenu name="ПочтовыйАдресКонтрагентаСовпадаетКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="ПочтовыйАдресКонтрагентаСовпадаетExtendedTooltip" id="232"/>
+									</LabelField>
 									<CheckBoxField name="ЮрПочтовыйАдресаСовпадают" id="131">
 										<DataPath>ЮрПочтовыйАдресаСовпадают</DataPath>
 										<TitleLocation>Right</TitleLocation>
@@ -3297,175 +2761,128 @@
 									</CheckBoxField>
 								</ChildItems>
 							</UsualGroup>
-							<UsualGroup name="ГруппаДействийАдреса" id="488">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Группа действий адреса</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Vertical</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаДействийАдресаРасширеннаяПодсказка" id="489"/>
-								<ChildItems>
-									<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагента" id="505">
-										<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагентаКонтекстноеМеню" id="506"/>
-										<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеЮрАдресКонтрагентаРасширеннаяПодсказка" id="507"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагента" id="511">
-										<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагентаКонтекстноеМеню" id="512"/>
-										<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеФактАдресКонтрагентаРасширеннаяПодсказка" id="513"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаглушкаДействияФактАдресОтступ" id="496">
-										<ContextMenu name="ЗаглушкаДействияФактАдресОтступКонтекстноеМеню" id="497"/>
-										<ExtendedTooltip name="ЗаглушкаДействияФактАдресОтступРасширеннаяПодсказка" id="498"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагента" id="508">
-										<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаКонтекстноеМеню" id="509"/>
-										<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеПочтовыйАдресКонтрагентаРасширеннаяПодсказка" id="510"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаглушкаДействияПочтовыйАдрес" id="514">
-										<ContextMenu name="ЗаглушкаДействияПочтовыйАдресКонтекстноеМеню" id="515"/>
-										<ExtendedTooltip name="ЗаглушкаДействияПочтовыйАдресРасширеннаяПодсказка" id="516"/>
-									</LabelDecoration>
-								</ChildItems>
-							</UsualGroup>
 						</ChildItems>
 					</UsualGroup>
 					<UsualGroup name="ГруппаКомпоновкиКонтактнойИнформации" id="449">
-						<Group>Horizontal</Group>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Контактная информация</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаКомпоновкиКонтактнойИнформацииРасширеннаяПодсказка" id="450"/>
 						<ChildItems>
-							<UsualGroup name="ГруппаЗаголовковКонтактнойИнформации" id="451">
-								<Group>Vertical</Group>
+							<UsualGroup name="ГруппаКонтактнаяИнформацияПолеТелефонКонтрагента" id="597">
+								<EnableContentChange>true</EnableContentChange>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Телефон</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаЗаголовковКонтактнойИнформацииРасширеннаяПодсказка" id="452"/>
-								<ChildItems>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагента" id="468">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Телефон:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагентаКонтекстноеМеню" id="469"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="470"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагенты" id="465">
-										<UserVisible>
-											<xr:Common>false</xr:Common>
-										</UserVisible>
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Факс:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="466"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="467"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагенты" id="474">
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Email:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="475"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="476"/>
-									</LabelDecoration>
-									<LabelDecoration name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="477">
-										<UserVisible>
-											<xr:Common>false</xr:Common>
-										</UserVisible>
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Другие контакты:</v8:content>
-											</v8:item>
-										</Title>
-										<ContextMenu name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="478"/>
-										<ExtendedTooltip name="ЗаголовокКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="479"/>
-									</LabelDecoration>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаПолейВводаКонтактнойИнформации" id="453">
-								<Group>Vertical</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаПолейВводаКонтактнойИнформацииРасширеннаяПодсказка" id="454"/>
+								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="598"/>
 								<ChildItems>
 									<InputField name="КонтактнаяИнформацияПолеТелефонКонтрагента" id="134">
 										<DataPath>КонтактнаяИнформацияПолеТелефонКонтрагента</DataPath>
-										<TitleLocation>None</TitleLocation>
+										<Width>25</Width>
+										<HorizontalStretch>false</HorizontalStretch>
 										<ChoiceButton>true</ChoiceButton>
 										<ContextMenu name="КонтактнаяИнформацияПолеТелефонКонтрагентаКонтекстноеМеню" id="135"/>
 										<ExtendedTooltip name="КонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="237"/>
 									</InputField>
-									<InputField name="КонтактнаяИнформацияПолеФаксКонтрагенты" id="136">
-										<DataPath>КонтактнаяИнформацияПолеФаксКонтрагенты</DataPath>
-										<UserVisible>
-											<xr:Common>false</xr:Common>
-										</UserVisible>
-										<TitleLocation>None</TitleLocation>
-										<ContextMenu name="КонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="137"/>
-										<ExtendedTooltip name="КонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="238"/>
-									</InputField>
-									<InputField name="КонтактнаяИнформацияПолеEmailКонтрагенты" id="138">
-										<DataPath>КонтактнаяИнформацияПолеEmailКонтрагенты</DataPath>
-										<TitleLocation>None</TitleLocation>
-										<ContextMenu name="КонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="139"/>
-										<ExtendedTooltip name="КонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="239"/>
-									</InputField>
-									<InputField name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="140">
-										<DataPath>КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты</DataPath>
-										<UserVisible>
-											<xr:Common>false</xr:Common>
-										</UserVisible>
-										<TitleLocation>None</TitleLocation>
-										<Height>2</Height>
-										<VerticalStretch>false</VerticalStretch>
-										<MultiLine>true</MultiLine>
-										<ContextMenu name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="141"/>
-										<ExtendedTooltip name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="240"/>
-									</InputField>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаДействийКонтактнойИнформации" id="458">
-								<Group>Vertical</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаДействийКонтактнойИнформацииРасширеннаяПодсказка" id="459"/>
-								<ChildItems>
 									<Button name="КомандаКонтактнаяИнформацияПолеТелефонКонтрагента" id="527">
 										<Type>UsualButton</Type>
 										<CommandName>Form.Command.КомандаКонтактнаяИнформацияПолеТелефонКонтрагента</CommandName>
 										<ExtendedTooltip name="КомандаКонтактнаяИнформацияПолеТелефонКонтрагентаРасширеннаяПодсказка" id="528"/>
 									</Button>
-									<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагенты" id="471">
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаКонтактнаяИнформацияПолеФаксКонтрагенты" id="599">
+								<EnableContentChange>true</EnableContentChange>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Факс</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="600"/>
+								<ChildItems>
+									<InputField name="КонтактнаяИнформацияПолеФаксКонтрагенты" id="136">
+										<DataPath>КонтактнаяИнформацияПолеФаксКонтрагенты</DataPath>
 										<UserVisible>
 											<xr:Common>false</xr:Common>
 										</UserVisible>
-										<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="472"/>
-										<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="473"/>
-									</LabelDecoration>
+										<Width>25</Width>
+										<HorizontalStretch>false</HorizontalStretch>
+										<ContextMenu name="КонтактнаяИнформацияПолеФаксКонтрагентыКонтекстноеМеню" id="137"/>
+										<ExtendedTooltip name="КонтактнаяИнформацияПолеФаксКонтрагентыРасширеннаяПодсказка" id="238"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаКонтактнаяИнформацияПолеEmailКонтрагенты" id="606">
+								<EnableContentChange>true</EnableContentChange>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа контактная информация поле email контрагенты</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа контактная информация поле email контрагенты</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="607"/>
+								<ChildItems>
+									<InputField name="КонтактнаяИнформацияПолеEmailКонтрагенты" id="138">
+										<DataPath>КонтактнаяИнформацияПолеEmailКонтрагенты</DataPath>
+										<Width>25</Width>
+										<HorizontalStretch>false</HorizontalStretch>
+										<ContextMenu name="КонтактнаяИнформацияПолеEmailКонтрагентыКонтекстноеМеню" id="139"/>
+										<ExtendedTooltip name="КонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="239"/>
+									</InputField>
 									<Button name="КомандаКонтактнаяИнформацияПолеEmailКонтрагенты" id="486">
 										<Type>UsualButton</Type>
 										<CommandName>Form.Command.КомандаКонтактнаяИнформацияПолеEmailКонтрагенты</CommandName>
 										<ExtendedTooltip name="КомандаКонтактнаяИнформацияПолеEmailКонтрагентыРасширеннаяПодсказка" id="487"/>
 									</Button>
-									<LabelDecoration name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="483">
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаКонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="613">
+								<EnableContentChange>true</EnableContentChange>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Другая информация</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="614"/>
+								<ChildItems>
+									<InputField name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты" id="140">
+										<DataPath>КонтактнаяИнформацияПолеДругаяИнформацияКонтрагенты</DataPath>
 										<UserVisible>
 											<xr:Common>false</xr:Common>
 										</UserVisible>
-										<Height>2</Height>
-										<ContextMenu name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="484"/>
-										<ExtendedTooltip name="ЗаглушкаДействияКонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="485"/>
-									</LabelDecoration>
+										<TitleLocation>Left</TitleLocation>
+										<ContextMenu name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыКонтекстноеМеню" id="141"/>
+										<ExtendedTooltip name="КонтактнаяИнформацияПолеДругаяИнформацияКонтрагентыРасширеннаяПодсказка" id="240"/>
+									</InputField>
 								</ChildItems>
 							</UsualGroup>
 						</ChildItems>
@@ -3479,7 +2896,6 @@
 						<v8:content>Дополнительные реквизиты</v8:content>
 					</v8:item>
 				</Title>
-				<HorizontalStretch>true</HorizontalStretch>
 				<Group>Vertical</Group>
 				<Behavior>Collapsible</Behavior>
 				<Collapsed>true</Collapsed>
@@ -3827,15 +3243,6 @@
 					</v8:StringQualifiers>
 				</Settings>
 			</Attribute>
-			<Attribute name="ДанныеРасчетногоСчета" id="38">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Данные расчетного счета</v8:content>
-					</v8:item>
-				</Title>
-				<Type/>
-			</Attribute>
 			<Attribute name="ОтобразитьЗаполнениеПоДаннымЕГР" id="39">
 				<Title>
 					<v8:item>
@@ -4160,6 +3567,17 @@
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 			</Attribute>
+			<Attribute name="НадписьПояснениеПроверкиДублейФНС" id="59">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Надпись пояснение проверки дублей ФНС</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>v8ui:FormattedString</v8:Type>
+				</Type>
+			</Attribute>
 		</Attributes>
 		<Commands>
 			<Command name="ЗагрузитьАдресныйКлассификатор" id="7">
@@ -4234,6 +3652,7 @@
 						<v8:content>Заполнить из файла</v8:content>
 					</v8:item>
 				</ToolTip>
+				<ModifiesSavedData>true</ModifiesSavedData>
 			</Command>
 			<Command name="ЗаполнитьИзЭлектроннойПочты" id="3">
 				<Title>
@@ -4248,6 +3667,7 @@
 						<v8:content>Заполнить из электронной почты</v8:content>
 					</v8:item>
 				</ToolTip>
+				<ModifiesSavedData>true</ModifiesSavedData>
 			</Command>
 			<Command name="ЗаполнитьРеквизитыПоДаннымЕГР" id="4">
 				<Title>

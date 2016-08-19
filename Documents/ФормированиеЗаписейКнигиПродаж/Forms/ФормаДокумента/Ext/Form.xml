@@ -205,26 +205,10 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаНомерИДатаExtendedTooltip" id="447"/>
 									<ChildItems>
-										<PictureField name="СостояниеДокумента" id="580">
-											<DataPath>СостояниеДокумента</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<Width>2</Width>
-											<Height>1</Height>
-											<HorizontalStretch>false</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
-											<ValuesPicture>
-												<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</ValuesPicture>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-											</Border>
-											<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="581"/>
-											<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="582"/>
-										</PictureField>
 										<InputField name="Номер" id="1">
 											<DataPath>Объект.Number</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="НомерExtendedTooltip" id="448"/>
 										</InputField>
@@ -240,14 +224,27 @@
 											<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
 											<ExtendedTooltip name="ДатаExtendedTooltip" id="449"/>
 										</InputField>
+										<PictureField name="СостояниеДокумента" id="580">
+											<DataPath>СостояниеДокумента</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>2</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="581">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="582"/>
+										</PictureField>
 									</ChildItems>
 								</UsualGroup>
-								<LabelDecoration name="Декорация1" id="565">
-									<Width>1</Width>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="Декорация1КонтекстноеМеню" id="566"/>
-									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="567"/>
-								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаШапкаПравая" id="189">
@@ -490,6 +487,7 @@
 										<InputField name="РеализацияКорректируемыйПериод" id="290">
 											<DataPath>Объект.Реализация.КорректируемыйПериод</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>17</Width>
 											<ContextMenu name="РеализацияКорректируемыйПериодКонтекстноеМеню" id="291"/>
 											<ExtendedTooltip name="РеализацияКорректируемыйПериодExtendedTooltip" id="473"/>
 										</InputField>
@@ -585,12 +583,12 @@
 											<ChoiceParameterLinks>
 												<xr:Link>
 													<xr:Name>Отбор.ДоговорКонтрагента</xr:Name>
-													<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:cc641f41-4e76-434f-ad4e-6cf2fd91bd53</xr:DataPath>
+													<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:87dea0e8-c235-41bc-8a87-28af5b211dff</xr:DataPath>
 													<xr:ValueChange>Clear</xr:ValueChange>
 												</xr:Link>
 												<xr:Link>
 													<xr:Name>Отбор.Контрагент</xr:Name>
-													<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:c5ab99d8-fac2-4f51-b3fe-ee05532703f2</xr:DataPath>
+													<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:33387e27-573e-43e8-bab5-cb7889ac0ce9</xr:DataPath>
 													<xr:ValueChange>Clear</xr:ValueChange>
 												</xr:Link>
 											</ChoiceParameterLinks>
@@ -665,6 +663,7 @@
 										<InputField name="АвансыКорректируемыйПериод" id="320">
 											<DataPath>Объект.Авансы.КорректируемыйПериод</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>17</Width>
 											<ContextMenu name="АвансыКорректируемыйПериодКонтекстноеМеню" id="321"/>
 											<ExtendedTooltip name="АвансыКорректируемыйПериодExtendedTooltip" id="489"/>
 										</InputField>
@@ -866,6 +865,7 @@
 										<InputField name="НачисленКУплатеКорректируемыйПериод" id="352">
 											<DataPath>Объект.НачисленКУплате.КорректируемыйПериод</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>17</Width>
 											<ContextMenu name="НачисленКУплатеКорректируемыйПериодКонтекстноеМеню" id="353"/>
 											<ExtendedTooltip name="НачисленКУплатеКорректируемыйПериодExtendedTooltip" id="506"/>
 										</InputField>
@@ -1112,7 +1112,6 @@
 										<InputField name="ВосстановленСчетУчетаНДС" id="398">
 											<DataPath>Объект.Восстановлен.СчетУчетаНДС</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<DropListWidth>40</DropListWidth>
 											<ContextMenu name="ВосстановленСчетУчетаНДСКонтекстноеМеню" id="399"/>
 											<ExtendedTooltip name="ВосстановленСчетУчетаНДСExtendedTooltip" id="532"/>
 										</InputField>
@@ -1161,6 +1160,7 @@
 										<InputField name="ВосстановленКорректируемыйПериод" id="408">
 											<DataPath>Объект.Восстановлен.КорректируемыйПериод</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>17</Width>
 											<ContextMenu name="ВосстановленКорректируемыйПериодКонтекстноеМеню" id="409"/>
 											<ExtendedTooltip name="ВосстановленКорректируемыйПериодExtendedTooltip" id="537"/>
 										</InputField>
@@ -1339,16 +1339,12 @@
 					<v8:content>Подвал</v8:content>
 				</v8:item>
 			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="554"/>
 			<ChildItems>
-				<LabelDecoration name="ДекорацияПодвалОтступ" id="239">
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="ДекорацияПодвалОтступКонтекстноеМеню" id="240"/>
-					<ExtendedTooltip name="ДекорацияПодвалОтступExtendedTooltip" id="555"/>
-				</LabelDecoration>
 				<UsualGroup name="ГруппаИтоги" id="561">
 					<Title>
 						<v8:item>
@@ -2104,26 +2100,10 @@
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ГруппаНомерИДатаExtendedTooltip" id="447"/>
 										<ChildItems>
-											<PictureField name="СостояниеДокумента" id="580">
-												<DataPath>СостояниеДокумента</DataPath>
-												<TitleLocation>None</TitleLocation>
-												<Width>2</Width>
-												<Height>1</Height>
-												<HorizontalStretch>false</HorizontalStretch>
-												<VerticalStretch>false</VerticalStretch>
-												<ValuesPicture>
-													<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-													<xr:LoadTransparent>true</xr:LoadTransparent>
-												</ValuesPicture>
-												<Border width="1">
-													<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-												</Border>
-												<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="581"/>
-												<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="582"/>
-											</PictureField>
 											<InputField name="Номер" id="1">
 												<DataPath>Объект.Number</DataPath>
 												<EditMode>EnterOnInput</EditMode>
+												<HorizontalStretch>false</HorizontalStretch>
 												<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
 												<ExtendedTooltip name="НомерExtendedTooltip" id="448"/>
 											</InputField>
@@ -2139,14 +2119,28 @@
 												<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
 												<ExtendedTooltip name="ДатаExtendedTooltip" id="449"/>
 											</InputField>
+											<PictureField name="СостояниеДокумента" id="580">
+												<DataPath>СостояниеДокумента</DataPath>
+												<TitleLocation>None</TitleLocation>
+												<GroupVerticalAlign>Center</GroupVerticalAlign>
+												<Width>2</Width>
+												<Height>1</Height>
+												<HorizontalStretch>false</HorizontalStretch>
+												<VerticalStretch>false</VerticalStretch>
+												<ValuesPicture>
+													<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</ValuesPicture>
+												<Border width="1">
+													<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+												</Border>
+												<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="581">
+													<Autofill>false</Autofill>
+												</ContextMenu>
+												<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="582"/>
+											</PictureField>
 										</ChildItems>
 									</UsualGroup>
-									<LabelDecoration name="Декорация1" id="565">
-										<Width>1</Width>
-										<HorizontalStretch>true</HorizontalStretch>
-										<ContextMenu name="Декорация1КонтекстноеМеню" id="566"/>
-										<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="567"/>
-									</LabelDecoration>
 								</ChildItems>
 							</UsualGroup>
 							<UsualGroup name="ГруппаШапкаПравая" id="189">
@@ -2389,6 +2383,7 @@
 											<InputField name="РеализацияКорректируемыйПериод" id="290">
 												<DataPath>Объект.Реализация.КорректируемыйПериод</DataPath>
 												<EditMode>EnterOnInput</EditMode>
+												<Width>17</Width>
 												<ContextMenu name="РеализацияКорректируемыйПериодКонтекстноеМеню" id="291"/>
 												<ExtendedTooltip name="РеализацияКорректируемыйПериодExtendedTooltip" id="473"/>
 											</InputField>
@@ -2484,12 +2479,12 @@
 												<ChoiceParameterLinks>
 													<xr:Link>
 														<xr:Name>Отбор.ДоговорКонтрагента</xr:Name>
-														<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:cc641f41-4e76-434f-ad4e-6cf2fd91bd53</xr:DataPath>
+														<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:87dea0e8-c235-41bc-8a87-28af5b211dff</xr:DataPath>
 														<xr:ValueChange>Clear</xr:ValueChange>
 													</xr:Link>
 													<xr:Link>
 														<xr:Name>Отбор.Контрагент</xr:Name>
-														<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:c5ab99d8-fac2-4f51-b3fe-ee05532703f2</xr:DataPath>
+														<xr:DataPath xsi:type="xs:string">51:02023637-7868-4a5f-8576-835a76e0c9ba/0:33387e27-573e-43e8-bab5-cb7889ac0ce9</xr:DataPath>
 														<xr:ValueChange>Clear</xr:ValueChange>
 													</xr:Link>
 												</ChoiceParameterLinks>
@@ -2564,6 +2559,7 @@
 											<InputField name="АвансыКорректируемыйПериод" id="320">
 												<DataPath>Объект.Авансы.КорректируемыйПериод</DataPath>
 												<EditMode>EnterOnInput</EditMode>
+												<Width>17</Width>
 												<ContextMenu name="АвансыКорректируемыйПериодКонтекстноеМеню" id="321"/>
 												<ExtendedTooltip name="АвансыКорректируемыйПериодExtendedTooltip" id="489"/>
 											</InputField>
@@ -2765,6 +2761,7 @@
 											<InputField name="НачисленКУплатеКорректируемыйПериод" id="352">
 												<DataPath>Объект.НачисленКУплате.КорректируемыйПериод</DataPath>
 												<EditMode>EnterOnInput</EditMode>
+												<Width>17</Width>
 												<ContextMenu name="НачисленКУплатеКорректируемыйПериодКонтекстноеМеню" id="353"/>
 												<ExtendedTooltip name="НачисленКУплатеКорректируемыйПериодExtendedTooltip" id="506"/>
 											</InputField>
@@ -3011,7 +3008,6 @@
 											<InputField name="ВосстановленСчетУчетаНДС" id="398">
 												<DataPath>Объект.Восстановлен.СчетУчетаНДС</DataPath>
 												<EditMode>EnterOnInput</EditMode>
-												<DropListWidth>40</DropListWidth>
 												<ContextMenu name="ВосстановленСчетУчетаНДСКонтекстноеМеню" id="399"/>
 												<ExtendedTooltip name="ВосстановленСчетУчетаНДСExtendedTooltip" id="532"/>
 											</InputField>
@@ -3060,6 +3056,7 @@
 											<InputField name="ВосстановленКорректируемыйПериод" id="408">
 												<DataPath>Объект.Восстановлен.КорректируемыйПериод</DataPath>
 												<EditMode>EnterOnInput</EditMode>
+												<Width>17</Width>
 												<ContextMenu name="ВосстановленКорректируемыйПериодКонтекстноеМеню" id="409"/>
 												<ExtendedTooltip name="ВосстановленКорректируемыйПериодExtendedTooltip" id="537"/>
 											</InputField>
@@ -3238,16 +3235,13 @@
 						<v8:content>Подвал</v8:content>
 					</v8:item>
 				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
 				<Group>Horizontal</Group>
+				<HorizontalAlign>Right</HorizontalAlign>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="554"/>
 				<ChildItems>
-					<LabelDecoration name="ДекорацияПодвалОтступ" id="239">
-						<HorizontalStretch>true</HorizontalStretch>
-						<ContextMenu name="ДекорацияПодвалОтступКонтекстноеМеню" id="240"/>
-						<ExtendedTooltip name="ДекорацияПодвалОтступExtendedTooltip" id="555"/>
-					</LabelDecoration>
 					<UsualGroup name="ГруппаИтоги" id="561">
 						<Title>
 							<v8:item>

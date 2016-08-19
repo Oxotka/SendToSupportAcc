@@ -172,6 +172,7 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="100"/>
 					<ChildItems>
@@ -193,6 +194,23 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="101"/>
 							<ChildItems>
+								<InputField name="Номер" id="5">
+									<DataPath>Объект.Number</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="НомерКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="102"/>
+								</InputField>
+								<InputField name="Дата" id="7">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="103"/>
+								</InputField>
 								<PictureField name="СостояниеДокумента" id="187">
 									<DataPath>СостояниеДокумента</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -212,28 +230,6 @@
 									</ContextMenu>
 									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="189"/>
 								</PictureField>
-								<LabelDecoration name="ДекорацияРазделительПустая" id="190">
-									<Width>4</Width>
-									<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="191"/>
-									<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="192"/>
-								</LabelDecoration>
-								<InputField name="Номер" id="5">
-									<DataPath>Объект.Number</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="НомерКонтекстноеМеню" id="6"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="102"/>
-								</InputField>
-								<InputField name="Дата" id="7">
-									<DataPath>Объект.Date</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="103"/>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<InputField name="Склад" id="11">
@@ -263,6 +259,7 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="105"/>
 					<ChildItems>
@@ -564,7 +561,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<Width>12</Width>
 									<HorizontalStretch>false</HorizontalStretch>
-									<DropListWidth>40</DropListWidth>
 									<ContextMenu name="ТоварыСчетУчетаКонтекстноеМеню" id="29"/>
 									<ExtendedTooltip name="ТоварыСчетУчетаExtendedTooltip" id="119"/>
 								</InputField>
@@ -589,32 +585,6 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаТоварыПодвалExtendedTooltip" id="127"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаТоварыПодвалЛевая" id="81">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Итоги по товарам левая</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа товары подвал левая</v8:content>
-										</v8:item>
-									</ToolTip>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаТоварыПодвалЛеваяExtendedTooltip" id="128"/>
-									<ChildItems>
-										<LabelDecoration name="ДекорацияОтступ" id="83">
-											<HorizontalStretch>true</HorizontalStretch>
-											<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="84"/>
-											<ExtendedTooltip name="ДекорацияОтступExtendedTooltip" id="129"/>
-										</LabelDecoration>
-									</ChildItems>
-								</UsualGroup>
 								<UsualGroup name="ГруппаТоварыПодвалПравая" id="82">
 									<Title>
 										<v8:item>
@@ -628,7 +598,6 @@
 											<v8:content>Группа товары подвал правая</v8:content>
 										</v8:item>
 									</ToolTip>
-									<HorizontalStretch>false</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -676,7 +645,6 @@
 							<v8:content>Проведение инвентаризации</v8:content>
 						</v8:item>
 					</Title>
-					<VerticalStretch>true</VerticalStretch>
 					<ExtendedTooltip name="ГруппаПроведениеИнвентаризацииРасширеннаяПодсказка" id="138"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаПериодИнвентаризации" id="159">
@@ -740,6 +708,7 @@
 							</ToolTip>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаДокументИнвентаризацииРасширеннаяПодсказка" id="139"/>
 							<ChildItems>
@@ -776,7 +745,6 @@
 											<v8:content>Группа дата номер док основания</v8:content>
 										</v8:item>
 									</ToolTip>
-									<HorizontalStretch>false</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -1085,6 +1053,57 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="АдресХранилища" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяОтложенноеПроведение" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется отложенное проведение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяДатаДокумента" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоОстаткам" id="1">
@@ -1381,6 +1400,7 @@
 						</ToolTip>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаЛеваяExtendedTooltip" id="100"/>
 						<ChildItems>
@@ -1402,30 +1422,6 @@
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="101"/>
 								<ChildItems>
-									<PictureField name="СостояниеДокумента" id="187">
-										<DataPath>СостояниеДокумента</DataPath>
-										<TitleLocation>None</TitleLocation>
-										<Width>2</Width>
-										<Height>1</Height>
-										<HorizontalStretch>false</HorizontalStretch>
-										<VerticalStretch>false</VerticalStretch>
-										<ValuesPicture>
-											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</ValuesPicture>
-										<Border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</Border>
-										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="188">
-											<Autofill>false</Autofill>
-										</ContextMenu>
-										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="189"/>
-									</PictureField>
-									<LabelDecoration name="ДекорацияРазделительПустая" id="190">
-										<Width>4</Width>
-										<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="191"/>
-										<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="192"/>
-									</LabelDecoration>
 									<InputField name="Номер" id="5">
 										<DataPath>Объект.Number</DataPath>
 										<HorizontalStretch>false</HorizontalStretch>
@@ -1443,6 +1439,26 @@
 										<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 										<ExtendedTooltip name="ДатаExtendedTooltip" id="103"/>
 									</InputField>
+									<PictureField name="СостояниеДокумента" id="187">
+										<DataPath>СостояниеДокумента</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<GroupVerticalAlign>Center</GroupVerticalAlign>
+										<Width>2</Width>
+										<Height>1</Height>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<ValuesPicture>
+											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</ValuesPicture>
+										<Border width="1">
+											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+										</Border>
+										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="188">
+											<Autofill>false</Autofill>
+										</ContextMenu>
+										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="189"/>
+									</PictureField>
 								</ChildItems>
 							</UsualGroup>
 							<InputField name="Склад" id="11">
@@ -1472,6 +1488,7 @@
 						</ToolTip>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаПраваяExtendedTooltip" id="105"/>
 						<ChildItems>
@@ -1773,7 +1790,6 @@
 										<EditMode>EnterOnInput</EditMode>
 										<Width>12</Width>
 										<HorizontalStretch>false</HorizontalStretch>
-										<DropListWidth>40</DropListWidth>
 										<ContextMenu name="ТоварыСчетУчетаКонтекстноеМеню" id="29"/>
 										<ExtendedTooltip name="ТоварыСчетУчетаExtendedTooltip" id="119"/>
 									</InputField>
@@ -1794,36 +1810,11 @@
 								</ToolTip>
 								<HorizontalStretch>true</HorizontalStretch>
 								<Group>Horizontal</Group>
+								<HorizontalAlign>Right</HorizontalAlign>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаТоварыПодвалExtendedTooltip" id="127"/>
 								<ChildItems>
-									<UsualGroup name="ГруппаТоварыПодвалЛевая" id="81">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Итоги по товарам левая</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа товары подвал левая</v8:content>
-											</v8:item>
-										</ToolTip>
-										<HorizontalStretch>true</HorizontalStretch>
-										<Group>Vertical</Group>
-										<Representation>None</Representation>
-										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаТоварыПодвалЛеваяExtendedTooltip" id="128"/>
-										<ChildItems>
-											<LabelDecoration name="ДекорацияОтступ" id="83">
-												<HorizontalStretch>true</HorizontalStretch>
-												<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="84"/>
-												<ExtendedTooltip name="ДекорацияОтступExtendedTooltip" id="129"/>
-											</LabelDecoration>
-										</ChildItems>
-									</UsualGroup>
 									<UsualGroup name="ГруппаТоварыПодвалПравая" id="82">
 										<Title>
 											<v8:item>
@@ -1837,7 +1828,6 @@
 												<v8:content>Группа товары подвал правая</v8:content>
 											</v8:item>
 										</ToolTip>
-										<HorizontalStretch>false</HorizontalStretch>
 										<Group>Horizontal</Group>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
@@ -1885,7 +1875,6 @@
 								<v8:content>Проведение инвентаризации</v8:content>
 							</v8:item>
 						</Title>
-						<VerticalStretch>true</VerticalStretch>
 						<ExtendedTooltip name="ГруппаПроведениеИнвентаризацииРасширеннаяПодсказка" id="138"/>
 						<ChildItems>
 							<UsualGroup name="ГруппаПериодИнвентаризации" id="159">
@@ -1949,6 +1938,7 @@
 								</ToolTip>
 								<Group>Horizontal</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаДокументИнвентаризацииРасширеннаяПодсказка" id="139"/>
 								<ChildItems>
@@ -1985,7 +1975,6 @@
 												<v8:content>Группа дата номер док основания</v8:content>
 											</v8:item>
 										</ToolTip>
-										<HorizontalStretch>false</HorizontalStretch>
 										<Group>Horizontal</Group>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
@@ -2293,6 +2282,57 @@
 					</v8:item>
 				</Title>
 				<Type/>
+			</Attribute>
+			<Attribute name="АдресХранилища" id="10">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Адрес хранилища</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>0</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+			</Attribute>
+			<Attribute name="ИдентификаторЗадания" id="11">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Идентификатор задания</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>v8:UUID</v8:Type>
+				</Type>
+			</Attribute>
+			<Attribute name="ИспользуетсяОтложенноеПроведение" id="12">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Используется отложенное проведение</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+			</Attribute>
+			<Attribute name="ТекущаяДатаДокумента" id="13">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Текущая дата документа</v8:content>
+					</v8:item>
+				</Title>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>DateTime</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
 			</Attribute>
 		</Attributes>
 		<Commands>

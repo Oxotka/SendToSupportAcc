@@ -43,20 +43,12 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="131"/>
 				</InputField>
-				<InputField name="Артикул" id="116">
-					<DataPath>Объект.Артикул</DataPath>
-					<Width>15</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="АртикулКонтекстноеМеню" id="117"/>
-					<ExtendedTooltip name="АртикулExtendedTooltip" id="138"/>
-				</InputField>
 				<InputField name="Код" id="1">
 					<DataPath>Объект.Code</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
 					<EditMode>EnterOnInput</EditMode>
-					<Width>9</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КодExtendedTooltip" id="132"/>
@@ -65,8 +57,18 @@
 		</UsualGroup>
 		<InputField name="НаименованиеПолное" id="211">
 			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<Height>2</Height>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
 			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="212"/>
 			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="213"/>
+		</InputField>
+		<InputField name="Артикул" id="116">
+			<DataPath>Объект.Артикул</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="АртикулКонтекстноеМеню" id="117"/>
+			<ExtendedTooltip name="АртикулExtendedTooltip" id="138"/>
 		</InputField>
 		<InputField name="Родитель" id="5">
 			<DataPath>Объект.Parent</DataPath>
@@ -82,45 +84,6 @@
 			<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="219"/>
 			<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="220"/>
 		</InputField>
-		<UsualGroup name="ГруппаУслуга" id="157">
-			<Visible>false</Visible>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Услуга</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаУслугаРасширеннаяПодсказка" id="158"/>
-			<ChildItems>
-				<LabelDecoration name="ДекорацияУслуга" id="159">
-					<Width>14</Width>
-					<ContextMenu name="ДекорацияУслугаКонтекстноеМеню" id="160"/>
-					<ExtendedTooltip name="ДекорацияУслугаРасширеннаяПодсказка" id="161"/>
-				</LabelDecoration>
-				<CheckBoxField name="Услуга" id="122">
-					<DataPath>Объект.Услуга</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Услуга</v8:content>
-						</v8:item>
-					</Title>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>CheckBox</CheckBoxType>
-					<EditFormat>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>БЛ=Товар; БИ=Услуга</v8:content>
-						</v8:item>
-					</EditFormat>
-					<ContextMenu name="УслугаКонтекстноеМеню" id="123"/>
-					<ExtendedTooltip name="УслугаExtendedTooltip" id="136"/>
-				</CheckBoxField>
-			</ChildItems>
-		</UsualGroup>
 		<UsualGroup name="ГруппаЕдиница" id="92">
 			<Title>
 				<v8:item>
@@ -136,7 +99,6 @@
 				<InputField name="ЕдиницаИзмерения" id="9">
 					<DataPath>Объект.ЕдиницаИзмерения</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<Width>15</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="10"/>
@@ -145,8 +107,6 @@
 				<LabelField name="ЕдиницаИзмеренияНаименование" id="112">
 					<DataPath>Объект.ЕдиницаИзмерения.НаименованиеПолное</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<Width>25</Width>
-					<HorizontalStretch>true</HorizontalStretch>
 					<TextColor>style:ПоясняющийТекст</TextColor>
 					<ContextMenu name="ЕдиницаИзмеренияНаименованиеКонтекстноеМеню" id="113"/>
 					<ExtendedTooltip name="ЕдиницаИзмеренияНаименованиеExtendedTooltip" id="141"/>
@@ -156,7 +116,6 @@
 		<InputField name="СтавкаНДС" id="11">
 			<DataPath>Объект.СтавкаНДС</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<Width>12</Width>
 			<HorizontalStretch>false</HorizontalStretch>
 			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 			<ContextMenu name="СтавкаНДСКонтекстноеМеню" id="12"/>
@@ -188,7 +147,6 @@
 					<v8:content>Информация для передачи в производство материалов и полуфабрикатов</v8:content>
 				</v8:item>
 			</ToolTip>
-			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Vertical</Group>
 			<Behavior>Collapsible</Behavior>
 			<Collapsed>true</Collapsed>
@@ -200,7 +158,6 @@
 				<InputField name="СтатьяЗатрат" id="23">
 					<DataPath>Объект.СтатьяЗатрат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<Width>23</Width>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameters>
 						<app:item name="Отбор.ВидРасходовНУ">
@@ -215,7 +172,6 @@
 				</InputField>
 				<InputField name="ОсновнаяСпецификацияНоменклатуры" id="107">
 					<DataPath>Объект.ОсновнаяСпецификацияНоменклатуры</DataPath>
-					<Width>24</Width>
 					<ContextMenu name="ОсновнаяСпецификацияНоменклатурыКонтекстноеМеню" id="108"/>
 					<ExtendedTooltip name="ОсновнаяСпецификацияНоменклатурыExtendedTooltip" id="151"/>
 				</InputField>
@@ -244,13 +200,11 @@
 			<ChildItems>
 				<InputField name="Производитель" id="118">
 					<DataPath>Объект.Производитель</DataPath>
-					<Width>30</Width>
 					<ContextMenu name="ПроизводительКонтекстноеМеню" id="119"/>
 					<ExtendedTooltip name="ПроизводительExtendedTooltip" id="137"/>
 				</InputField>
 				<InputField name="Импортер" id="120">
 					<DataPath>Объект.Импортер</DataPath>
-					<Width>30</Width>
 					<ContextMenu name="ИмпортерКонтекстноеМеню" id="121"/>
 					<ExtendedTooltip name="ИмпортерExtendedTooltip" id="146"/>
 				</InputField>
@@ -338,7 +292,6 @@
 					<ChildItems>
 						<InputField name="ОКВЭДКод" id="183">
 							<DataPath>Объект.КодОКВЭД</DataPath>
-							<Width>12</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceButton>true</ChoiceButton>
 							<ContextMenu name="ОКВЭДКодКонтекстноеМеню" id="184"/>
@@ -373,7 +326,6 @@
 					<ChildItems>
 						<InputField name="ТНВЭДКод" id="175">
 							<DataPath>Объект.КодТНВЭД</DataPath>
-							<Width>12</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceButton>true</ChoiceButton>
 							<ContextMenu name="ТНВЭДКодКонтекстноеМеню" id="176"/>
@@ -408,7 +360,6 @@
 					<ChildItems>
 						<InputField name="ОКПКод" id="191">
 							<DataPath>Объект.КодОКП</DataPath>
-							<Width>12</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceButton>true</ChoiceButton>
 							<ContextMenu name="ОКПКодКонтекстноеМеню" id="192"/>
@@ -615,20 +566,12 @@
 						<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 						<ExtendedTooltip name="НаименованиеExtendedTooltip" id="131"/>
 					</InputField>
-					<InputField name="Артикул" id="116">
-						<DataPath>Объект.Артикул</DataPath>
-						<Width>15</Width>
-						<HorizontalStretch>false</HorizontalStretch>
-						<ContextMenu name="АртикулКонтекстноеМеню" id="117"/>
-						<ExtendedTooltip name="АртикулExtendedTooltip" id="138"/>
-					</InputField>
 					<InputField name="Код" id="1">
 						<DataPath>Объект.Code</DataPath>
 						<UserVisible>
 							<xr:Common>false</xr:Common>
 						</UserVisible>
 						<EditMode>EnterOnInput</EditMode>
-						<Width>9</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 						<ExtendedTooltip name="КодExtendedTooltip" id="132"/>
@@ -637,8 +580,18 @@
 			</UsualGroup>
 			<InputField name="НаименованиеПолное" id="211">
 				<DataPath>Объект.НаименованиеПолное</DataPath>
+				<TitleLocation>Left</TitleLocation>
+				<Height>2</Height>
+				<VerticalStretch>false</VerticalStretch>
+				<MultiLine>true</MultiLine>
 				<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="212"/>
 				<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="213"/>
+			</InputField>
+			<InputField name="Артикул" id="116">
+				<DataPath>Объект.Артикул</DataPath>
+				<HorizontalStretch>false</HorizontalStretch>
+				<ContextMenu name="АртикулКонтекстноеМеню" id="117"/>
+				<ExtendedTooltip name="АртикулExtendedTooltip" id="138"/>
 			</InputField>
 			<InputField name="Родитель" id="5">
 				<DataPath>Объект.Parent</DataPath>
@@ -654,45 +607,6 @@
 				<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="219"/>
 				<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="220"/>
 			</InputField>
-			<UsualGroup name="ГруппаУслуга" id="157">
-				<Visible>false</Visible>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Услуга</v8:content>
-					</v8:item>
-				</Title>
-				<Group>Horizontal</Group>
-				<Representation>None</Representation>
-				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ГруппаУслугаРасширеннаяПодсказка" id="158"/>
-				<ChildItems>
-					<LabelDecoration name="ДекорацияУслуга" id="159">
-						<Width>14</Width>
-						<ContextMenu name="ДекорацияУслугаКонтекстноеМеню" id="160"/>
-						<ExtendedTooltip name="ДекорацияУслугаРасширеннаяПодсказка" id="161"/>
-					</LabelDecoration>
-					<CheckBoxField name="Услуга" id="122">
-						<DataPath>Объект.Услуга</DataPath>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Услуга</v8:content>
-							</v8:item>
-						</Title>
-						<TitleLocation>Right</TitleLocation>
-						<CheckBoxType>CheckBox</CheckBoxType>
-						<EditFormat>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>БЛ=Товар; БИ=Услуга</v8:content>
-							</v8:item>
-						</EditFormat>
-						<ContextMenu name="УслугаКонтекстноеМеню" id="123"/>
-						<ExtendedTooltip name="УслугаExtendedTooltip" id="136"/>
-					</CheckBoxField>
-				</ChildItems>
-			</UsualGroup>
 			<UsualGroup name="ГруппаЕдиница" id="92">
 				<Title>
 					<v8:item>
@@ -708,7 +622,6 @@
 					<InputField name="ЕдиницаИзмерения" id="9">
 						<DataPath>Объект.ЕдиницаИзмерения</DataPath>
 						<EditMode>EnterOnInput</EditMode>
-						<Width>15</Width>
 						<HorizontalStretch>false</HorizontalStretch>
 						<AutoMarkIncomplete>true</AutoMarkIncomplete>
 						<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="10"/>
@@ -717,8 +630,6 @@
 					<LabelField name="ЕдиницаИзмеренияНаименование" id="112">
 						<DataPath>Объект.ЕдиницаИзмерения.НаименованиеПолное</DataPath>
 						<TitleLocation>None</TitleLocation>
-						<Width>25</Width>
-						<HorizontalStretch>true</HorizontalStretch>
 						<TextColor>style:ПоясняющийТекст</TextColor>
 						<ContextMenu name="ЕдиницаИзмеренияНаименованиеКонтекстноеМеню" id="113"/>
 						<ExtendedTooltip name="ЕдиницаИзмеренияНаименованиеExtendedTooltip" id="141"/>
@@ -728,7 +639,6 @@
 			<InputField name="СтавкаНДС" id="11">
 				<DataPath>Объект.СтавкаНДС</DataPath>
 				<EditMode>EnterOnInput</EditMode>
-				<Width>12</Width>
 				<HorizontalStretch>false</HorizontalStretch>
 				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 				<ContextMenu name="СтавкаНДСКонтекстноеМеню" id="12"/>
@@ -760,7 +670,6 @@
 						<v8:content>Информация для передачи в производство материалов и полуфабрикатов</v8:content>
 					</v8:item>
 				</ToolTip>
-				<HorizontalStretch>true</HorizontalStretch>
 				<Group>Vertical</Group>
 				<Behavior>Collapsible</Behavior>
 				<Collapsed>true</Collapsed>
@@ -772,7 +681,6 @@
 					<InputField name="СтатьяЗатрат" id="23">
 						<DataPath>Объект.СтатьяЗатрат</DataPath>
 						<EditMode>EnterOnInput</EditMode>
-						<Width>23</Width>
 						<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 						<ChoiceParameters>
 							<app:item name="Отбор.ВидРасходовНУ">
@@ -787,7 +695,6 @@
 					</InputField>
 					<InputField name="ОсновнаяСпецификацияНоменклатуры" id="107">
 						<DataPath>Объект.ОсновнаяСпецификацияНоменклатуры</DataPath>
-						<Width>24</Width>
 						<ContextMenu name="ОсновнаяСпецификацияНоменклатурыКонтекстноеМеню" id="108"/>
 						<ExtendedTooltip name="ОсновнаяСпецификацияНоменклатурыExtendedTooltip" id="151"/>
 					</InputField>
@@ -816,13 +723,11 @@
 				<ChildItems>
 					<InputField name="Производитель" id="118">
 						<DataPath>Объект.Производитель</DataPath>
-						<Width>30</Width>
 						<ContextMenu name="ПроизводительКонтекстноеМеню" id="119"/>
 						<ExtendedTooltip name="ПроизводительExtendedTooltip" id="137"/>
 					</InputField>
 					<InputField name="Импортер" id="120">
 						<DataPath>Объект.Импортер</DataPath>
-						<Width>30</Width>
 						<ContextMenu name="ИмпортерКонтекстноеМеню" id="121"/>
 						<ExtendedTooltip name="ИмпортерExtendedTooltip" id="146"/>
 					</InputField>
@@ -910,7 +815,6 @@
 						<ChildItems>
 							<InputField name="ОКВЭДКод" id="183">
 								<DataPath>Объект.КодОКВЭД</DataPath>
-								<Width>12</Width>
 								<HorizontalStretch>false</HorizontalStretch>
 								<ChoiceButton>true</ChoiceButton>
 								<ContextMenu name="ОКВЭДКодКонтекстноеМеню" id="184"/>
@@ -945,7 +849,6 @@
 						<ChildItems>
 							<InputField name="ТНВЭДКод" id="175">
 								<DataPath>Объект.КодТНВЭД</DataPath>
-								<Width>12</Width>
 								<HorizontalStretch>false</HorizontalStretch>
 								<ChoiceButton>true</ChoiceButton>
 								<ContextMenu name="ТНВЭДКодКонтекстноеМеню" id="176"/>
@@ -980,7 +883,6 @@
 						<ChildItems>
 							<InputField name="ОКПКод" id="191">
 								<DataPath>Объект.КодОКП</DataPath>
-								<Width>12</Width>
 								<HorizontalStretch>false</HorizontalStretch>
 								<ChoiceButton>true</ChoiceButton>
 								<ContextMenu name="ОКПКодКонтекстноеМеню" id="192"/>

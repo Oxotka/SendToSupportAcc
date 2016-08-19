@@ -72,10 +72,6 @@
 										<v8:content>DirectBank (прямой обмен с банком)</v8:content>
 									</v8:item>
 								</ToolTip>
-								<Picture>
-									<xr:Ref>0:6ff39320-751c-4a05-908e-0578db45c332</xr:Ref>
-									<xr:LoadTransparent>true</xr:LoadTransparent>
-								</Picture>
 								<ExtendedTooltip name="КомандыЭДОРасширеннаяПодсказка" id="252"/>
 							</Popup>
 							<Button name="ОбщаяКомандаСтруктураПодчиненности" id="210">
@@ -161,6 +157,7 @@
 					<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
 				</v8:item>
 			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -197,6 +194,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="195"/>
 					<ChildItems>
@@ -207,36 +205,11 @@
 									<v8:content>Номер/дата</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="147"/>
 							<ChildItems>
-								<PictureField name="СостояниеДокумента" id="228">
-									<DataPath>СостояниеДокумента</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<Width>2</Width>
-									<Height>1</Height>
-									<HorizontalStretch>false</HorizontalStretch>
-									<VerticalStretch>false</VerticalStretch>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<Border width="1">
-										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-									</Border>
-									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="229">
-										<Autofill>false</Autofill>
-									</ContextMenu>
-									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="230"/>
-								</PictureField>
-								<LabelDecoration name="ДекорацияРазделительПустая" id="231">
-									<Width>3</Width>
-									<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="232"/>
-									<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="233"/>
-								</LabelDecoration>
 								<InputField name="Номер" id="65">
 									<DataPath>Объект.Number</DataPath>
 									<SkipOnInput>true</SkipOnInput>
@@ -263,6 +236,25 @@
 									<ContextMenu name="ДатаКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="ДатаExtendedTooltip" id="149"/>
 								</InputField>
+								<PictureField name="СостояниеДокумента" id="228">
+									<DataPath>СостояниеДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>2</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="229">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="230"/>
+								</PictureField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаКонтрагент" id="114">
@@ -274,6 +266,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаКонтрагентExtendedTooltip" id="156"/>
 							<ChildItems>
@@ -296,28 +289,8 @@
 									<ContextMenu name="СчетКонтрагентаКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="СчетКонтрагентаExtendedTooltip" id="158"/>
 								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаРасшифровкаКонтрагент" id="116">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Реквизиты плательщика</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаРасшифровкаКонтрагентExtendedTooltip" id="159"/>
-							<ChildItems>
 								<LabelField name="РасшифровкаКонтрагент" id="51">
 									<DataPath>РасшифровкаКонтрагент</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content> </v8:content>
-										</v8:item>
-									</Title>
 									<TitleLocation>None</TitleLocation>
 									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
 									<Font ref="style:NormalTextFont" kind="StyleItem"/>
@@ -335,6 +308,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПлатежРасширеннаяПодсказка" id="163"/>
 							<ChildItems>
@@ -363,15 +337,9 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаШапкаПравая" id="196">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
+					<United>false</United>
 					<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="197"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаОрганизация" id="113">
@@ -383,15 +351,10 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="150"/>
 							<ChildItems>
-								<LabelDecoration name="ДекорацияПустаяНадпись3" id="214">
-									<HorizontalStretch>true</HorizontalStretch>
-									<VerticalAlign>Top</VerticalAlign>
-									<ContextMenu name="ДекорацияПустаяНадпись3КонтекстноеМеню" id="215"/>
-									<ExtendedTooltip name="ДекорацияПустаяНадпись3РасширеннаяПодсказка" id="216"/>
-								</LabelDecoration>
 								<UsualGroup name="ГруппаОрганизация1" id="220">
 									<Title>
 										<v8:item>
@@ -405,6 +368,7 @@
 											<v8:content>Группа организация</v8:content>
 										</v8:item>
 									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -438,19 +402,6 @@
 									<ContextMenu name="СчетОрганизацииКонтекстноеМеню" id="95"/>
 									<ExtendedTooltip name="СчетОрганизацииExtendedTooltip" id="152"/>
 								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаРасшифровкаОрганизация" id="115">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Реквизиты организации</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Horizontal</Group>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаРасшифровкаОрганизацияExtendedTooltip" id="153"/>
-							<ChildItems>
 								<LabelField name="РасшифровкаОрганизация" id="49">
 									<DataPath>РасшифровкаОрганизация</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -471,6 +422,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
+							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаВидПлатежаРасширеннаяПодсказка" id="168"/>
 							<ChildItems>
@@ -567,7 +519,6 @@
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>true</DropListButton>
 											<ChoiceListButton>true</ChoiceListButton>
-											<DropListWidth>55</DropListWidth>
 											<ContextMenu name="ОчередностьПлатежаКонтекстноеМеню" id="25"/>
 											<ExtendedTooltip name="ОчередностьПлатежаExtendedTooltip" id="171"/>
 										</InputField>
@@ -586,138 +537,6 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаНазначениеПлатежаАкцепт" id="125">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа назначение платежа акцепт</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа назначение платежа акцепт</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Vertical</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаНазначениеПлатежаАкцептРасширеннаяПодсказка" id="174"/>
-			<ChildItems>
-				<InputField name="НазначениеПлатежа" id="32">
-					<DataPath>Объект.НазначениеПлатежа</DataPath>
-					<TitleLocation>Left</TitleLocation>
-					<TitleHeight>2</TitleHeight>
-					<EditMode>EnterOnInput</EditMode>
-					<Height>3</Height>
-					<VerticalStretch>false</VerticalStretch>
-					<MultiLine>true</MultiLine>
-					<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="173"/>
-				</InputField>
-				<UsualGroup name="ГруппаВидАкцепта" id="124">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Вид акцепта</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Horizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаВидАкцептаExtendedTooltip" id="183"/>
-					<ChildItems>
-						<InputField name="ВидАкцепта" id="132">
-							<DataPath>Объект.ВидАкцепта</DataPath>
-							<Width>5</Width>
-							<DropListButton>true</DropListButton>
-							<TextEdit>false</TextEdit>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>1 - заранее данный акцепт плательщика</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">1</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>2 - требует получения акцепта</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">2</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ChoiceListButton>true</ChoiceListButton>
-							<DropListWidth>70</DropListWidth>
-							<ContextMenu name="ВидАкцептаКонтекстноеМеню" id="133"/>
-							<ExtendedTooltip name="ВидАкцептаРасширеннаяПодсказка" id="185"/>
-						</InputField>
-						<LabelField name="РасшифровкаВидАкцепта" id="137">
-							<DataPath>РасшифровкаВидАкцепта</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<ContextMenu name="РасшифровкаВидАкцептаКонтекстноеМеню" id="138"/>
-							<ExtendedTooltip name="РасшифровкаВидАкцептаExtendedTooltip" id="186"/>
-						</LabelField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаСрокАкцептаДатаОтсылки" id="48">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа: срок акцепта / дата отсылки</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Horizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаСрокАкцептаДатаОтсылкиExtendedTooltip" id="179"/>
-					<ChildItems>
-						<InputField name="СрокДляАкцепта" id="28">
-							<DataPath>Объект.СрокДляАкцепта</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Срок для акцепта</v8:content>
-								</v8:item>
-							</Title>
-							<TitleHeight>1</TitleHeight>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СрокДляАкцептаКонтекстноеМеню" id="29"/>
-							<ExtendedTooltip name="СрокДляАкцептаExtendedTooltip" id="180"/>
-						</InputField>
-						<LabelDecoration name="ДекорацияСрокДляАкцепта" id="258">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>дней</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДекорацияСрокДляАкцептаКонтекстноеМеню" id="259"/>
-							<ExtendedTooltip name="ДекорацияСрокДляАкцептаРасширеннаяПодсказка" id="260"/>
-						</LabelDecoration>
-						<InputField name="ДатаОтсылкиДокументов" id="17">
-							<DataPath>Объект.ДатаОтсылкиДокументов</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ДатаОтсылкиДокументовКонтекстноеМеню" id="18"/>
-							<ExtendedTooltip name="ДатаОтсылкиДокументовExtendedTooltip" id="181"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-			</ChildItems>
-		</UsualGroup>
 		<UsualGroup name="ГруппаПодвал" id="43">
 			<Title>
 				<v8:item>
@@ -730,13 +549,209 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="189"/>
 			<ChildItems>
-				<LabelField name="СостояниеЭД" id="253">
-					<DataPath>ТекстСостоянияЭД</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Hiperlink>true</Hiperlink>
-					<ContextMenu name="СостояниеЭДКонтекстноеМеню" id="254"/>
-					<ExtendedTooltip name="СостояниеЭДExtendedTooltip" id="255"/>
-				</LabelField>
+				<UsualGroup name="ГруппаНазначениеПлатежаАкцепт" id="125">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа назначение платежа акцепт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа назначение платежа акцепт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНазначениеПлатежаАкцептРасширеннаяПодсказка" id="174"/>
+					<ChildItems>
+						<InputField name="НазначениеПлатежа" id="32">
+							<DataPath>Объект.НазначениеПлатежа</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<TitleHeight>2</TitleHeight>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>93</Width>
+							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="173"/>
+						</InputField>
+						<UsualGroup name="ГруппаВидАкцепта" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид акцепта</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВидАкцептаExtendedTooltip" id="183"/>
+							<ChildItems>
+								<InputField name="ВидАкцепта" id="132">
+									<DataPath>Объект.ВидАкцепта</DataPath>
+									<Width>5</Width>
+									<DropListButton>true</DropListButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>1 - заранее данный акцепт плательщика</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2 - требует получения акцепта</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ВидАкцептаКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ВидАкцептаРасширеннаяПодсказка" id="185"/>
+								</InputField>
+								<LabelField name="РасшифровкаВидАкцепта" id="137">
+									<DataPath>РасшифровкаВидАкцепта</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="РасшифровкаВидАкцептаКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="РасшифровкаВидАкцептаExtendedTooltip" id="186"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСрокАкцептаДатаОтсылки" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа: срок акцепта / дата отсылки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокАкцептаДатаОтсылкиExtendedTooltip" id="179"/>
+							<ChildItems>
+								<InputField name="СрокДляАкцепта" id="28">
+									<DataPath>Объект.СрокДляАкцепта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок для акцепта</v8:content>
+										</v8:item>
+									</Title>
+									<TitleHeight>1</TitleHeight>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СрокДляАкцептаКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="СрокДляАкцептаExtendedTooltip" id="180"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияСрокДляАкцепта" id="258">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дней</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСрокДляАкцептаКонтекстноеМеню" id="259"/>
+									<ExtendedTooltip name="ДекорацияСрокДляАкцептаРасширеннаяПодсказка" id="260"/>
+								</LabelDecoration>
+								<InputField name="ДатаОтсылкиДокументов" id="17">
+									<DataPath>Объект.ДатаОтсылкиДокументов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаОтсылкиДокументовКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ДатаОтсылкиДокументовExtendedTooltip" id="181"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСостояниеОбмена" id="266">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние обмена</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние обмена</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСостояниеОбменаРасширеннаяПодсказка" id="268"/>
+					<ChildItems>
+						<InputField name="Состояние" id="263">
+							<DataPath>Состояние</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalStretch>false</HorizontalStretch>
+							<OpenButton>true</OpenButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Подготовлено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отправлено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Оплачено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отклонено</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.НаПодписи</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СостояниеКонтекстноеМеню" id="264"/>
+							<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="265"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="ГруппаКомментарийОтветственный" id="256">
 					<Title>
 						<v8:item>
@@ -957,23 +972,16 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ТекстСостоянияЭД" id="16">
+		<Attribute name="Состояние" id="17">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>DirectBank</v8:content>
+					<v8:content>Состояние</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>cfg:EnumRef.СостоянияБанковскихДокументов</v8:Type>
 			</Type>
-			<FunctionalOptions>
-				<Item>FunctionalOption.ИспользоватьОбменСБанками</Item>
-			</FunctionalOptions>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1089,10 +1097,6 @@
 											<v8:content>DirectBank (прямой обмен с банком)</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Picture>
-										<xr:Ref>0:6ff39320-751c-4a05-908e-0578db45c332</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
 									<ExtendedTooltip name="КомандыЭДОРасширеннаяПодсказка" id="252"/>
 								</Popup>
 								<Button name="ОбщаяКомандаСтруктураПодчиненности" id="210">
@@ -1166,6 +1170,7 @@
 						<v8:content>Предупреждение о заполнении реквизитов счета</v8:content>
 					</v8:item>
 				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
 				<Group>Horizontal</Group>
 				<Representation>NormalSeparation</Representation>
 				<ShowTitle>false</ShowTitle>
@@ -1202,6 +1207,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="195"/>
 						<ChildItems>
@@ -1212,36 +1218,11 @@
 										<v8:content>Номер/дата</v8:content>
 									</v8:item>
 								</Title>
-								<HorizontalStretch>false</HorizontalStretch>
 								<Group>Horizontal</Group>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="147"/>
 								<ChildItems>
-									<PictureField name="СостояниеДокумента" id="228">
-										<DataPath>СостояниеДокумента</DataPath>
-										<TitleLocation>None</TitleLocation>
-										<Width>2</Width>
-										<Height>1</Height>
-										<HorizontalStretch>false</HorizontalStretch>
-										<VerticalStretch>false</VerticalStretch>
-										<ValuesPicture>
-											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</ValuesPicture>
-										<Border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</Border>
-										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="229">
-											<Autofill>false</Autofill>
-										</ContextMenu>
-										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="230"/>
-									</PictureField>
-									<LabelDecoration name="ДекорацияРазделительПустая" id="231">
-										<Width>3</Width>
-										<ContextMenu name="ДекорацияРазделительПустаяКонтекстноеМеню" id="232"/>
-										<ExtendedTooltip name="ДекорацияРазделительПустаяРасширеннаяПодсказка" id="233"/>
-									</LabelDecoration>
 									<InputField name="Номер" id="65">
 										<DataPath>Объект.Number</DataPath>
 										<SkipOnInput>true</SkipOnInput>
@@ -1268,6 +1249,26 @@
 										<ContextMenu name="ДатаКонтекстноеМеню" id="68"/>
 										<ExtendedTooltip name="ДатаExtendedTooltip" id="149"/>
 									</InputField>
+									<PictureField name="СостояниеДокумента" id="228">
+										<DataPath>СостояниеДокумента</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<GroupVerticalAlign>Center</GroupVerticalAlign>
+										<Width>2</Width>
+										<Height>1</Height>
+										<HorizontalStretch>false</HorizontalStretch>
+										<VerticalStretch>false</VerticalStretch>
+										<ValuesPicture>
+											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</ValuesPicture>
+										<Border width="1">
+											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+										</Border>
+										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="229">
+											<Autofill>false</Autofill>
+										</ContextMenu>
+										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="230"/>
+									</PictureField>
 								</ChildItems>
 							</UsualGroup>
 							<UsualGroup name="ГруппаКонтрагент" id="114">
@@ -1279,6 +1280,7 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаКонтрагентExtendedTooltip" id="156"/>
 								<ChildItems>
@@ -1301,28 +1303,8 @@
 										<ContextMenu name="СчетКонтрагентаКонтекстноеМеню" id="14"/>
 										<ExtendedTooltip name="СчетКонтрагентаExtendedTooltip" id="158"/>
 									</InputField>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаРасшифровкаКонтрагент" id="116">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Реквизиты плательщика</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Horizontal</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаРасшифровкаКонтрагентExtendedTooltip" id="159"/>
-								<ChildItems>
 									<LabelField name="РасшифровкаКонтрагент" id="51">
 										<DataPath>РасшифровкаКонтрагент</DataPath>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content> </v8:content>
-											</v8:item>
-										</Title>
 										<TitleLocation>None</TitleLocation>
 										<TextColor>style:ТекстИнформационнойНадписи</TextColor>
 										<Font ref="style:NormalTextFont" kind="StyleItem"/>
@@ -1340,6 +1322,7 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаПлатежРасширеннаяПодсказка" id="163"/>
 								<ChildItems>
@@ -1368,15 +1351,9 @@
 						</ChildItems>
 					</UsualGroup>
 					<UsualGroup name="ГруппаШапкаПравая" id="196">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Организация</v8:content>
-							</v8:item>
-						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
+						<United>false</United>
 						<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="197"/>
 						<ChildItems>
 							<UsualGroup name="ГруппаОрганизация" id="113">
@@ -1388,15 +1365,10 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="150"/>
 								<ChildItems>
-									<LabelDecoration name="ДекорацияПустаяНадпись3" id="214">
-										<HorizontalStretch>true</HorizontalStretch>
-										<VerticalAlign>Top</VerticalAlign>
-										<ContextMenu name="ДекорацияПустаяНадпись3КонтекстноеМеню" id="215"/>
-										<ExtendedTooltip name="ДекорацияПустаяНадпись3РасширеннаяПодсказка" id="216"/>
-									</LabelDecoration>
 									<UsualGroup name="ГруппаОрганизация1" id="220">
 										<Title>
 											<v8:item>
@@ -1410,6 +1382,7 @@
 												<v8:content>Группа организация</v8:content>
 											</v8:item>
 										</ToolTip>
+										<HorizontalStretch>true</HorizontalStretch>
 										<Group>Horizontal</Group>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
@@ -1443,19 +1416,6 @@
 										<ContextMenu name="СчетОрганизацииКонтекстноеМеню" id="95"/>
 										<ExtendedTooltip name="СчетОрганизацииExtendedTooltip" id="152"/>
 									</InputField>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаРасшифровкаОрганизация" id="115">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Реквизиты организации</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Horizontal</Group>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаРасшифровкаОрганизацияExtendedTooltip" id="153"/>
-								<ChildItems>
 									<LabelField name="РасшифровкаОрганизация" id="49">
 										<DataPath>РасшифровкаОрганизация</DataPath>
 										<TitleLocation>None</TitleLocation>
@@ -1476,6 +1436,7 @@
 								</Title>
 								<Group>Vertical</Group>
 								<Representation>None</Representation>
+								<United>false</United>
 								<ShowTitle>false</ShowTitle>
 								<ExtendedTooltip name="ГруппаВидПлатежаРасширеннаяПодсказка" id="168"/>
 								<ChildItems>
@@ -1572,7 +1533,6 @@
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>true</DropListButton>
 												<ChoiceListButton>true</ChoiceListButton>
-												<DropListWidth>55</DropListWidth>
 												<ContextMenu name="ОчередностьПлатежаКонтекстноеМеню" id="25"/>
 												<ExtendedTooltip name="ОчередностьПлатежаExtendedTooltip" id="171"/>
 											</InputField>
@@ -1591,138 +1551,6 @@
 					</UsualGroup>
 				</ChildItems>
 			</UsualGroup>
-			<UsualGroup name="ГруппаНазначениеПлатежаАкцепт" id="125">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа назначение платежа акцепт</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа назначение платежа акцепт</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Group>Vertical</Group>
-				<Representation>None</Representation>
-				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ГруппаНазначениеПлатежаАкцептРасширеннаяПодсказка" id="174"/>
-				<ChildItems>
-					<InputField name="НазначениеПлатежа" id="32">
-						<DataPath>Объект.НазначениеПлатежа</DataPath>
-						<TitleLocation>Left</TitleLocation>
-						<TitleHeight>2</TitleHeight>
-						<EditMode>EnterOnInput</EditMode>
-						<Height>3</Height>
-						<VerticalStretch>false</VerticalStretch>
-						<MultiLine>true</MultiLine>
-						<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="33"/>
-						<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="173"/>
-					</InputField>
-					<UsualGroup name="ГруппаВидАкцепта" id="124">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Вид акцепта</v8:content>
-							</v8:item>
-						</Title>
-						<Group>Horizontal</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаВидАкцептаExtendedTooltip" id="183"/>
-						<ChildItems>
-							<InputField name="ВидАкцепта" id="132">
-								<DataPath>Объект.ВидАкцепта</DataPath>
-								<Width>5</Width>
-								<DropListButton>true</DropListButton>
-								<TextEdit>false</TextEdit>
-								<ChoiceList>
-									<xr:Item>
-										<xr:Presentation/>
-										<xr:CheckState>0</xr:CheckState>
-										<xr:Value xsi:type="FormChoiceListDesTimeValue">
-											<Presentation>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>1 - заранее данный акцепт плательщика</v8:content>
-												</v8:item>
-											</Presentation>
-											<Value xsi:type="xs:string">1</Value>
-										</xr:Value>
-									</xr:Item>
-									<xr:Item>
-										<xr:Presentation/>
-										<xr:CheckState>0</xr:CheckState>
-										<xr:Value xsi:type="FormChoiceListDesTimeValue">
-											<Presentation>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>2 - требует получения акцепта</v8:content>
-												</v8:item>
-											</Presentation>
-											<Value xsi:type="xs:string">2</Value>
-										</xr:Value>
-									</xr:Item>
-								</ChoiceList>
-								<ChoiceListButton>true</ChoiceListButton>
-								<DropListWidth>70</DropListWidth>
-								<ContextMenu name="ВидАкцептаКонтекстноеМеню" id="133"/>
-								<ExtendedTooltip name="ВидАкцептаРасширеннаяПодсказка" id="185"/>
-							</InputField>
-							<LabelField name="РасшифровкаВидАкцепта" id="137">
-								<DataPath>РасшифровкаВидАкцепта</DataPath>
-								<TitleLocation>None</TitleLocation>
-								<ContextMenu name="РасшифровкаВидАкцептаКонтекстноеМеню" id="138"/>
-								<ExtendedTooltip name="РасшифровкаВидАкцептаExtendedTooltip" id="186"/>
-							</LabelField>
-						</ChildItems>
-					</UsualGroup>
-					<UsualGroup name="ГруппаСрокАкцептаДатаОтсылки" id="48">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Группа: срок акцепта / дата отсылки</v8:content>
-							</v8:item>
-						</Title>
-						<Group>Horizontal</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаСрокАкцептаДатаОтсылкиExtendedTooltip" id="179"/>
-						<ChildItems>
-							<InputField name="СрокДляАкцепта" id="28">
-								<DataPath>Объект.СрокДляАкцепта</DataPath>
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Срок для акцепта</v8:content>
-									</v8:item>
-								</Title>
-								<TitleHeight>1</TitleHeight>
-								<EditMode>EnterOnInput</EditMode>
-								<ContextMenu name="СрокДляАкцептаКонтекстноеМеню" id="29"/>
-								<ExtendedTooltip name="СрокДляАкцептаExtendedTooltip" id="180"/>
-							</InputField>
-							<LabelDecoration name="ДекорацияСрокДляАкцепта" id="258">
-								<Title formatted="false">
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>дней</v8:content>
-									</v8:item>
-								</Title>
-								<ContextMenu name="ДекорацияСрокДляАкцептаКонтекстноеМеню" id="259"/>
-								<ExtendedTooltip name="ДекорацияСрокДляАкцептаРасширеннаяПодсказка" id="260"/>
-							</LabelDecoration>
-							<InputField name="ДатаОтсылкиДокументов" id="17">
-								<DataPath>Объект.ДатаОтсылкиДокументов</DataPath>
-								<EditMode>EnterOnInput</EditMode>
-								<ContextMenu name="ДатаОтсылкиДокументовКонтекстноеМеню" id="18"/>
-								<ExtendedTooltip name="ДатаОтсылкиДокументовExtendedTooltip" id="181"/>
-							</InputField>
-						</ChildItems>
-					</UsualGroup>
-				</ChildItems>
-			</UsualGroup>
 			<UsualGroup name="ГруппаПодвал" id="43">
 				<Title>
 					<v8:item>
@@ -1735,13 +1563,209 @@
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаПодвалExtendedTooltip" id="189"/>
 				<ChildItems>
-					<LabelField name="СостояниеЭД" id="253">
-						<DataPath>ТекстСостоянияЭД</DataPath>
-						<ReadOnly>true</ReadOnly>
-						<Hiperlink>true</Hiperlink>
-						<ContextMenu name="СостояниеЭДКонтекстноеМеню" id="254"/>
-						<ExtendedTooltip name="СостояниеЭДExtendedTooltip" id="255"/>
-					</LabelField>
+					<UsualGroup name="ГруппаНазначениеПлатежаАкцепт" id="125">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа назначение платежа акцепт</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа назначение платежа акцепт</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаНазначениеПлатежаАкцептРасширеннаяПодсказка" id="174"/>
+						<ChildItems>
+							<InputField name="НазначениеПлатежа" id="32">
+								<DataPath>Объект.НазначениеПлатежа</DataPath>
+								<TitleLocation>Left</TitleLocation>
+								<TitleHeight>2</TitleHeight>
+								<EditMode>EnterOnInput</EditMode>
+								<Width>93</Width>
+								<Height>3</Height>
+								<VerticalStretch>false</VerticalStretch>
+								<MultiLine>true</MultiLine>
+								<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="НазначениеПлатежаExtendedTooltip" id="173"/>
+							</InputField>
+							<UsualGroup name="ГруппаВидАкцепта" id="124">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вид акцепта</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаВидАкцептаExtendedTooltip" id="183"/>
+								<ChildItems>
+									<InputField name="ВидАкцепта" id="132">
+										<DataPath>Объект.ВидАкцепта</DataPath>
+										<Width>5</Width>
+										<DropListButton>true</DropListButton>
+										<TextEdit>false</TextEdit>
+										<ChoiceList>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>1 - заранее данный акцепт плательщика</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xs:string">1</Value>
+												</xr:Value>
+											</xr:Item>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>2 - требует получения акцепта</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xs:string">2</Value>
+												</xr:Value>
+											</xr:Item>
+										</ChoiceList>
+										<ChoiceListButton>true</ChoiceListButton>
+										<ContextMenu name="ВидАкцептаКонтекстноеМеню" id="133"/>
+										<ExtendedTooltip name="ВидАкцептаРасширеннаяПодсказка" id="185"/>
+									</InputField>
+									<LabelField name="РасшифровкаВидАкцепта" id="137">
+										<DataPath>РасшифровкаВидАкцепта</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<ContextMenu name="РасшифровкаВидАкцептаКонтекстноеМеню" id="138"/>
+										<ExtendedTooltip name="РасшифровкаВидАкцептаExtendedTooltip" id="186"/>
+									</LabelField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСрокАкцептаДатаОтсылки" id="48">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа: срок акцепта / дата отсылки</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаСрокАкцептаДатаОтсылкиExtendedTooltip" id="179"/>
+								<ChildItems>
+									<InputField name="СрокДляАкцепта" id="28">
+										<DataPath>Объект.СрокДляАкцепта</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Срок для акцепта</v8:content>
+											</v8:item>
+										</Title>
+										<TitleHeight>1</TitleHeight>
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="СрокДляАкцептаКонтекстноеМеню" id="29"/>
+										<ExtendedTooltip name="СрокДляАкцептаExtendedTooltip" id="180"/>
+									</InputField>
+									<LabelDecoration name="ДекорацияСрокДляАкцепта" id="258">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>дней</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ДекорацияСрокДляАкцептаКонтекстноеМеню" id="259"/>
+										<ExtendedTooltip name="ДекорацияСрокДляАкцептаРасширеннаяПодсказка" id="260"/>
+									</LabelDecoration>
+									<InputField name="ДатаОтсылкиДокументов" id="17">
+										<DataPath>Объект.ДатаОтсылкиДокументов</DataPath>
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="ДатаОтсылкиДокументовКонтекстноеМеню" id="18"/>
+										<ExtendedTooltip name="ДатаОтсылкиДокументовExtendedTooltip" id="181"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаСостояниеОбмена" id="261">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа состояние обмена</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа состояние обмена</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаСостояниеОбменаРасширеннаяПодсказка" id="262"/>
+						<ChildItems>
+							<InputField name="Состояние" id="263">
+								<DataPath>Состояние</DataPath>
+								<ReadOnly>true</ReadOnly>
+								<HorizontalStretch>false</HorizontalStretch>
+								<OpenButton>true</OpenButton>
+								<ListChoiceMode>true</ListChoiceMode>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Подготовлено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отправлено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Оплачено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.Отклонено</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation/>
+											<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияБанковскихДокументов.EnumValue.НаПодписи</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="СостояниеКонтекстноеМеню" id="264"/>
+								<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="265"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
 					<UsualGroup name="ГруппаКомментарийОтветственный" id="256">
 						<Title>
 							<v8:item>
@@ -1962,23 +1986,16 @@
 					<v8:Type>xs:boolean</v8:Type>
 				</Type>
 			</Attribute>
-			<Attribute name="ТекстСостоянияЭД" id="16">
+			<Attribute name="Состояние" id="16">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>DirectBank</v8:content>
+						<v8:content>Состояние</v8:content>
 					</v8:item>
 				</Title>
 				<Type>
-					<v8:Type>xs:string</v8:Type>
-					<v8:StringQualifiers>
-						<v8:Length>0</v8:Length>
-						<v8:AllowedLength>Variable</v8:AllowedLength>
-					</v8:StringQualifiers>
+					<v8:Type>cfg:EnumRef.СостоянияБанковскихДокументов</v8:Type>
 				</Type>
-				<FunctionalOptions>
-					<Item>FunctionalOption.ИспользоватьОбменСБанками</Item>
-				</FunctionalOptions>
 			</Attribute>
 		</Attributes>
 		<Commands>

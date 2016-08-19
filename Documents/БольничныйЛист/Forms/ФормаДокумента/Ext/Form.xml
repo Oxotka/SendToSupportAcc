@@ -27,8 +27,6 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<Width>100</Width>
-			<HorizontalStretch>false</HorizontalStretch>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ChildItemsWidth>LeftWide</ChildItemsWidth>
@@ -42,6 +40,7 @@
 							<v8:content>Основные реквизиты</v8:content>
 						</v8:item>
 					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -90,6 +89,7 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ОбязательныеРеквизитыExtendedTooltip" id="589"/>
 					<ChildItems>
@@ -331,7 +331,6 @@
 									<v8:content>Результаты</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Horizontal</Group>
 							<ShowTitle>false</ShowTitle>
 							<BackColor>style:ButtonBackColor</BackColor>
@@ -407,7 +406,6 @@
 											<v8:content>Средний заработок</v8:content>
 										</v8:item>
 									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ExtendedTooltip name="СреднийЗаработокИнфоExtendedTooltip" id="656"/>
@@ -492,17 +490,30 @@
 											<ContextMenu name="ОграничениеПособияКонтекстноеМеню" id="389"/>
 											<ExtendedTooltip name="ОграничениеПособияExtendedTooltip" id="616"/>
 										</InputField>
-										<InputField name="РайонныйКоэффициентРФНаНачалоСобытия" id="764">
-											<DataPath>Объект.РайонныйКоэффициентРФНаНачалоСобытия</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Районный коэффициент</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="РайонныйКоэффициентРФНаНачалоСобытияКонтекстноеМеню" id="765"/>
-											<ExtendedTooltip name="РайонныйКоэффициентРФНаНачалоСобытияРасширеннаяПодсказка" id="766"/>
-										</InputField>
+										<UsualGroup name="РайонныйКоэффициентДоляНеполногоВремениГруппа" id="873">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="РайонныйКоэффициентДоляНеполногоВремениГруппаРасширеннаяПодсказка" id="874"/>
+											<ChildItems>
+												<InputField name="РайонныйКоэффициентРФНаНачалоСобытия" id="764">
+													<DataPath>Объект.РайонныйКоэффициентРФНаНачалоСобытия</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Районный коэффициент</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="РайонныйКоэффициентРФНаНачалоСобытияКонтекстноеМеню" id="765"/>
+													<ExtendedTooltip name="РайонныйКоэффициентРФНаНачалоСобытияРасширеннаяПодсказка" id="766"/>
+												</InputField>
+												<InputField name="ДоляНеполногоВремени" id="875">
+													<DataPath>Объект.ДоляНеполногоВремени</DataPath>
+													<ContextMenu name="ДоляНеполногоВремениКонтекстноеМеню" id="877"/>
+													<ExtendedTooltip name="ДоляНеполногоВремениРасширеннаяПодсказка" id="872"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 										<UsualGroup name="ГруппаПрименятьЛьготыПриИсчисленииПособия" id="556">
 											<Title>
 												<v8:item>
@@ -521,6 +532,8 @@
 															<v8:content>Группа флаг льгот и условия</v8:content>
 														</v8:item>
 													</Title>
+													<Width>56</Width>
+													<HorizontalStretch>false</HorizontalStretch>
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
@@ -705,6 +718,7 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="НачисленияДатаНачалаКонтекстноеМеню" id="819"/>
 											<ExtendedTooltip name="НачисленияДатаНачалаРасширеннаяПодсказка" id="820"/>
 										</InputField>
@@ -775,44 +789,6 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<UsualGroup name="ПодписиГруппа" id="755">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Подписи</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ПодписиГруппаРасширеннаяПодсказка" id="756"/>
-			<ChildItems>
-				<UsualGroup name="ОтветственныеЛицаГруппа" id="757">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ОтветственныеЛицаГруппаРасширеннаяПодсказка" id="758"/>
-					<ChildItems>
-						<InputField name="Руководитель" id="747">
-							<ContextMenu name="РуководительКонтекстноеМеню" id="748"/>
-							<ExtendedTooltip name="РуководительРасширеннаяПодсказка" id="749"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ДолжностиГруппа" id="762">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ДолжностиГруппаРасширеннаяПодсказка" id="763"/>
-					<ChildItems>
-						<InputField name="ДолжностьРуководителя" id="750">
-							<ContextMenu name="ДолжностьРуководителяКонтекстноеМеню" id="751"/>
-							<ExtendedTooltip name="ДолжностьРуководителяРасширеннаяПодсказка" id="752"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-			</ChildItems>
-		</UsualGroup>
 		<UsualGroup name="ГруппаКомментарийОтветственный" id="720">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
@@ -1165,8 +1141,6 @@
 						<v8:content>Шапка</v8:content>
 					</v8:item>
 				</Title>
-				<Width>100</Width>
-				<HorizontalStretch>false</HorizontalStretch>
 				<Group>Horizontal</Group>
 				<Representation>None</Representation>
 				<ChildItemsWidth>LeftWide</ChildItemsWidth>
@@ -1180,6 +1154,7 @@
 								<v8:content>Основные реквизиты</v8:content>
 							</v8:item>
 						</Title>
+						<HorizontalStretch>false</HorizontalStretch>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
@@ -1214,6 +1189,7 @@
 							<InputField name="Сотрудник" id="13">
 								<DataPath>Объект.Сотрудник</DataPath>
 								<EditMode>EnterOnInput</EditMode>
+								<AutoMaxWidth>false</AutoMaxWidth>
 								<ContextMenu name="СотрудникКонтекстноеМеню" id="14"/>
 								<ExtendedTooltip name="СотрудникExtendedTooltip" id="577"/>
 							</InputField>
@@ -1228,6 +1204,7 @@
 						</Title>
 						<Group>Vertical</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ОбязательныеРеквизитыExtendedTooltip" id="589"/>
 						<ChildItems>
@@ -1469,7 +1446,6 @@
 										<v8:content>Результаты</v8:content>
 									</v8:item>
 								</Title>
-								<HorizontalStretch>true</HorizontalStretch>
 								<Group>Horizontal</Group>
 								<ShowTitle>false</ShowTitle>
 								<BackColor>style:ButtonBackColor</BackColor>
@@ -1545,7 +1521,6 @@
 												<v8:content>Средний заработок</v8:content>
 											</v8:item>
 										</Title>
-										<HorizontalStretch>true</HorizontalStretch>
 										<Group>Horizontal</Group>
 										<Representation>None</Representation>
 										<ExtendedTooltip name="СреднийЗаработокИнфоExtendedTooltip" id="656"/>
@@ -1630,17 +1605,30 @@
 												<ContextMenu name="ОграничениеПособияКонтекстноеМеню" id="389"/>
 												<ExtendedTooltip name="ОграничениеПособияExtendedTooltip" id="616"/>
 											</InputField>
-											<InputField name="РайонныйКоэффициентРФНаНачалоСобытия" id="764">
-												<DataPath>Объект.РайонныйКоэффициентРФНаНачалоСобытия</DataPath>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Районный коэффициент</v8:content>
-													</v8:item>
-												</Title>
-												<ContextMenu name="РайонныйКоэффициентРФНаНачалоСобытияКонтекстноеМеню" id="765"/>
-												<ExtendedTooltip name="РайонныйКоэффициентРФНаНачалоСобытияРасширеннаяПодсказка" id="766"/>
-											</InputField>
+											<UsualGroup name="РайонныйКоэффициентДоляНеполногоВремениГруппа" id="873">
+												<Group>Horizontal</Group>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="РайонныйКоэффициентДоляНеполногоВремениГруппаРасширеннаяПодсказка" id="874"/>
+												<ChildItems>
+													<InputField name="РайонныйКоэффициентРФНаНачалоСобытия" id="764">
+														<DataPath>Объект.РайонныйКоэффициентРФНаНачалоСобытия</DataPath>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Районный коэффициент</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="РайонныйКоэффициентРФНаНачалоСобытияКонтекстноеМеню" id="765"/>
+														<ExtendedTooltip name="РайонныйКоэффициентРФНаНачалоСобытияРасширеннаяПодсказка" id="766"/>
+													</InputField>
+													<InputField name="ДоляНеполногоВремени" id="870">
+														<DataPath>Объект.ДоляНеполногоВремени</DataPath>
+														<ContextMenu name="ДоляНеполногоВремениКонтекстноеМеню" id="871"/>
+														<ExtendedTooltip name="ДоляНеполногоВремениРасширеннаяПодсказка" id="872"/>
+													</InputField>
+												</ChildItems>
+											</UsualGroup>
 											<UsualGroup name="ГруппаПрименятьЛьготыПриИсчисленииПособия" id="556">
 												<Title>
 													<v8:item>
@@ -1659,6 +1647,8 @@
 																<v8:content>Группа флаг льгот и условия</v8:content>
 															</v8:item>
 														</Title>
+														<Width>56</Width>
+														<HorizontalStretch>false</HorizontalStretch>
 														<Group>Horizontal</Group>
 														<Representation>None</Representation>
 														<ShowTitle>false</ShowTitle>
@@ -1673,6 +1663,7 @@
 																	</v8:item>
 																</Title>
 																<TitleLocation>Right</TitleLocation>
+																<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 																<CheckBoxType>Auto</CheckBoxType>
 																<ContextMenu name="ПрименятьЛьготыПриНачисленииПособияКонтекстноеМеню" id="558"/>
 																<ExtendedTooltip name="ПрименятьЛьготыПриНачисленииПособияExtendedTooltip" id="622"/>
@@ -1680,6 +1671,7 @@
 															<InputField name="ФинансированиеФедеральнымБюджетом" id="559">
 																<DataPath>Объект.ФинансированиеФедеральнымБюджетом</DataPath>
 																<TitleLocation>None</TitleLocation>
+																<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 																<ListChoiceMode>true</ListChoiceMode>
 																<ChooseType>false</ChooseType>
 																<ChoiceList>
@@ -1843,6 +1835,7 @@
 													</v8:item>
 												</Title>
 												<EditMode>EnterOnInput</EditMode>
+												<Width>10</Width>
 												<ContextMenu name="НачисленияДатаНачалаКонтекстноеМеню" id="819"/>
 												<ExtendedTooltip name="НачисленияДатаНачалаРасширеннаяПодсказка" id="820"/>
 											</InputField>
@@ -1913,44 +1906,6 @@
 					</Page>
 				</ChildItems>
 			</Pages>
-			<UsualGroup name="ПодписиГруппа" id="755">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Подписи</v8:content>
-					</v8:item>
-				</Title>
-				<Group>Horizontal</Group>
-				<Representation>None</Representation>
-				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ПодписиГруппаРасширеннаяПодсказка" id="756"/>
-				<ChildItems>
-					<UsualGroup name="ОтветственныеЛицаГруппа" id="757">
-						<Group>Vertical</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ОтветственныеЛицаГруппаРасширеннаяПодсказка" id="758"/>
-						<ChildItems>
-							<InputField name="Руководитель" id="747">
-								<ContextMenu name="РуководительКонтекстноеМеню" id="748"/>
-								<ExtendedTooltip name="РуководительРасширеннаяПодсказка" id="749"/>
-							</InputField>
-						</ChildItems>
-					</UsualGroup>
-					<UsualGroup name="ДолжностиГруппа" id="762">
-						<Group>Vertical</Group>
-						<Representation>None</Representation>
-						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ДолжностиГруппаРасширеннаяПодсказка" id="763"/>
-						<ChildItems>
-							<InputField name="ДолжностьРуководителя" id="750">
-								<ContextMenu name="ДолжностьРуководителяКонтекстноеМеню" id="751"/>
-								<ExtendedTooltip name="ДолжностьРуководителяРасширеннаяПодсказка" id="752"/>
-							</InputField>
-						</ChildItems>
-					</UsualGroup>
-				</ChildItems>
-			</UsualGroup>
 			<UsualGroup name="ГруппаКомментарийОтветственный" id="720">
 				<Group>Horizontal</Group>
 				<Representation>None</Representation>
@@ -1960,6 +1915,7 @@
 					<InputField name="Комментарий" id="300">
 						<DataPath>Объект.Комментарий</DataPath>
 						<TitleLocation>Left</TitleLocation>
+						<AutoMaxWidth>false</AutoMaxWidth>
 						<Height>1</Height>
 						<VerticalStretch>false</VerticalStretch>
 						<MultiLine>true</MultiLine>

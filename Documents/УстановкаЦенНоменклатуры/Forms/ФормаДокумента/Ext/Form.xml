@@ -145,131 +145,83 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Horizontal</Group>
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="101"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаШапкаЛевая" id="102">
+				<UsualGroup name="ГруппаДатаНомер" id="26">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шапка левая</v8:content>
+							<v8:content>Дата и номер</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шапка левая</v8:content>
+							<v8:content>Дата и номер</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>Vertical</Group>
+					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="103"/>
+					<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="59"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаДатаНомер" id="26">
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
+						</InputField>
+						<InputField name="Дата" id="3">
+							<DataPath>Объект.Date</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Дата и номер</v8:content>
+									<v8:content>от</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дата и номер</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="59"/>
-							<ChildItems>
-								<PictureField name="СостояниеДокумента" id="134">
-									<DataPath>СостояниеДокумента</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<Width>2</Width>
-									<Height>1</Height>
-									<HorizontalStretch>false</HorizontalStretch>
-									<VerticalStretch>false</VerticalStretch>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<Border width="1">
-										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-									</Border>
-									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="135">
-										<Autofill>false</Autofill>
-									</ContextMenu>
-									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="136"/>
-								</PictureField>
-								<InputField name="Номер" id="1">
-									<DataPath>Объект.Number</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
-								</InputField>
-								<InputField name="Дата" id="3">
-									<DataPath>Объект.Date</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="61"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаТипЦен" id="137">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаТипЦенРасширеннаяПодсказка" id="138"/>
-							<ChildItems>
-								<LabelDecoration name="ДекорацияОтступПустая" id="139">
-									<Width>1</Width>
-									<ContextMenu name="ДекорацияОтступПустаяКонтекстноеМеню" id="140"/>
-									<ExtendedTooltip name="ДекорацияОтступПустаяРасширеннаяПодсказка" id="141"/>
-								</LabelDecoration>
-								<InputField name="ТипЦен" id="13">
-									<DataPath>Объект.ТипЦен</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ТипЦенКонтекстноеМеню" id="14"/>
-									<ExtendedTooltip name="ТипЦенExtendedTooltip" id="62"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ДатаExtendedTooltip" id="61"/>
+						</InputField>
+						<PictureField name="СостояниеДокумента" id="134">
+							<DataPath>СостояниеДокумента</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>2</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="135">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="136"/>
+						</PictureField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаШапкаПравая" id="104">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шапка правая</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шапка правая</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
+				<UsualGroup name="ГруппаТипЦен" id="137">
+					<Group>Horizontal</Group>
 					<Representation>None</Representation>
+					<United>false</United>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="105"/>
+					<ExtendedTooltip name="ГруппаТипЦенРасширеннаяПодсказка" id="138"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияОтступ1" id="106">
-							<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="107"/>
-							<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="108"/>
-						</LabelDecoration>
+						<InputField name="ТипЦен" id="13">
+							<DataPath>Объект.ТипЦен</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТипЦенКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ТипЦенExtendedTooltip" id="62"/>
+						</InputField>
 						<CheckBoxField name="ПроводитьНулевыеЗначения" id="109">
 							<DataPath>ПроводитьНулевыеЗначения</DataPath>
 							<TitleLocation>Right</TitleLocation>
@@ -977,131 +929,84 @@
 						<v8:content>Шапка</v8:content>
 					</v8:item>
 				</ToolTip>
-				<Group>Horizontal</Group>
+				<Group>Vertical</Group>
 				<Representation>None</Representation>
 				<ShowTitle>false</ShowTitle>
 				<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="101"/>
 				<ChildItems>
-					<UsualGroup name="ГруппаШапкаЛевая" id="102">
+					<UsualGroup name="ГруппаДатаНомер" id="26">
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Шапка левая</v8:content>
+								<v8:content>Дата и номер</v8:content>
 							</v8:item>
 						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Шапка левая</v8:content>
+								<v8:content>Дата и номер</v8:content>
 							</v8:item>
 						</ToolTip>
-						<Group>Vertical</Group>
+						<Group>Horizontal</Group>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаШапкаЛеваяРасширеннаяПодсказка" id="103"/>
+						<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="59"/>
 						<ChildItems>
-							<UsualGroup name="ГруппаДатаНомер" id="26">
+							<InputField name="Номер" id="1">
+								<DataPath>Объект.Number</DataPath>
+								<EditMode>EnterOnInput</EditMode>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+								<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
+							</InputField>
+							<InputField name="Дата" id="3">
+								<DataPath>Объект.Date</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Дата и номер</v8:content>
+										<v8:content>от</v8:content>
 									</v8:item>
 								</Title>
-								<ToolTip>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Дата и номер</v8:content>
-									</v8:item>
-								</ToolTip>
-								<Group>Horizontal</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="59"/>
-								<ChildItems>
-									<PictureField name="СостояниеДокумента" id="134">
-										<DataPath>СостояниеДокумента</DataPath>
-										<TitleLocation>None</TitleLocation>
-										<Width>2</Width>
-										<Height>1</Height>
-										<HorizontalStretch>false</HorizontalStretch>
-										<VerticalStretch>false</VerticalStretch>
-										<ValuesPicture>
-											<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</ValuesPicture>
-										<Border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</Border>
-										<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="135">
-											<Autofill>false</Autofill>
-										</ContextMenu>
-										<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="136"/>
-									</PictureField>
-									<InputField name="Номер" id="1">
-										<DataPath>Объект.Number</DataPath>
-										<EditMode>EnterOnInput</EditMode>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-										<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
-									</InputField>
-									<InputField name="Дата" id="3">
-										<DataPath>Объект.Date</DataPath>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>от</v8:content>
-											</v8:item>
-										</Title>
-										<EditMode>EnterOnInput</EditMode>
-										<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-										<ExtendedTooltip name="ДатаExtendedTooltip" id="61"/>
-									</InputField>
-								</ChildItems>
-							</UsualGroup>
-							<UsualGroup name="ГруппаТипЦен" id="137">
-								<Group>Horizontal</Group>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаТипЦенРасширеннаяПодсказка" id="138"/>
-								<ChildItems>
-									<LabelDecoration name="ДекорацияОтступПустая" id="139">
-										<Width>1</Width>
-										<ContextMenu name="ДекорацияОтступПустаяКонтекстноеМеню" id="140"/>
-										<ExtendedTooltip name="ДекорацияОтступПустаяРасширеннаяПодсказка" id="141"/>
-									</LabelDecoration>
-									<InputField name="ТипЦен" id="13">
-										<DataPath>Объект.ТипЦен</DataPath>
-										<EditMode>EnterOnInput</EditMode>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="ТипЦенКонтекстноеМеню" id="14"/>
-										<ExtendedTooltip name="ТипЦенExtendedTooltip" id="62"/>
-									</InputField>
-								</ChildItems>
-							</UsualGroup>
+								<EditMode>EnterOnInput</EditMode>
+								<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+								<ExtendedTooltip name="ДатаExtendedTooltip" id="61"/>
+							</InputField>
+							<PictureField name="СостояниеДокумента" id="134">
+								<DataPath>СостояниеДокумента</DataPath>
+								<TitleLocation>None</TitleLocation>
+								<GroupVerticalAlign>Center</GroupVerticalAlign>
+								<Width>2</Width>
+								<Height>1</Height>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<ValuesPicture>
+									<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</ValuesPicture>
+								<Border width="1">
+									<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+								</Border>
+								<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="135">
+									<Autofill>false</Autofill>
+								</ContextMenu>
+								<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="136"/>
+							</PictureField>
 						</ChildItems>
 					</UsualGroup>
-					<UsualGroup name="ГруппаШапкаПравая" id="104">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Шапка правая</v8:content>
-							</v8:item>
-						</Title>
-						<ToolTip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Шапка правая</v8:content>
-							</v8:item>
-						</ToolTip>
-						<Group>Vertical</Group>
+					<UsualGroup name="ГруппаТипЦен" id="137">
+						<Group>Horizontal</Group>
 						<Representation>None</Representation>
+						<United>false</United>
 						<ShowTitle>false</ShowTitle>
-						<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="105"/>
+						<ExtendedTooltip name="ГруппаТипЦенРасширеннаяПодсказка" id="138"/>
 						<ChildItems>
-							<LabelDecoration name="ДекорацияОтступ1" id="106">
-								<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="107"/>
-								<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="108"/>
-							</LabelDecoration>
+							<InputField name="ТипЦен" id="13">
+								<DataPath>Объект.ТипЦен</DataPath>
+								<EditMode>EnterOnInput</EditMode>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ContextMenu name="ТипЦенКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ТипЦенExtendedTooltip" id="62"/>
+							</InputField>
 							<CheckBoxField name="ПроводитьНулевыеЗначения" id="109">
 								<DataPath>ПроводитьНулевыеЗначения</DataPath>
 								<TitleLocation>Right</TitleLocation>
