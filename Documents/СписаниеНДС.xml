@@ -31,15 +31,6 @@
 			<NumberAllowedLength>Fixed</NumberAllowedLength>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="87702f72-123f-45cc-bdd4-2ea86379e444">
-				<Properties>
-					<Name>ПодразделениеОрганизации</Name>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<Type>
-						<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
-					</Type>
-				</Properties>
-			</Attribute>
 			<Attribute uuid="cecaa406-305c-4d17-9fb8-2e6b115df37d">
 				<Properties>
 					<Name>Ответственный</Name>
@@ -104,6 +95,15 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Type>
 						<v8:TypeSet>cfg:Characteristic.ВидыСубконтоХозрасчетные</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="626f02d7-53f2-485c-9f3c-8caaf4bdbb77">
+				<Properties>
+					<Name>ПодразделениеСписания</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -217,6 +217,70 @@
 							<ObjectBelonging>Adopted</ObjectBelonging>
 							<Type>
 								<v8:Type>cfg:EnumRef.ВидыЦенностей</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="cd96bafd-bb7d-4678-b34f-37e9e3fdaf7b">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.СписаниеНДС.АвансыПолученные" category="TabularSection">
+						<xr:TypeId>f242f468-81ed-48dd-963e-729a67b3b5a4</xr:TypeId>
+						<xr:ValueId>5ac16254-619a-439d-b3d5-b1efd9711c54</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.СписаниеНДС.АвансыПолученные" category="TabularSectionRow">
+						<xr:TypeId>fbcc2330-abf8-40e1-b94d-fe49d2e1fab0</xr:TypeId>
+						<xr:ValueId>ad65a191-85e6-4d14-8e1e-5c37eee1be8d</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>АвансыПолученные</Name>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="5966a2ef-4d7d-4ff9-9e82-550280ed2185">
+						<Properties>
+							<Name>СуммаАванса</Name>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="af23b8bf-aadc-4d38-af57-f3d00333e20d">
+						<Properties>
+							<Name>НДС</Name>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="959415e1-fb38-426b-8456-a12fa2f27866">
+						<Properties>
+							<Name>Покупатель</Name>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="19b5db0b-1243-4adc-a479-a6ba8ec4df84">
+						<Properties>
+							<Name>ДокументАванса</Name>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Type>
+								<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 							</Type>
 						</Properties>
 					</Attribute>
